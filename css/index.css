@@ -1,0 +1,130 @@
+body {
+    background: #f2f2f2;
+    font-size: 12px;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px 12px 10px;
+    box-sizing: border-box;
+    background: #912941;
+    color: #FFF;
+}
+
+.top a {
+    color: #FFF;
+}
+
+.top a .iconfont {
+    font-size: 16px;
+}
+
+.index {
+    padding-top: 20px;
+    margin: 0px 20px;
+}
+
+.head {
+    box-sizing: border-box;
+    padding: 12px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f2f2f2;
+    font-size: 18px;
+}
+
+.head #admin p {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0px 0px 0px 10px;
+}
+
+
+.logo img {
+    width: 80px;
+    height: 50px;
+}
+
+.icon-list {
+    margin-top: 28px;
+    background: #FFF;
+}
+
+.icon-list ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-list ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.icon-list ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*border: 1px solid #000;*/
+    border-right: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+    /*padding:30px 15px 30px 10px;*/
+    width: 109px;
+    height: 109px;
+}
+.icon-list ul li a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-list ul .none-list {
+    border-right: none;
+}
+
+.icon-list ul .none-item {
+    border-bottom: none;
+}
+
+.icon-list ul li .iconfont {
+    margin-bottom: 10px;
+    font-size: 42px;
+    color: #912941;
+}
+
+#returns {
+    display: none;
+}
+
+#returns .sanjiao {
+    width: 0;
+    border: 8px solid rgba(0, 0, 0, 0.5);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    position: absolute;
+    right: 30px;
+    top: 62px;
+}
+
+.tuichu a{
+    display: block;
+    width: 86px;
+    height: 36px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    right: 16px;
+    top: 78px;
+    text-align: center;
+    line-height: 36px;
+    font-size: 16px;
+    color: #FFF;
+    font-weight: normal;
+}

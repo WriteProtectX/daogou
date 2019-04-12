@@ -1,0 +1,124 @@
+html{
+    font-size: 12px;
+    height: 100%;
+}
+body{
+    background: #f2f2f2;
+    height: 100%;
+    padding-top: 88px;
+}
+.top {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px 12px 10px;
+    box-sizing: border-box;
+    background: #912941;
+    color: #FFF;
+}
+
+.top a {
+    color: #FFF;
+}
+.search{
+    width: 100%;
+    background: #FFF;
+    position: fixed;
+    top:40px;
+    display: flex;
+    font-size: 14px;
+    padding:6px 10px 6px 10px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.083rem solid #ddd;
+}
+.screen a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#912941;
+}
+.searchkuang{
+    /*margin-right: 38px;*/
+    width: 100%;
+    margin: 0px 22px;
+}
+.search .iconfont{
+    font-size: 20px;
+}
+.searchkuang from{
+    /*padding: 0px 38px 0px 0px;*/
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: #f2f2f2;
+    border-radius: 5px;
+}
+.searchkuang from span{
+    padding-right:6px;
+    padding-left:6px ;
+
+}
+.searchkuang from input{
+    height: 30px;
+    flex: 1;
+    width: 100%;
+    background: #f2f2f2;
+    font-size: 14px;
+}
+.searchsize{
+    padding: 4px 6px;
+    border: 1px solid #ddd;
+    width: 44px;
+}
+.order{
+    background: #f2f2f2;
+}
+.pro-list{
+    background: #FFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.83rem 0.93rem;
+    box-sizing: border-box;
+    align-items: center;
+    border-bottom: 0.083rem solid #ddd;
+    border-top: 0.083rem solid #ddd;
+    margin-bottom: 0.63rem;
+}
+.pro-list img{
+    width: 6.66rem;
+    height: 6.66rem;
+    border: 0.083rem solid #ddd;
+}
+.pro-list .item-list{
+
+    display: flex;
+    flex-direction: column;
+}
+.pro-list .item-list span{
+    margin-bottom: 0.6rem;
+    font-size: 1.3rem;
+}
+.pro-list .item-list p{
+    font-size: 1.3rem;
+}
+.title{
+    width: 23.66rem;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.btn{
+    border: 0.083rem solid #912941;
+    padding: 0.41rem 0.83rem;
+    background: #912941;
+}
+.btn a{
+    display: block;
+    color: #FFF;
+}
