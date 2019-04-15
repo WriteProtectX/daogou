@@ -5,7 +5,7 @@ html{
 body{
     background: #f2f2f2;
     height: 100%;
-    padding-top: 88px;
+    padding-top: 8.167rem;
 }
 .top {
     width: 100%;
@@ -14,7 +14,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 15px 12px 10px;
+    padding: 0.833rem 1.25rem 0.833rem 0.833rem;
     box-sizing: border-box;
     background: #912941;
     color: #FFF;
@@ -22,23 +22,23 @@ body{
 
 .top a {
     color: #FFF;
-    font-size: 14px;
+    font-size: 1.167rem;
 }
 .top a span{
     color: #FFF;
-    font-size: 16px;
+    font-size: 1.333rem;
 }
 .top span {
-    font-size: 14px;
+    font-size: 1.167rem;
 }
 .search{
     width: 100%;
     background: #FFF;
     position: fixed;
-    top:40px;
+    top:3.667rem;
     display: flex;
-    font-size: 14px;
-    padding:6px 10px 6px 10px;
+    font-size: 1.167rem;
+    padding:0rem 0.833rem 0rem 0.833rem;
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
@@ -49,42 +49,42 @@ body{
     flex-direction: column;
     align-items: center;
     color:#912941;
-    width: 40px;
+    width: 3.333rem;
 }
 .searchkuang{
-    /*margin-right: 38px;*/
+    /*margin-right: 3.167rem;*/
     width: 100%;
-    margin: 0px 10px;
+    margin: 0rem 0.833rem;
 }
 .search .iconfont{
-    font-size: 20px;
+    font-size: 1.667rem;
 }
 .searchkuang from{
-    /*padding: 0px 38px 0px 0px;*/
+    /*padding: 0rem 3.167rem 0rem 0rem;*/
     width: 100%;
     flex: 1;
     display: flex;
     align-items: center;
     background: #f2f2f2;
-    border-radius: 5px;
+    border-radius: 0.417rem;
     overflow: hidden;
 }
 .searchkuang from span{
-    padding-right:6px;
-    padding-left:6px ;
+    padding-right:0.5rem;
+    padding-left:0.5rem ;
 
 }
 .searchkuang from input{
-    height: 30px;
+    height: 2.5rem;
     flex: 1;
     width: 100%;
     background: #f2f2f2;
-    font-size: 14px;
+    font-size: 1.167rem;
 }
 .searchsize{
-    padding: 4px 6px;
-    border: 1px solid #ddd;
-    width: 44px;
+    padding: 0.333rem 0.5rem;
+    border: 0.083rem solid #ddd;
+    width: 3.667rem;
 }
 .order{
     background: #f2f2f2;
@@ -110,17 +110,17 @@ body{
     border: 0.083rem solid #ddd;
     margin-right: 1rem;
 }
-.pro-list .item-list{
-    /*width: 16.66rem;*/
-    display: flex;
-    flex-direction: column;
-}
+/*.pro-list .item-list{*/
+/*    !*width: 16.66rem;*!*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
 .pro-list .item-list span{
     margin-bottom: 1rem;
-    font-size: 20px;
+    font-size: 1.667rem;
 }
 .pro-list .item-list p{
-    font-size: 20px;
+    font-size: 1.333rem;
     color: #999;
 }
 .title{
@@ -138,7 +138,7 @@ body{
     border: 0.083rem solid #912941;
     padding: 0.41rem 0.83rem;
     background: #912941;
-    margin-bottom: 10px;
+    margin-bottom: 0.833rem;
 }
 .btn a{
     display: block;

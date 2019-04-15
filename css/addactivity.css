@@ -1,12 +1,11 @@
 html {
     font-size: 12px;
-    height: 100%;
+
 }
 
 body {
     background: #fff;
-    height: 100%;
-    /*padding-top: 7.333rem;*/
+    /*padding-top: 7.5rem;*/
 }
 
 .top {
@@ -16,7 +15,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 1.25rem 1rem 0.833rem;
+    padding: 0.833rem 1.25rem 0.833rem 0.833rem;
     box-sizing: border-box;
     background: #912941;
     color: #FFF;
@@ -26,48 +25,73 @@ body {
     color: #FFF;
     font-size: 1.167rem;
 }
-.top a span{
+
+.top a span {
     color: #FFF;
     font-size: 1.333rem;
 }
+
 .top span {
     font-size: 1.167rem;
 }
 
 .order {
-    /*background: #f2f2f2;*/
-    padding: 0rem 1.667rem;
-    margin-top: 2.5rem;
-
+    margin-top: 4.167rem;
+    /*background: #ddd;*/
+    padding: 0rem 2.5rem;
+    box-sizing: border-box;
 }
-.order ul li {
+
+.order .list {
     display: flex;
     justify-content: center;
+    margin-bottom: 1.667rem;
     align-items: center;
-    font-size: 1.5rem;
+}
+
+.order .list input {
+    flex: 1;
+    height: 3.333rem;
+    border: 0.083rem solid #ddd;
+    padding: 0rem 0.667rem;
+    border-radius: 0.833rem;
+}
+
+.order .text {
+    display: flex;
+    justify-content: center;
     margin-bottom: 1.667rem;
 }
-.order ul li input{
+
+.order .text textarea {
     flex: 1;
-    width: 100%;
-    padding:0.5rem 0.667rem;
-    font-size: 1.333rem;
-    color: #666;
-    margin-left: 0.833rem;
+    height: 13.333rem;
+    vertical-align: middle;
     border: 0.083rem solid #ddd;
+    padding: 0.667rem;
     border-radius: 0.833rem;
 }
-.order ul li  select{
-    margin-left: 0.833rem;
-    width: 100%;
-    flex: 1;
-    text-align: center;
-    padding:0.5rem 0.667rem;
-    border: 0.083rem solid #ddd;
-    background: #FFF;
+
+.demoBox {
+    display: flex;
     border-radius: 0.833rem;
-    color: #999;
+    align-items: center;
+    margin-bottom: 1.667rem;
 }
+
+.demoBox > input {
+    display: block;
+    border: 0;
+    border-radius: 0.833rem;
+    padding: 0 0.667rem;
+    height: 3.333rem;
+    flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    font-size: 1.167rem;
+    border: 0.083rem solid #ddd;
+}
+
 .btn{
     display: flex;
     justify-content: center;
@@ -84,5 +108,3 @@ body {
     line-height: 3.333rem;
     color: #fff;
 }
-
-

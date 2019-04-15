@@ -2,8 +2,8 @@ html{
     font-size: 12px;
 }
 body{
-    font-size: 12px;
-    margin-top: 44px;
+    font-size: 1rem;
+    margin-top: 3.667rem;
     background: #f2f2f2;
 }
 
@@ -14,7 +14,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 15px 12px 10px;
+    padding: 1rem 1.25rem 1rem 0.833rem;
     box-sizing: border-box;
     background: #912941;
     color: #FFF;
@@ -22,14 +22,14 @@ body{
 
 .top a {
     color: #FFF;
-    font-size: 14px;
+    font-size: 1.167rem;
 }
 .top a span{
     color: #FFF;
-    font-size: 16px;
+    font-size: 1.333rem;
 }
 .top span {
-    font-size: 14px;
+    font-size: 1.167rem;
 }
 .addclient{
     font-size: 1.333rem;

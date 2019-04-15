@@ -1,6 +1,7 @@
 body {
     background: #f2f2f2;
     font-size: 12px;
+    height: 100%;
 }
 
 .top {
@@ -10,7 +11,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 15px 12px 10px;
+    padding: 1rem 1.25rem 1rem 0.833rem;
     box-sizing: border-box;
     background: #912941;
     color: #FFF;
@@ -18,47 +19,47 @@ body {
 
 .top a {
     color: #FFF;
-    font-size: 14px;
+    font-size: 1.167rem;
 }
 .top a span{
     color: #FFF;
-    font-size: 16px;
+    font-size: 1.333rem;
 }
 .top span {
-    font-size: 14px;
+    font-size: 1.167rem;
 }
 
 .index {
-    padding-top: 20px;
-    margin: 0px 20px;
+    padding-top: 1.667rem;
+    margin: 0rem 1.667rem;
 }
 
 .head {
     box-sizing: border-box;
-    padding: 12px 10px;
+    padding: 1rem 0.833rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: #f2f2f2;
-    font-size: 18px;
+    font-size: 1.5rem;
 }
 
 .head #admin p {
-    height: 30px;
-    line-height: 30px;
+    height: 2.5rem;
+    line-height: 2.5rem;
     text-align: center;
-    padding: 0px 0px 0px 10px;
+    padding: 0rem 0rem 0rem 0.833rem;
 }
 
 
 .logo img {
-    width: 80px;
-    height: 50px;
+    width: 6.667rem;
+    height: 4.167rem;
 }
 
 .icon-list {
-    margin: 28px;
-    background: #FFF;
+    margin-top: 2.333rem;
+
 }
 
 .icon-list ul li a {
@@ -78,12 +79,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /*border: 1px solid #000;*/
-    border-right: 1px solid #f2f2f2;
-    border-bottom: 1px solid #f2f2f2;
-    /*padding:30px 15px 30px 10px;*/
-    width: 92px;
-    height: 92px;
+    /*border: 0.083rem solid #000;*/
+    border-right: 0.083rem solid #f2f2f2;
+    border-bottom: 0.083rem solid #f2f2f2;
+    /*padding:2.5rem 1.25rem 2.5rem 0.833rem;*/
+    background: #FFF;
+    width: 7.667rem;
+    height: 7.667rem;
 }
 .icon-list ul li a{
     height: 100%;
@@ -101,8 +103,7 @@ body {
 }
 
 .icon-list ul li .iconfont {
-    margin-bottom: 10px;
-    font-size: 42px;
+    font-size: 3.5rem;
     color: #912941;
 }
 
@@ -112,26 +113,26 @@ body {
 
 #returns .sanjiao {
     width: 0;
-    border: 8px solid rgba(0, 0, 0, 0.5);
+    border: 0.667rem solid rgba(0, 0, 0, 0.5);
     border-top-color: transparent;
     border-left-color: transparent;
     border-right-color: transparent;
     position: absolute;
-    right: 30px;
-    top: 62px;
+    right: 2.5rem;
+    top: 5.167rem;
 }
 
 .tuichu a{
     display: block;
-    width: 86px;
-    height: 36px;
+    width: 7.167rem;
+    height: 3rem;
     background: rgba(0, 0, 0, 0.5);
     position: absolute;
-    right: 16px;
-    top: 78px;
+    right: 1.333rem;
+    top: 6.5rem;
     text-align: center;
-    line-height: 36px;
-    font-size: 16px;
+    line-height: 3rem;
+    font-size: 1.333rem;
     color: #FFF;
     font-weight: normal;
 }
