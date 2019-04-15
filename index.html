@@ -94,102 +94,96 @@
 <script>
     $(function () {
         //退出登录
-        $("#admin").on("click", function (e) {
-            $("#returns").show();
-            alert("展示")
-            $("body").bind("click", function () {
-                $("#returns").hide();
-                alert("隐藏")
-                stopPropagation(e);
-            });
-            stopPropagation(e);
-        });
-        // $("#returns").on("click", function (e) {
-        //
-        //     alert(123)
+        // $("#admin").on("click", function (e) {
+        //     $("#returns").show();
+        //     alert("展示")
+        //     $("body").bind("click", function () {
+        //         $("#returns").hide();
+        //         alert("隐藏")
+        //         stopPropagation(e);
+        //     });
+        //     stopPropagation(e);
         // });
 
 
-        // $("#admin").on("click",function (e) {
-        //     $('#returns').css('display','block');
-        //     $(document).bind("click",function (e) {
-        //         $('#returns').css('display','none');
-        //     })
-        // })
 
-
-
-        /*阻止冒泡*/
-        function stopPropagation(e) {
-            e = e || event;
-            if (e.stopPropagation)
-                e.stopPropagation();//停止冒泡  非ie
-            else
-                e.cancelBubble = true;//停止冒泡 ie
-        }
-
+        $('#admin').click(function (event) {
+            //取消事件冒泡
+            event.stopPropagation();
+            //按钮的toggle,如果div是可见的,点击按钮切换为隐藏的;如果是隐藏的,切换为可见的。
+            $('#returns').toggle('slow');
+            return false;
+        });
+        //点击空白处隐藏弹出层，下面为滑动消失效果和淡出消失效果。
+        $(document).click(function(event){
+            var _con = $("#returns");   // 设置目标区域
+            if(!_con.is(event.target) && _con.has(event.target).length === 0){ // Mark 1
+                //$('#divTop').slideUp('slow');   //滑动消失
+                $('#returns').hide(1000);          //淡出消失
+            }
+        });
 
 
         //加入HTML
-        let html = ''
-        html = ' <ul>\n' +
-            '            <li>\n' +
-            '                <a href="./order.html">\n' +
-            '                    <span class="iconfont">&#xe605;</span>\n' +
-            '                    <span class="size">订单查询修改</span>\n' +
-            '                </a>\n' +
-            '            </li>\n' +
-            '            <li>\n' +
-            '                <a href="./housekeeper.html">\n' +
-            '                    <span class="iconfont">&#xe62a;</span>\n' +
-            '                    <span class="size">添加历史客户</span>\n' +
-            '                </a>\n' +
-            '            </li>\n' +
-            '            <li class="none-list">\n' +
-            '                <a href="./Scan.html">\n' +
-            '                    <span class="iconfont">&#xe661;</span>\n' +
-            '                    <span class="size">扫码绑定</span>\n' +
-            '                </a>\n' +
-            '            </li>\n' +
-            '            <li>\n' +
-            '                <a href="./gift.html">\n' +
-            '                    <span class="iconfont">&#xe6bf;</span>\n' +
-            '                    <span class="size">礼品赠送</span>\n' +
-            '                </a>\n' +
-            '            </li>\n' +
-            '            <li>\n' +
-            '                <a href="./guidelist.html">\n' +
-            '                    <span class="iconfont">&#xe69e;</span>\n' +
-            '                    <span class="size">修改腕表管家</span>\n' +
-            '                </a>\n' +
-            '            </li>\n' +
-            '            <li class="none-list">\n' +
-            '                <a href="#">\n' +
-            '                    <span class="iconfont">&#xe608;</span>\n' +
-            '                    <span class="size">一键制表</span>\n' +
-            '                </a>\n' +
-            '            </li>\n' +
-            '            <li class="none-item">\n' +
-            '                <a href="./servicing.html">\n' +
-            '                    <span class="iconfont">&#xe683;</span>\n' +
-            '                    <span class="size">维修登记</span>\n' +
-            '                </a>\n' +
-            '            </li>\n' +
-            '            <li class="none-item">\n' +
-            '                <a href="./keepservicing.html">\n' +
-            '                    <span class="iconfont">&#xe618;</span>\n' +
-            '                    <span class="size">维修记录</span>\n' +
-            '                </a>\n' +
-            '            </li>\n' +
-            '            <li class="none-list none-item">\n' +
-            '                <a href="./activity.html">\n' +
-            '                    <span class="iconfont">&#xe610;</span>\n' +
-            '                    <span class="size">活动登记</span>\n' +
-            '                </a>\n' +
-            '            </li>\n' +
-            '\n' +
-            '        </ul>'
-        $('.icon-list').append(html)
+    let html = ''
+    html = ' <ul>\n' +
+        '            <li>\n' +
+        '                <a href="./order.html">\n' +
+        '                    <span class="iconfont">&#xe605;</span>\n' +
+        '                    <span class="size">订单查询修改</span>\n' +
+        '                </a>\n' +
+        '            </li>\n' +
+        '            <li>\n' +
+        '                <a href="./housekeeper.html">\n' +
+        '                    <span class="iconfont">&#xe62a;</span>\n' +
+        '                    <span class="size">添加历史客户</span>\n' +
+        '                </a>\n' +
+        '            </li>\n' +
+        '            <li class="none-list">\n' +
+        '                <a href="./Scan.html">\n' +
+        '                    <span class="iconfont">&#xe661;</span>\n' +
+        '                    <span class="size">扫码绑定</span>\n' +
+        '                </a>\n' +
+        '            </li>\n' +
+        '            <li>\n' +
+        '                <a href="./gift.html">\n' +
+        '                    <span class="iconfont">&#xe6bf;</span>\n' +
+        '                    <span class="size">礼品赠送</span>\n' +
+        '                </a>\n' +
+        '            </li>\n' +
+        '            <li>\n' +
+        '                <a href="./guidelist.html">\n' +
+        '                    <span class="iconfont">&#xe69e;</span>\n' +
+        '                    <span class="size">修改腕表管家</span>\n' +
+        '                </a>\n' +
+        '            </li>\n' +
+        '            <li class="none-list">\n' +
+        '                <a href="#">\n' +
+        '                    <span class="iconfont">&#xe608;</span>\n' +
+        '                    <span class="size">一键制表</span>\n' +
+        '                </a>\n' +
+        '            </li>\n' +
+        '            <li class="none-item">\n' +
+        '                <a href="./servicing.html">\n' +
+        '                    <span class="iconfont">&#xe683;</span>\n' +
+        '                    <span class="size">维修登记</span>\n' +
+        '                </a>\n' +
+        '            </li>\n' +
+        '            <li class="none-item">\n' +
+        '                <a href="./keepservicing.html">\n' +
+        '                    <span class="iconfont">&#xe618;</span>\n' +
+        '                    <span class="size">维修记录</span>\n' +
+        '                </a>\n' +
+        '            </li>\n' +
+        '            <li class="none-list none-item">\n' +
+        '                <a href="./activity.html">\n' +
+        '                    <span class="iconfont">&#xe610;</span>\n' +
+        '                    <span class="size">活动登记</span>\n' +
+        '                </a>\n' +
+        '            </li>\n' +
+        '\n' +
+        '        </ul>'
+    $('.icon-list').append(html)
 
     })
 </script>
