@@ -92,42 +92,63 @@ body{
     background: #FFF;
     display: flex;
     justify-content: space-between;
-    padding: 0.83rem 0.93rem;
+    padding: 0.83rem 0.83rem;
     box-sizing: border-box;
     align-items: center;
     border-bottom: 0.083rem solid #ddd;
     border-top: 0.083rem solid #ddd;
     margin-bottom: 0.63rem;
 }
+.mes-item{
+    display: flex;
+    align-items: center;
+}
 .pro-list img{
     width: 6.66rem;
     height: 6.66rem;
     border: 0.083rem solid #ddd;
+    margin-right: 1rem;
 }
 .pro-list .item-list{
-
+    /*width: 16.66rem;*/
     display: flex;
     flex-direction: column;
 }
 .pro-list .item-list span{
-    margin-bottom: 0.6rem;
-    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-size: 20px;
 }
 .pro-list .item-list p{
-    font-size: 1.3rem;
+    font-size: 20px;
+    color: #999;
 }
 .title{
-    width: 23.66rem;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
+    /*width: 14.66rem;*/
+    /*white-space:nowrap;*/
+    /*overflow:hidden;*/
+    /*text-overflow:ellipsis;*/
+}
+.allbtn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .btn{
+     border: 0.083rem solid #912941;
+     padding: 0.41rem 0.83rem;
+     background: #912941;
+    margin-bottom: 10px;
+ }
+.btn a{
+    display: block;
+    color: #FFF;
+}
+.btn2{
     border: 0.083rem solid #912941;
     padding: 0.41rem 0.83rem;
     background: #912941;
 }
-.btn a{
+.btn2 a{
     display: block;
     color: #FFF;
 }

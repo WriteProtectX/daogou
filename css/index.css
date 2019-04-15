@@ -4,6 +4,9 @@ body {
 }
 
 .top {
+    width: 100%;
+    position: fixed;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -15,10 +18,14 @@ body {
 
 .top a {
     color: #FFF;
+    font-size: 14px;
 }
-
-.top a .iconfont {
+.top a span{
+    color: #FFF;
     font-size: 16px;
+}
+.top span {
+    font-size: 14px;
 }
 
 .index {
@@ -50,7 +57,7 @@ body {
 }
 
 .icon-list {
-    margin-top: 28px;
+    margin: 28px;
     background: #FFF;
 }
 
@@ -75,8 +82,8 @@ body {
     border-right: 1px solid #f2f2f2;
     border-bottom: 1px solid #f2f2f2;
     /*padding:30px 15px 30px 10px;*/
-    width: 109px;
-    height: 109px;
+    width: 92px;
+    height: 92px;
 }
 .icon-list ul li a{
     height: 100%;

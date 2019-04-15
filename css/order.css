@@ -22,6 +22,14 @@ body{
 
 .top a {
     color: #FFF;
+    font-size: 14px;
+}
+.top a span{
+    color: #FFF;
+    font-size: 16px;
+}
+.top span {
+    font-size: 14px;
 }
 .search{
     width: 100%;
@@ -41,21 +49,25 @@ body{
     flex-direction: column;
     align-items: center;
     color:#912941;
+    width: 30px;
 }
 .searchkuang{
-    margin-right: 38px;
+    /*margin-right: 38px;*/
+    width: 100%;
+    margin: 0px 10px;
 }
 .search .iconfont{
     font-size: 20px;
 }
 .searchkuang from{
-    padding: 0px 38px 0px 0px;
+    /*padding: 0px 38px 0px 0px;*/
+    width: 100%;
     flex: 1;
     display: flex;
     align-items: center;
     background: #f2f2f2;
     border-radius: 5px;
-    width:100%;
+    overflow: hidden;
 }
 .searchkuang from span{
     padding-right:6px;
@@ -65,12 +77,14 @@ body{
 .searchkuang from input{
     height: 30px;
     flex: 1;
+    width: 100%;
     background: #f2f2f2;
     font-size: 14px;
 }
 .searchsize{
     padding: 4px 6px;
     border: 1px solid #ddd;
+    width: 44px;
 }
 .order{
     background: #f2f2f2;

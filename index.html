@@ -97,7 +97,7 @@
         $("#admin").on("click", function(e){
             $("#returns").show();
 
-            $(document).one("click", function(){
+            $(document).bind("click", function(){
                 $("#returns").hide();
             });
 
@@ -106,6 +106,17 @@
         $("#returns").on("click", function(e){
             e.stopPropagation();
         });
+
+        /*阻止冒泡*/
+        function stopPropagation(e) {
+            console.log(e)
+            e = e || event;
+            if (e.stopPropagation)
+                e.stopPropagation();//停止冒泡  非ie
+            else
+                e.cancelBubble = true;//停止冒泡 ie
+        }
+
         //加入HTML
         let html = ''
             html = ' <ul>\n' +
@@ -116,7 +127,7 @@
                 '                </a>\n' +
                 '            </li>\n' +
                 '            <li>\n' +
-                '                <a href="./addclient.html">\n' +
+                '                <a href="./housekeeper.html">\n' +
                 '                    <span class="iconfont">&#xe62a;</span>\n' +
                 '                    <span class="size">添加历史客户</span>\n' +
                 '                </a>\n' +
@@ -128,13 +139,13 @@
                 '                </a>\n' +
                 '            </li>\n' +
                 '            <li>\n' +
-                '                <a href="#">\n' +
+                '                <a href="./gift.html">\n' +
                 '                    <span class="iconfont">&#xe6bf;</span>\n' +
                 '                    <span class="size">礼品赠送</span>\n' +
                 '                </a>\n' +
                 '            </li>\n' +
                 '            <li>\n' +
-                '                <a href="#">\n' +
+                '                <a href="./guidelist.html">\n' +
                 '                    <span class="iconfont">&#xe69e;</span>\n' +
                 '                    <span class="size">修改腕表管家</span>\n' +
                 '                </a>\n' +

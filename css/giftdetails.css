@@ -1,8 +1,11 @@
 html{
     font-size: 12px!important;
+    background: #f2f2f2;
 }
 body{
     font-size: 12px;
+    background: #f2f2f2;
+
 }
 
 .top {
@@ -30,18 +33,25 @@ body{
     font-size: 14px;
 }
 .buydetails{
-    margin-top: 3.3rem;
+    padding-top: 50px;
     background: #f2f2f2;
-    height: 100%;
+
+}
+.order-list{
+
+    padding-bottom: 12px;
+    background: #f2f2f2;
 }
 .order{
     box-sizing: border-box;
-    padding: 1rem 1.6rem;
+    margin: 0rem 0.6rem;
+    padding: 0.83rem 0.83rem;
     display: flex;
     flex-direction: column;
     font-size: 1.3rem;
     background: #fff;
-    margin-bottom: 0.83rem;
+    border-bottom: 1px solid #f2f2f2;
+    /*margin-bottom: 0.83rem;*/
 }
 .order span{
     margin-bottom: 0.83rem;
@@ -51,9 +61,11 @@ body{
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    padding: 0.83rem 1.6rem;
+    margin: 0rem 0.6rem;
+    padding: 0.83rem 0.83rem;
     background: #fff;
-    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #f2f2f2;
+    /*margin-bottom: 0.5rem;*/
 }
 .pro-list img{
     height: 6.66rem;
@@ -83,7 +95,8 @@ body{
 .list ul li{
     display: flex;
     justify-content: space-between;
-    padding: 0.83rem 1.6rem;
+    margin: 0rem 0.6rem;
+    padding: 0.83rem 0.83rem;
     align-items: center;
     background: #fff;
     border-bottom: 1px solid #f2f2f2;
@@ -121,4 +134,34 @@ body{
     text-align: center;
     line-height: 40px;
     color: #FFF;
+}
+.gift{
+    display: flex;
+    padding: 0.83rem 1.6rem;
+    align-items: center;
+    background: #fff;
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 1.3rem;
+}
+.gift select{
+    text-align: center;
+    font-size:16px;
+    padding: 6px;
+    color: #999;
+}
+.gif-list{
+    display: flex;
+    box-sizing: border-box;
+    padding: 0.83rem 1.6rem;
+    background: #fff;
+    margin-bottom: 0.5rem;
+}
+.gif-list img{
+    height: 6.66rem;
+    width: 6.66rem;
+    border: 1px solid #ddd;
+    margin-right: 0.80rem;
+}
+.gif-list .pro-mes .title{
+    padding-top: 10px;
 }
