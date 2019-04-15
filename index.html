@@ -97,29 +97,38 @@
         $("#admin").on("click", function (e) {
             $("#returns").show();
             alert("展示")
-
-            $(document).bind("click", function () {
+            $("body").bind("click", function () {
                 $("#returns").hide();
                 alert("隐藏")
+                stopPropagation(e);
             });
+            stopPropagation(e);
+        });
+        // $("#returns").on("click", function (e) {
+        //
+        //     alert(123)
+        // });
 
-            e.stopPropagation();
-        });
-        $("#returns").on("click", function (e) {
-            e.stopPropagation();
-            alert(123)
-        });
+
+        // $("#admin").on("click",function (e) {
+        //     $('#returns').css('display','block');
+        //     $(document).bind("click",function (e) {
+        //         $('#returns').css('display','none');
+        //     })
+        // })
+
 
 
         /*阻止冒泡*/
         function stopPropagation(e) {
-            console.log(e)
             e = e || event;
             if (e.stopPropagation)
                 e.stopPropagation();//停止冒泡  非ie
             else
                 e.cancelBubble = true;//停止冒泡 ie
         }
+
+
 
         //加入HTML
         let html = ''
