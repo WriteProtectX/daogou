@@ -1,110 +1,329 @@
 html {
     font-size: 12px;
-
 }
 
-body {
-    background: #fff;
-    /*padding-top: 7.5rem;*/
-}
+@media screen and (max-width:600px) { /*一栏布局*/
+    body {
+        background: #fff;
+        /*padding-top: 7.5rem;*/
+    }
 
-.top {
-    width: 100%;
-    /*position: fixed;*/
-    /*top: 0;*/
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.833rem 1.25rem 0.833rem 0.833rem;
-    box-sizing: border-box;
-    background: #912941;
-    color: #FFF;
-}
+    .top {
+        width: 100%;
+        /*position: fixed;*/
+        /*top: 0;*/
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.833rem 1.25rem 0.833rem 0.833rem;
+        box-sizing: border-box;
+        background: #912941;
+        color: #FFF;
+    }
 
-.top a {
-    color: #FFF;
-    font-size: 1.167rem;
-}
+    .top a {
+        color: #FFF;
+        font-size: 1.167rem;
+    }
 
-.top a span {
-    color: #FFF;
-    font-size: 1.333rem;
-}
+    .top a span {
+        color: #FFF;
+        font-size: 1.333rem;
+    }
 
-.top span {
-    font-size: 1.167rem;
-}
+    .top span {
+        font-size: 1.167rem;
+    }
 
-.order {
-    margin-top: 4.167rem;
-    /*background: #ddd;*/
-    padding: 0rem 2.5rem;
-    box-sizing: border-box;
-}
+    .order {
+        margin-top: 4.167rem;
+        /*background: #ddd;*/
+        padding: 0rem 2.5rem;
+        box-sizing: border-box;
+    }
 
-.order .list {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1.667rem;
-    align-items: center;
-}
+    .order .list {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.667rem;
+        align-items: center;
+    }
 
-.order .list input {
-    flex: 1;
-    height: 3.333rem;
-    border: 0.083rem solid #ddd;
-    padding: 0rem 0.667rem;
-    border-radius: 0.833rem;
-}
+    .order .list input {
+        flex: 1;
+        height: 3.333rem;
+        border: 0.083rem solid #ddd;
+        padding: 0rem 0.667rem;
+        border-radius: 0.833rem;
+    }
 
-.order .text {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1.667rem;
-}
+    .order .text {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.667rem;
+    }
 
-.order .text textarea {
-    flex: 1;
-    height: 13.333rem;
-    vertical-align: middle;
-    border: 0.083rem solid #ddd;
-    padding: 0.667rem;
-    border-radius: 0.833rem;
-}
+    .order .text textarea {
+        flex: 1;
+        height: 13.333rem;
+        vertical-align: middle;
+        border: 0.083rem solid #ddd;
+        padding: 0.667rem;
+        border-radius: 0.833rem;
+    }
 
-.demoBox {
-    display: flex;
-    border-radius: 0.833rem;
-    align-items: center;
-    margin-bottom: 1.667rem;
-}
+    .demoBox {
+        display: flex;
+        border-radius: 0.833rem;
+        align-items: center;
+        margin-bottom: 1.667rem;
+    }
 
-.demoBox > input {
-    display: block;
-    border: 0;
-    border-radius: 0.833rem;
-    padding: 0 0.667rem;
-    height: 3.333rem;
-    flex: 1;
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    font-size: 1.167rem;
-    border: 0.083rem solid #ddd;
-}
+    .demoBox > input {
+        display: block;
+        border: 0;
+        border-radius: 0.833rem;
+        padding: 0 0.667rem;
+        height: 3.333rem;
+        flex: 1;
+        -webkit-flex: 1;
+        -moz-flex: 1;
+        font-size: 1.167rem;
+        border: 0.083rem solid #ddd;
+    }
 
-.btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5.833rem;
+    .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5.833rem;
+    }
+    .btn div a {
+        font-size: 1.333rem;
+        display: block;
+        width: 12.917rem;
+        height: 3.333rem;
+        background: #912941;
+        text-align: center;
+        line-height: 3.333rem;
+        color: #fff;
+    }
+
 }
-.btn div a {
-    font-size: 1.333rem;
-    display: block;
-    width: 12.917rem;
-    height: 3.333rem;
-    background: #912941;
-    text-align: center;
-    line-height: 3.333rem;
-    color: #fff;
+@media screen and (min-width:768px) and (max-width:1024px){ /*二栏布局*/
+
+    .top {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.25rem 1rem 0.833rem;
+        box-sizing: border-box;
+        background: #912941;
+        color: #FFF;
+        height: 5rem;
+    }
+
+    .top a {
+        color: #FFF;
+        font-size: 2.167rem;
+    }
+
+    .top a span {
+        color: #FFF;
+        font-size: 2.167rem;
+    }
+
+    .top span {
+        font-size: 2.167rem;
+    }
+    .order {
+        margin-top: 10.167rem;
+        /*background: #ddd;*/
+        padding: 0rem 2.5rem;
+        box-sizing: border-box;
+    }
+
+    .order .list {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.667rem;
+        align-items: center;
+    }
+
+    .order .list input {
+        flex: 1;
+        height: 4.333rem;
+        border: 0.083rem solid #ddd;
+        padding: 0rem 0.667rem;
+        border-radius: 0.833rem;
+        font-size: 1.667rem;
+    }
+    .order .list span{
+        font-size: 2rem;
+    }
+    .order .text {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.667rem;
+        font-size: 2rem;
+    }
+
+    .order .text textarea {
+        flex: 1;
+        height: 13.333rem;
+        vertical-align: middle;
+        border: 0.083rem solid #ddd;
+        padding: 0.667rem;
+        border-radius: 0.833rem;
+        font-size: 1.667rem;
+    }
+
+    .demoBox {
+        display: flex;
+        border-radius: 0.833rem;
+        align-items: center;
+        margin-bottom: 1.667rem;
+        font-size: 2rem;
+    }
+
+    .demoBox > input {
+        display: block;
+        border: 0;
+        border-radius: 0.833rem;
+        padding: 0 0.667rem;
+        height: 4.333rem;
+        flex: 1;
+        -webkit-flex: 1;
+        -moz-flex: 1;
+        font-size: 1.667rem;
+        border: 0.083rem solid #ddd;
+    }
+
+    .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5.833rem;
+    }
+    .btn div a {
+        display: block;
+        width: 15.917rem;
+        height: 5.333rem;
+        background: #912941;
+        text-align: center;
+        line-height: 5.333rem;
+        color: #fff;
+        font-size: 2.167rem;
+    }
+}
+@media screen and (min-width:1024px) and (max-width:1400px){ /*三栏布局*/
+    .top {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.25rem 1rem 0.833rem;
+        box-sizing: border-box;
+        background: #912941;
+        color: #FFF;
+        height: 7rem;
+    }
+
+    .top a {
+        color: #FFF;
+        font-size: 3rem;
+    }
+
+    .top a span {
+        color: #FFF;
+        font-size: 3rem;
+    }
+
+    .top span {
+        font-size: 3rem;
+    }
+    .order {
+        margin-top: 15.167rem;
+        /*background: #ddd;*/
+        padding: 0rem 2.5rem;
+        box-sizing: border-box;
+    }
+
+    .order .list {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.667rem;
+        align-items: center;
+    }
+
+    .order .list input {
+        flex: 1;
+        height: 6.333rem;
+        border: 0.083rem solid #ddd;
+        padding: 0rem 0.667rem;
+        border-radius: 0.833rem;
+        font-size: 2.333rem;
+    }
+    .order .list span{
+        font-size: 2.833rem;
+    }
+    .order .text {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.667rem;
+        font-size: 2.833rem;
+    }
+
+    .order .text textarea {
+        flex: 1;
+        height: 13.333rem;
+        vertical-align: middle;
+        border: 0.083rem solid #ddd;
+        padding: 0.667rem;
+        border-radius: 0.833rem;
+        font-size: 2.333rem;
+    }
+
+    .demoBox {
+        display: flex;
+        border-radius: 0.833rem;
+        align-items: center;
+        margin-bottom: 1.667rem;
+        font-size: 2.833rem;
+    }
+
+    .demoBox > input {
+        display: block;
+        border: 0;
+        border-radius: 0.833rem;
+        padding: 0 0.667rem;
+        height: 6.333rem;
+        flex: 1;
+        -webkit-flex: 1;
+        -moz-flex: 1;
+        font-size: 2.333rem;
+        border: 0.083rem solid #ddd;
+    }
+
+    .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5.833rem;
+    }
+    .btn div a {
+        display: block;
+        width: 22.917rem;
+        height: 7.333rem;
+        background: #912941;
+        text-align: center;
+        line-height: 7.333rem;
+        color: #fff;
+        font-size: 2.833rem;
+    }
 }

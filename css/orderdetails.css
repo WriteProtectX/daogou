@@ -1,154 +1,526 @@
-html{
-    font-size: 12px!important;
+html {
+    font-size: 12px !important;
     height: 100%;
-}
-body{
-    font-size: 1rem;
-    /*height: 100%;*/
-    padding-bottom: 1.667rem;
-}
-
-.top {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 1.25rem 1rem 0.833rem;
-    box-sizing: border-box;
-    background: #912941;
-    color: #FFF;
-}
-
-.top a {
-    color: #FFF;
-    font-size: 1.167rem;
-}
-.top a span{
-    color: #FFF;
-    font-size: 1.333rem;
-}
-.top span {
-    font-size: 1.167rem;
-}
-.buydetails{
-    padding-bottom: 2.5rem;
-    margin-top: 3.3rem;
     background: #f2f2f2;
-
-}
-.order{
-    box-sizing: border-box;
-    padding: 1rem 1.6rem;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.3rem;
-    background: #fff;
-    margin-bottom: 0.83rem;
-}
-.order span{
-    margin-bottom: 0.83rem;
 }
 
-.pro-list{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 0.83rem 1.6rem;
-    background: #fff;
-    margin-bottom: 0.5rem;
-}
-.pro-list img{
-    height: 6.66rem;
-    width: 6.66rem;
-    border:0.083rem solid #ddd;
-    margin-right: 0.80rem;
-}
-.pro-mes{
-    display: flex;
-    flex-direction: column;
-    font-size: 1.133rem;
-}
-.pro-mes .pirce{
-    color: red;
-    font-size: 1.5rem;
+
+@media screen and (max-width: 600px) {
+    /*一栏布局*/
+    body {
+        font-size: 1rem;
+        /*height: 100%;*/
+        padding-bottom: 1.667rem;
+    }
+
+    .top {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.25rem 1rem 0.833rem;
+        box-sizing: border-box;
+        background: #912941;
+        color: #FFF;
+    }
+
+    .top a {
+        color: #FFF;
+        font-size: 1.167rem;
+    }
+
+    .top a span {
+        color: #FFF;
+        font-size: 1.333rem;
+    }
+
+    .top span {
+        font-size: 1.167rem;
+    }
+
+    .buydetails {
+        padding-bottom: 2.5rem;
+        margin-top: 3.3rem;
+        background: #f2f2f2;
+
+    }
+
+    .order {
+        box-sizing: border-box;
+        padding: 1rem 1.6rem;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.3rem;
+        background: #fff;
+        margin-bottom: 0.83rem;
+    }
+
+    .order span {
+        margin-bottom: 0.83rem;
+    }
+
+    .pro-list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 0.83rem 1.6rem;
+        background: #fff;
+        margin-bottom: 0.5rem;
+    }
+
+    .pro-list img {
+        height: 6.66rem;
+        width: 6.66rem;
+        border: 0.083rem solid #ddd;
+        margin-right: 0.80rem;
+    }
+
+    .pro-mes {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.133rem;
+    }
+
+    .pro-mes .pirce {
+        color: red;
+        font-size: 1.5rem;
+    }
+
+    .pro-mes span {
+        margin-bottom: 0.1rem;
+    }
+
+    .list ul li {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.83rem 1.6rem;
+        align-items: center;
+        background: #fff;
+        border-bottom: 0.083rem solid #f2f2f2;
+        font-size: 1.3rem;
+    }
+
+    .twolist {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.833rem 0.833rem 0.833rem 1.667rem;
+        align-items: center;
+        background: #fff;
+        border-bottom: 0.083rem solid #f2f2f2;
+        font-size: 1.3rem;
+    }
+
+    .twolist .shifou {
+        /*width: 100%;*/
+        /*height: 3rem;*/
+        display: flex;
+
+    }
+
+    .twolist .shifou label {
+        display: flex;
+        align-items: center;
+        margin-right: 0.333rem;
+        font-size: 1.167rem;
+        /*height: 3rem;*/
+    }
+
+    .twolist .shifou label span {
+
+    }
+
+    .twolist .shifou label .radios {
+        /*margin-left:0.167rem;*/
+        width: 1.667rem;
+        height: 1.667rem;
+    }
+
+    .newpirce {
+        color: red;
+        font-size: 1.5rem;
+    }
+
+    .mes {
+        margin-top: 0.833rem;
+        padding: 0rem 0.833rem;
+        box-sizing: border-box;
+    }
+
+    .mes .transition {
+        padding: 0.667rem;
+        box-sizing: border-box;
+        width: 100%;
+        height: 8.333rem;
+        font-size: 1.333rem;
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.667rem;
+    }
+
+    .btn div a {
+        font-size: 1.333rem;
+        display: block;
+        width: 12.917rem;
+        height: 3.333rem;
+        background: #912941;
+        text-align: center;
+        line-height: 3.333rem;
+        color: #FFF;
+    }
 }
 
-.pro-mes span{
-    margin-bottom: 0.1rem;
-}
-.list ul li{
-    display: flex;
-    justify-content: space-between;
-    padding: 0.83rem 1.6rem;
-    align-items: center;
-    background: #fff;
-    border-bottom: 0.083rem solid #f2f2f2;
-    font-size: 1.3rem;
-}
-.twolist{
-    display: flex;
-    justify-content: space-between;
-    padding: 0.833rem 0.833rem 0.833rem 1.667rem;
-    align-items: center;
-    background: #fff;
-    border-bottom: 0.083rem solid #f2f2f2;
-    font-size: 1.3rem;
-}
-.twolist .shifou{
-    /*width: 100%;*/
-    /*height: 3rem;*/
-    display: flex;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /*二栏布局*/
+    body {
+        font-size: 1rem;
+        /*height: 100%;*/
+        padding-bottom: 1.667rem;
+        height: 100%;
+    }
+
+    .top {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.25rem 1rem 0.833rem;
+        box-sizing: border-box;
+        background: #912941;
+        color: #FFF;
+        height: 5rem;
+    }
+
+    .top a {
+        color: #FFF;
+        font-size: 2.167rem;
+    }
+
+    .top a span {
+        color: #FFF;
+        font-size: 2.167rem;
+    }
+
+    .top span {
+        font-size: 2.167rem;
+    }
+
+    .buydetails {
+        padding-bottom: 2.5rem;
+        margin-top: 5.3rem;
+        background: #f2f2f2;
+        height: 100%;
+    }
+
+    .order {
+        box-sizing: border-box;
+        padding: 1rem 1.6rem;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.8rem;
+        background: #fff;
+        margin-bottom: 0.83rem;
+    }
+
+    .order span {
+        margin-bottom: 0.83rem;
+    }
+
+    .pro-list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 0.83rem 1.6rem;
+        background: #fff;
+        margin-bottom: 0.5rem;
+    }
+
+    .pro-list img {
+        height: 10.66rem;
+        width: 10.66rem;
+        border: 0.083rem solid #ddd;
+        margin-right: 0.80rem;
+    }
+
+    .pro-mes {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.8rem;
+    }
+
+    .pro-mes .pirce {
+        color: red;
+        font-size: 2rem;
+    }
+
+    .pro-mes span {
+        margin-bottom: 0.1rem;
+    }
+
+    .list ul li {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.83rem 1.6rem;
+        align-items: center;
+        background: #fff;
+        border-bottom: 0.083rem solid #f2f2f2;
+        font-size: 1.8rem;
+    }
+
+    .twolist {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.833rem 0.833rem 0.833rem 1.667rem;
+        align-items: center;
+        background: #fff;
+        border-bottom: 0.083rem solid #f2f2f2;
+        font-size: 1.3rem;
+    }
+
+    .twolist .shifou {
+        /*width: 100%;*/
+        /*height: 3rem;*/
+        display: flex;
+
+    }
+
+    .twolist .shifou label {
+        display: flex;
+        align-items: center;
+        margin-right: 0.333rem;
+        font-size: 1.167rem;
+        /*height: 3rem;*/
+    }
+
+    .twolist .shifou label span {
+
+    }
+
+    .twolist .shifou label .radios {
+        /*margin-left:0.167rem;*/
+        width: 1.667rem;
+        height: 1.667rem;
+    }
+
+    .newpirce {
+        color: red;
+        font-size: 2.5rem;
+    }
+
+    .mes {
+        margin-top: 0.833rem;
+        padding: 0rem 0.833rem;
+        box-sizing: border-box;
+    }
+
+    .mes .transition {
+        padding: 0.667rem;
+        box-sizing: border-box;
+        width: 100%;
+        height: 10.333rem;
+        font-size: 1.83rem;
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.667rem;
+    }
+
+    .btn div a {
+        font-size: 1.333rem;
+        display: block;
+        width: 15.917rem;
+        height: 5.333rem;
+        background: #912941;
+        text-align: center;
+        line-height: 5.333rem;
+        color: #FFF;
+        font-size: 2.167rem;
+    }
 
 }
-.twolist .shifou label{
-    display: flex;
-    align-items: center;
-    margin-right:0.333rem;
-    font-size: 1.167rem;
-    /*height: 3rem;*/
-}
-.twolist .shifou label span{
 
-}
+@media screen and (min-width: 1024px) and (max-width: 1400px) {
+    /*三栏布局*/
+    body {
+        font-size: 1rem;
+        /*height: 100%;*/
+        padding-bottom: 1.667rem;
+        height: 100%;
+    }
 
-.twolist .shifou label .radios{
-    /*margin-left:0.167rem;*/
-    width: 1.667rem;
-    height: 1.667rem;
-}
-.newpirce{
-    color: red;
-    font-size: 1.5rem;
-}
-.mes{
-    margin-top: 0.833rem;
-    padding: 0rem 0.833rem;
-    box-sizing: border-box;
-}
-.mes .transition{
-    padding: 0.667rem;
-    box-sizing: border-box;
-    width: 100%;
-    height: 8.333rem;
-    font-size: 1.333rem;
-}
+    .top {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.25rem 1rem 0.833rem;
+        box-sizing: border-box;
+        background: #912941;
+        color: #FFF;
+        height: 6.667rem;
+    }
 
-.btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.667rem;
-}
-.btn div a{
-    font-size: 1.333rem;
-    display: block;
-    width: 12.917rem;
-    height:3.333rem;
-    background:#912941;
-    text-align: center;
-    line-height: 3.333rem;
-    color: #FFF;
+    .top a {
+        color: #FFF;
+        font-size: 2.8rem;
+    }
+
+    .top a span {
+        color: #FFF;
+        font-size: 2.8rem;
+    }
+
+    .top span {
+        font-size: 2.8rem;
+    }
+
+    .buydetails {
+        padding-bottom: 2.5rem;
+        margin-top: 7.3rem;
+        background: #f2f2f2;
+        height: 100%;
+    }
+
+    .order {
+        box-sizing: border-box;
+        padding: 1rem 1.6rem;
+        display: flex;
+        flex-direction: column;
+        font-size: 2.5rem;
+        background: #fff;
+        margin-bottom: 0.83rem;
+    }
+
+    .order span {
+        margin-bottom: 0.83rem;
+    }
+
+    .pro-list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 0.83rem 1.6rem;
+        background: #fff;
+        margin-bottom: 0.5rem;
+    }
+
+    .pro-list img {
+        height: 15.66rem;
+        width: 15.66rem;
+        border: 0.083rem solid #ddd;
+        margin-right: 0.80rem;
+    }
+
+    .pro-mes {
+        display: flex;
+        flex-direction: column;
+        font-size: 2.6rem;
+    }
+
+    .pro-mes .pirce {
+        color: red;
+        font-size: 3rem;
+    }
+
+    .pro-mes span {
+        margin-bottom: 0.1rem;
+    }
+
+    .list ul li {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.83rem 1.6rem;
+        align-items: center;
+        background: #fff;
+        border-bottom: 0.083rem solid #f2f2f2;
+        font-size: 2.8rem;
+    }
+
+    .twolist {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.833rem 0.833rem 0.833rem 1.667rem;
+        align-items: center;
+        background: #fff;
+        border-bottom: 0.083rem solid #f2f2f2;
+        font-size: 2.3rem;
+    }
+
+    .twolist .shifou {
+        /*width: 100%;*/
+        /*height: 3rem;*/
+        display: flex;
+
+    }
+
+    .twolist .shifou label {
+        display: flex;
+        align-items: center;
+        margin-right: 0.333rem;
+        font-size: 1.167rem;
+        /*height: 3rem;*/
+    }
+
+    .twolist .shifou label span {
+
+    }
+
+    .twolist .shifou label .radios {
+        /*margin-left:0.167rem;*/
+        width: 1.667rem;
+        height: 1.667rem;
+    }
+
+    .newpirce {
+        color: red;
+        font-size: 3.5rem;
+    }
+
+    .mes {
+        margin-top: 0.833rem;
+        padding: 0rem 0.833rem;
+        box-sizing: border-box;
+    }
+
+    .mes .transition {
+        padding: 0.667rem;
+        box-sizing: border-box;
+        width: 100%;
+        height: 20.333rem;
+        font-size: 2.6rem;
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.667rem;
+    }
+
+    .btn div a {
+        font-size: 1.333rem;
+        display: block;
+        width: 22.917rem;
+        height: 8.333rem;
+        background: #912941;
+        text-align: center;
+        line-height: 8.333rem;
+        color: #FFF;
+        font-size: 2.833rem;
+    }
 }

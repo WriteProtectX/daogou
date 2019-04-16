@@ -1,8 +1,7 @@
 body {
-    background: #f2f2f2;
+    background: #fff;
     font-size: 12px;
     height: 100%;
-    z-index: 9999999;
 }
 
 .top {
@@ -22,118 +21,239 @@ body {
     color: #FFF;
     font-size: 1.167rem;
 }
-.top a span{
+
+.top a span {
     color: #FFF;
     font-size: 1.333rem;
 }
+
 .top span {
     font-size: 1.167rem;
 }
 
-.index {
-    padding-top: 1.667rem;
-    margin: 0rem 1.667rem;
+@media screen and (max-width: 600px) {
+    /*1栏布局*/
+    .head {
+        height: 12.167rem;
+        width: 100%;
+        background: #912941;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 99;
+    }
+
+    .head .logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .head .logo img {
+        width: 9.667rem;
+        height: 6.167rem;
+        /*border-radius: 1.333rem;*/
+    }
+
+    .head .admin {
+        font-size: 1.9rem;
+        color: #ffffff;
+    }
+
+
+    .indexmain {
+        /*padding: 1.667rem;*/
+        margin-top: 1.667rem;
+    }
+
+    .indexmain ul li a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .indexmain ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .indexmain ul li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        height: 8.667rem;
+        background: #eee;
+        margin:0.083rem;
+        /*border-radius: 50%;*/
+    }
+
+    .indexmain ul li a {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .indexmain ul li a .iconfont{
+        font-size: 3rem;
+    }
+    .indexmain ul li a .size{
+        font-size: 1.167rem;
+        /*margin-top: 0.333rem;*/
+    }
+}
+@media screen and (min-width:768px) and (max-width:1024px){
+    /*2栏布局*/
+    .head {
+        height: 18.167rem;
+        width: 100%;
+        background: #912941;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 99;
+    }
+
+    .head .logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .head .logo img {
+        width: 14.667rem;
+        height: 10.167rem;
+    }
+
+    .head .admin {
+        font-size: 2.5rem;
+        color: #ffffff;
+    }
+
+
+    .indexmain {
+        /*padding: 1.667rem;*/
+        margin-top: 5.667rem;
+        padding-bottom: 5.667rem;
+    }
+
+    .indexmain ul li a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .indexmain ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .indexmain ul li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        height: 17.667rem;
+        background: #eee;
+        margin:0.083rem;
+        /*border-radius: 50%;*/
+    }
+
+    .indexmain ul li a {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .indexmain ul li a .iconfont{
+        font-size: 5.667rem;
+    }
+    .indexmain ul li a .size{
+        font-size: 1.667rem;
+    }
 }
 
-.head {
-    box-sizing: border-box;
-    padding: 1rem 0.833rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #f2f2f2;
-    font-size: 1.5rem;
+@media screen and (min-width:1024px) and (max-width:1400px){
+    /*3栏布局*/
+    .head {
+        height: 30.167rem;
+        width: 100%;
+        background: #912941;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 99;
+    }
+
+    .head .logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .head .logo img {
+        width: 20.667rem;
+        height: 14.167rem;
+    }
+
+    .head .admin {
+        margin-top: 0.833rem;
+        font-size: 3.5rem;
+        color: #ffffff;
+    }
+
+
+    .indexmain {
+        /*padding: 1.667rem;*/
+        margin-top: 4.667rem;
+        padding-bottom: 4.667rem;
+    }
+
+    .indexmain ul li a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .indexmain ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .indexmain ul li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        height: 24.667rem;
+        background: #eee;
+        margin: 0.083rem;
+        /*border-radius: 50%;*/
+    }
+
+    .indexmain ul li a {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .indexmain ul li a .iconfont{
+        font-size: 8.333rem;
+    }
+    .indexmain ul li a .size{
+        font-size: 2.5rem;
+    }
 }
 
-.head #admin p {
-    height: 2.5rem;
-    line-height: 2.5rem;
-    text-align: center;
-    padding: 0rem 0rem 0rem 0.833rem;
-}
 
 
-.logo img {
-    width: 6.667rem;
-    height: 4.167rem;
-}
 
-.icon-list {
-    margin-top: 2.333rem;
-
-}
-
-.icon-list ul li a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.icon-list ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.icon-list ul li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /*border: 0.083rem solid #000;*/
-    border-right: 0.083rem solid #f2f2f2;
-    border-bottom: 0.083rem solid #f2f2f2;
-    /*padding:2.5rem 1.25rem 2.5rem 0.833rem;*/
-    background: #FFF;
-    width: 7.667rem;
-    height: 7.667rem;
-}
-.icon-list ul li a{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.icon-list ul .none-list {
-    border-right: none;
-}
-
-.icon-list ul .none-item {
-    border-bottom: none;
-}
-
-.icon-list ul li .iconfont {
-    font-size: 3.5rem;
-    color: #912941;
-}
-
-#returns {
-    display: none;
-}
-
-#returns .sanjiao {
-    width: 0;
-    border: 0.667rem solid rgba(0, 0, 0, 0.5);
-    border-top-color: transparent;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    position: absolute;
-    right: 2.5rem;
-    top: 5.167rem;
-}
-
-.tuichu a{
-    display: block;
-    width: 7.167rem;
-    height: 3rem;
-    background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    right: 1.333rem;
-    top: 6.5rem;
-    text-align: center;
-    line-height: 3rem;
-    font-size: 1.333rem;
-    color: #FFF;
-    font-weight: normal;
-}
