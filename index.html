@@ -1,178 +1,123 @@
 <!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-    <title>会员服务信息系统</title>
-    <link rel="stylesheet" href="./components/common.css"/>
-    <link rel="stylesheet" href="css/index.css"/>
-    <link rel="stylesheet" href="./components/iconfont/iconfont.css"/>
-</head>
 
-<body>
-<div class="index">
-    <div class="head">
-        <div class="logo">
-        <img src="images/user_logo.jpeg" alt="">
-    </div>
-        <div class="admin">
-            <p>admin</p>
-        </div>
-    </div>
-    <div class="main">
-    </div>
-    <div class="indexmain">
-<!--        <ul>-->
-<!--            <li>-->
-<!--                <a href="#">-->
-<!--                    <span class="iconfont">&#xe605;</span>-->
-<!--                    <span class="size">订单查询修改</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="#">-->
-<!--                    <span class="iconfont">&#xe62a;</span>-->
-<!--                    <span class="size">添加历史客户</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li class="none-list">-->
-<!--                <a href="#">-->
-<!--                    <span class="iconfont">&#xe661;</span>-->
-<!--                    <span class="size">扫码绑定</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="#">-->
-<!--                    <span class="iconfont">&#xe6bf;</span>-->
-<!--                    <span class="size">礼品赠送</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="#">-->
-<!--                    <span class="iconfont">&#xe69e;</span>-->
-<!--                    <span class="size">修改腕表管家</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li class="none-list">-->
-<!--                <a href="#">-->
-<!--                    <span class="iconfont">&#xe608;</span>-->
-<!--                    <span class="size">一键制表</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li class="none-item">-->
-<!--                <a href="#">-->
-<!--                    <span class="iconfont">&#xe683;</span>-->
-<!--                    <span class="size">维修登记</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li class="none-item">-->
-<!--                <a href="#">-->
-<!--                    <span class="iconfont">&#xe618;</span>-->
-<!--                    <span class="size">维修记录</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li class="none-list none-item">-->
-<!--                <a href="#">-->
-<!--                    <span class="iconfont">&#xe610;</span>-->
-<!--                    <span class="size">活动登记</span>-->
-<!--                </a>-->
-<!--            </li>-->
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<title>会员服务信息系统</title>
+		<link rel="stylesheet" href="./components/common.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="./components/iconfont/iconfont.css" />
+	</head>
 
-<!--        </ul>-->
-    </div>
-</div>
-<script src="./js/jquery-3.2.1.min.js"></script>
-<script>
-    $(function () {
-        //退出登录
-        // $("#admin").on("click", function(e){
-        //     $("#returns").show();
-        //     alert("展示")
-        //
-        //     $(document).bind("click", function(){
-        //         $("#returns").hide();
-        //         alert("隐藏")
-        //     });
-        //
-        //     e.stopPropagation();
-        // });
-        // $("#returns").on("click", function(e){
-        //     e.stopPropagation();
-        //     alert(123)
-        // });
-        //
-        // /*阻止冒泡*/
-        // function stopPropagation(e) {
-        //     console.log(e)
-        //     e = e || event;
-        //     if (e.stopPropagation)
-        //         e.stopPropagation();//停止冒泡  非ie
-        //     else
-        //         e.cancelBubble = true;//停止冒泡 ie
-        // }
-        //
-        //加入HTML
-        let html = ''
-            html = ' <ul>\n' +
-                '            <li>\n' +
-                '                <a href="./order.html">\n' +
-                '                    <span class="iconfont">&#xe605;</span>\n' +
-                '                    <span class="size">订单查询修改</span>\n' +
-                '                </a>\n' +
-                '            </li>\n' +
-                '            <li>\n' +
-                '                <a href="./housekeeper.html">\n' +
-                '                    <span class="iconfont">&#xe62a;</span>\n' +
-                '                    <span class="size">添加历史客户</span>\n' +
-                '                </a>\n' +
-                '            </li>\n' +
-                '            <li class="none-list">\n' +
-                '                <a href="./Scan.html">\n' +
-                '                    <span class="iconfont">&#xe661;</span>\n' +
-                '                    <span class="size">扫码绑定</span>\n' +
-                '                </a>\n' +
-                '            </li>\n' +
-                '            <li>\n' +
-                '                <a href="./gift.html">\n' +
-                '                    <span class="iconfont">&#xe6bf;</span>\n' +
-                '                    <span class="size">礼品赠送</span>\n' +
-                '                </a>\n' +
-                '            </li>\n' +
-                '            <li>\n' +
-                '                <a href="./guidelist.html">\n' +
-                '                    <span class="iconfont">&#xe69e;</span>\n' +
-                '                    <span class="size">修改腕表管家</span>\n' +
-                '                </a>\n' +
-                '            </li>\n' +
-                '            <li class="none-list">\n' +
-                '                <a href="#">\n' +
-                '                    <span class="iconfont">&#xe608;</span>\n' +
-                '                    <span class="size">一键制表</span>\n' +
-                '                </a>\n' +
-                '            </li>\n' +
-                '            <li class="none-item">\n' +
-                '                <a href="./servicing.html">\n' +
-                '                    <span class="iconfont">&#xe683;</span>\n' +
-                '                    <span class="size">维修登记</span>\n' +
-                '                </a>\n' +
-                '            </li>\n' +
-                '            <li class="none-item">\n' +
-                '                <a href="./keepservicing.html">\n' +
-                '                    <span class="iconfont">&#xe618;</span>\n' +
-                '                    <span class="size">维修记录</span>\n' +
-                '                </a>\n' +
-                '            </li>\n' +
-                '            <li class="none-list none-item">\n' +
-                '                <a href="./activity.html">\n' +
-                '                    <span class="iconfont">&#xe610;</span>\n' +
-                '                    <span class="size">活动登记</span>\n' +
-                '                </a>\n' +
-                '            </li>\n' +
-                '\n' +
-                '        </ul>'
-            $('.indexmain').append(html)
+	<body>
+		<div class="index">
+			<div class="head">
+				<div class="logo">
+					<img src="images/user_logo.jpeg" alt="">
+				</div>
+				<div class="admin">
+					<p>admin</p>
+				</div>
+			</div>
+			<div class="main">
+			</div>
+			<div class="indexmain">
+				<ul>
+					<li>
+						<a href="./order.html">
+							<span class="iconfont">&#xe605;</span>
+							<span class="size">订单查询修改</span>
+						</a>
+					</li>
+					<li>
+						<a href="./housekeeper.html">
+							<span class="iconfont">&#xe62a;</span>
+							<span class="size">添加历史客户</span>
+						</a>
+					</li>
+					<li class="none-list">
+						<a href="./Scan.html">
+							<span class="iconfont">&#xe661;</span>
+							<span class="size">扫码绑定</span>
+						</a>
+					</li>
+					<li>
+						<a href="./gift.html">
+							<span class="iconfont">&#xe6bf;</span>
+							<span class="size">礼品赠送</span>
+						</a>
+					</li>
+					<li>
+						<a href="./guidelist.html">
+							<span class="iconfont">&#xe69e;</span>
+							<span class="size">修改腕表管家</span>
+						</a>
+					</li>
+					<li class="none-list">
+						<a href="#">
+							<span class="iconfont">&#xe608;</span>
+							<span class="size">一键制表</span>
+						</a>
+					</li>
+					<li class="none-item">
+						<a href="./servicing.html">
+							<span class="iconfont">&#xe683;</span>
+							<span class="size">维修登记</span>
+						</a>
+					</li>
+					<li class="none-item">
+						<a href="./keepservicing.html">
+							<span class="iconfont">&#xe618;</span>
+							<span class="size">维修记录</span>
+						</a>
+					</li>
+					<li class="none-list none-item">
+						<a href="./activity.html">
+							<span class="iconfont">&#xe610;</span>
+							<span class="size">活动登记</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script src="./js/jquery-3.2.1.min.js"></script>
+		<script>
+			$(function() {
+				//退出登录
+				// $("#admin").on("click", function(e){
+				//     $("#returns").show();
+				//     alert("展示")
+				//
+				//     $(document).bind("click", function(){
+				//         $("#returns").hide();
+				//         alert("隐藏")
+				//     });
+				//
+				//     e.stopPropagation();
+				// });
+				// $("#returns").on("click", function(e){
+				//     e.stopPropagation();
+				//     alert(123)
+				// });
+				//
+				// /*阻止冒泡*/
+				// function stopPropagation(e) {
+				//     console.log(e)
+				//     e = e || event;
+				//     if (e.stopPropagation)
+				//         e.stopPropagation();//停止冒泡  非ie
+				//     else
+				//         e.cancelBubble = true;//停止冒泡 ie
+				// }
+				//
+				//加入HTML
+				let html = ''
+				html = '
+				'
+				$('.indexmain').append(html)
+			})
+		</script>
+	</body>
 
-    })
-</script>
-</body>
 </html>
