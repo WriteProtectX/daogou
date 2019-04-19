@@ -179,7 +179,7 @@ body {
     }
 }
 
-@media screen and (min-width:1024px) and (max-width:1400px){
+@media screen and (min-width:600px) and (max-width:1800px){
     /*3栏布局*/
     .head {
         height: 30.167rem;
@@ -253,7 +253,80 @@ body {
         font-size: 2.5rem;
     }
 }
+@media screen and (min-width:1024px) and (max-width:1800px){
+    /*3栏布局*/
+    .head {
+        height: 30.167rem;
+        width: 100%;
+        background: #912941;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 99;
+    }
 
+    .head .logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .head .logo img {
+        width: 20.667rem;
+        height: 14.167rem;
+    }
+
+    .head .admin {
+        margin-top: 0.833rem;
+        font-size: 3.5rem;
+        color: #ffffff;
+    }
+
+
+    .indexmain {
+        /*padding: 1.667rem;*/
+        margin-top: 4.667rem;
+        padding-bottom: 4.667rem;
+    }
+
+    .indexmain ul li a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .indexmain ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .indexmain ul li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        height: 24.667rem;
+        background: #eee;
+        margin: 0.083rem;
+        /*border-radius: 50%;*/
+    }
+
+    .indexmain ul li a {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .indexmain ul li a .iconfont{
+        font-size: 8.333rem;
+    }
+    .indexmain ul li a .size{
+        font-size: 2.5rem;
+    }
+}
 
 
 
