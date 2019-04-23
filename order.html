@@ -83,6 +83,23 @@
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script>
     $(function () {
+        
+        $(".screen").on("click",function (e) {
+            $(".mainback").show()
+            $(".screenmain").show()
+            document.documentElement.style.overflow = "hidden";
+        })
+        $(".mainback").on("click",function (e) {
+            $(".mainback").hide()
+            $(".screenmain").hide()
+            document.documentElement.style.overflow = "scroll";
+        })
+
+        $('.itemprolist').find('span').click(function(){
+            var index = $(this).index();
+            $(this).addClass('on').siblings().removeClass('on');
+        })
+
         // 加入HTML
         // let html = ''
         // html = '

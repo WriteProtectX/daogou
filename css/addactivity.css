@@ -1,6 +1,175 @@
 html {
     font-size: 12px;
 }
+body {
+    background: #fff;
+    /*padding-top: 7.5rem;*/
+}
+
+.top {
+    width: 100%;
+    /*position: fixed;*/
+    /*top: 0;*/
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    -khtml-justify-content: space-between;
+    justify-content: space-between;
+    padding: 0.833rem 1.25rem 0.833rem 0.833rem;
+    box-sizing: border-box;
+    background: #912941;
+    color: #FFF;
+}
+
+.top a {
+    color: #FFF;
+    font-size: 1.167rem;
+}
+
+.top a span {
+    color: #FFF;
+    font-size: 1.333rem;
+}
+
+.top span {
+    font-size: 1.167rem;
+}
+
+.order {
+    margin-top: 4.167rem;
+    /*background: #ddd;*/
+    padding: 0rem 2.5rem;
+    box-sizing: border-box;
+}
+
+.order .list {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    -khtml-justify-content: center;
+    justify-content: center;
+    margin-bottom: 1.667rem;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+}
+
+.order .list input {
+    flex: 1;
+    -webkit-flex: 1;
+    height: 3.333rem;
+    border: 0.083rem solid #ddd;
+    padding: 0rem 0.667rem;
+    border-radius: 0.833rem;
+}
+
+.order .text {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    -khtml-justify-content: center;
+    justify-content: center;
+    margin-bottom: 1.667rem;
+}
+
+.order .text textarea {
+    flex: 1;
+    -webkit-flex: 1;
+    height: 13.333rem;
+    vertical-align: middle;
+    border: 0.083rem solid #ddd;
+    padding: 0.667rem;
+    border-radius: 0.833rem;
+}
+
+.demoBox {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    border-radius: 0.833rem;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    margin-bottom: 1.667rem;
+}
+
+.demoBox > input {
+    display: block;
+    border: 0;
+    border-radius: 0.833rem;
+    padding: 0 0.667rem;
+    height: 3.333rem;
+    flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    font-size: 1.167rem;
+    border: 0.083rem solid #ddd;
+}
+
+.btn {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    -khtml-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    margin-top: 5.833rem;
+}
+
+.btn div a {
+    font-size: 1.333rem;
+    display: block;
+    width: 12.917rem;
+    height: 3.333rem;
+    background: #912941;
+    text-align: center;
+    line-height: 3.333rem;
+    color: #fff;
+}
+
 
 @media screen and (max-width: 600px) {
     /*一栏布局*/
@@ -80,6 +249,7 @@ html {
 
     .order .list input {
         flex: 1;
+        -webkit-flex: 1;
         height: 3.333rem;
         border: 0.083rem solid #ddd;
         padding: 0rem 0.667rem;
@@ -103,6 +273,7 @@ html {
 
     .order .text textarea {
         flex: 1;
+        -webkit-flex: 1;
         height: 13.333rem;
         vertical-align: middle;
         border: 0.083rem solid #ddd;
@@ -247,6 +418,7 @@ html {
 
     .order .list input {
         flex: 1;
+        -webkit-flex: 1;
         height: 4.333rem;
         border: 0.083rem solid #ddd;
         padding: 0rem 0.667rem;
@@ -276,6 +448,7 @@ html {
 
     .order .text textarea {
         flex: 1;
+        -webkit-flex: 1;
         height: 13.333rem;
         vertical-align: middle;
         border: 0.083rem solid #ddd;
@@ -421,6 +594,7 @@ html {
 
     .order .list input {
         flex: 1;
+        -webkit-flex: 1;
         height: 6.333rem;
         border: 0.083rem solid #ddd;
         padding: 0rem 0.667rem;
@@ -450,6 +624,7 @@ html {
 
     .order .text textarea {
         flex: 1;
+        -webkit-flex: 1;
         height: 13.333rem;
         vertical-align: middle;
         border: 0.083rem solid #ddd;

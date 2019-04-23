@@ -2,7 +2,282 @@ html {
     height: 100%;
     font-size: 12px;
 }
+body {
+    background: #f2f2f2;
+    height: 100%;
+    padding-top: 7.333rem;
+}
 
+.top {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    -khtml-display: flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    -khtml-justify-content: space-between;
+    justify-content: space-between;
+    padding: 1rem 1.25rem 1rem 0.833rem;
+    box-sizing: border-box;
+    background: #912941;
+    color: #FFF;
+}
+
+.top a {
+    color: #FFF;
+    font-size: 1.167rem;
+}
+
+.top a span {
+    color: #FFF;
+    font-size: 1.333rem;
+}
+
+.top span {
+    font-size: 1.167rem;
+}
+
+.search {
+    width: 100%;
+    background: #FFF;
+    position: fixed;
+    top: 3.333rem;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    -khtml-display: flex;
+    display: flex;
+    font-size: 1.167rem;
+    padding: 0.5rem 0.833rem 0.5rem 0.833rem;
+    box-sizing: border-box;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    -khtml-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    border-bottom: 0.083rem solid #ddd;
+}
+
+.screen a {
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    -khtml-display: flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    -khtml-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    color: #912941;
+}
+
+.searchkuang {
+    /*margin-right: 3.167rem;*/
+    width: 100%;
+    margin: 0rem 1.833rem;
+}
+
+.search .iconfont {
+    font-size: 1.667rem;
+}
+
+.searchkuang from {
+    /*padding: 0rem 3.167rem 0rem 0rem;*/
+    width: 100%;
+    flex: 1;
+    -webkit-flex: 1;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    background: #f2f2f2;
+    border-radius: 0.417rem;
+    overflow: hidden;
+}
+
+.searchkuang from span {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+
+}
+
+.searchkuang from input {
+    height: 2.5rem;
+    flex: 1;
+    -webkit-flex: 1;
+    width: 100%;
+    background: #f2f2f2;
+    font-size: 1.167rem;
+}
+
+.searchsize {
+    padding: 0.333rem 0.5rem;
+    border: 0.083rem solid #ddd;
+    width: 3.667rem;
+}
+
+.order {
+    background: #f2f2f2;
+}
+
+.pro-list {
+    background: #FFF;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    -khtml-justify-content: space-between;
+    justify-content: space-between;
+    padding: 0.83rem 0.83rem;
+    box-sizing: border-box;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    border-bottom: 0.083rem solid #ddd;
+    border-top: 0.083rem solid #ddd;
+    margin-bottom: 0.63rem;
+}
+
+.mes-item {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+}
+
+.pro-list img {
+    width: 6.66rem;
+    height: 6.66rem;
+    border: 0.083rem solid #ddd;
+    margin-right: 1rem;
+}
+
+.pro-list .item-list {
+    /*width: 16.66rem;*/
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    -khtml-flex-direction: column;
+    flex-direction: column;
+}
+
+.pro-list .item-list span {
+    margin-bottom: 1rem;
+    font-size: 1.667rem;
+}
+
+.pro-list .item-list p {
+    font-size: 1.333rem;
+    color: #999;
+}
+
+.title {
+    /*width: 14.66rem;*/
+    /*white-space:nowrap;*/
+    /*overflow:hidden;*/
+    /*text-overflow:ellipsis;*/
+}
+
+.allbtn {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    -khtml-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+}
+
+.btn {
+    border: 0.083rem solid #912941;
+    padding: 0.41rem 0.83rem;
+    background: #912941;
+    margin-bottom: 0.833rem;
+}
+
+.btn a {
+    display: block;
+    color: #FFF;
+}
+
+.btn2 {
+    border: 0.083rem solid #912941;
+    padding: 0.41rem 0.83rem;
+    background: #912941;
+}
+
+.btn2 a {
+    display: block;
+    color: #FFF;
+}
 
 @media screen and (max-width: 600px) {
     /*一栏布局*/
@@ -119,6 +394,7 @@ html {
         /*padding: 0rem 3.167rem 0rem 0rem;*/
         width: 100%;
         flex: 1;
+        -webkit-flex: 1;
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flex;
@@ -144,6 +420,7 @@ html {
     .searchkuang from input {
         height: 2.5rem;
         flex: 1;
+        -webkit-flex: 1;
         width: 100%;
         background: #f2f2f2;
         font-size: 1.167rem;
@@ -404,6 +681,7 @@ html {
         /*padding: 0rem 3.167rem 0rem 0rem;*/
         width: 100%;
         flex: 1;
+        -webkit-flex: 1;
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flex;
@@ -429,6 +707,7 @@ html {
     .searchkuang from input {
         height: 3.8rem;
         flex: 1;
+        -webkit-flex: 1;
         width: 100%;
         background: #f2f2f2;
         font-size: 1.77rem;
@@ -717,6 +996,7 @@ html {
         /*padding: 0rem 3.167rem 0rem 0rem;*/
         width: 100%;
         flex: 1;
+        -webkit-flex: 1;
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flex;
@@ -742,6 +1022,7 @@ html {
     .searchkuang from input {
         height: 6rem;
         flex: 1;
+        -webkit-flex: 1;
         width: 100%;
         background: #f2f2f2;
         font-size: 2.5rem;

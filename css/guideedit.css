@@ -3,7 +3,138 @@ html {
 
     background: #FFF;
 }
+body {
+    background: #fff;
+    height: 100%;
+    /*padding-top: 7.333rem;*/
+}
 
+.top {
+    width: 100%;
+    /*position: fixed;*/
+    /*top: 0;*/
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    -khtml-justify-content: space-between;
+    justify-content: space-between;
+    padding: 1rem 1.25rem 1rem 0.833rem;
+    box-sizing: border-box;
+    background: #912941;
+    color: #FFF;
+}
+
+.top a {
+    color: #FFF;
+    font-size: 1.167rem;
+}
+
+.top a span {
+    color: #FFF;
+    font-size: 1.333rem;
+}
+
+.top span {
+    font-size: 1.167rem;
+}
+
+.order {
+    /*background: #f2f2f2;*/
+    padding: 0rem 1.667rem;
+    margin-top: 2.5rem;
+
+}
+
+.order ul li {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    -khtml-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.667rem;
+}
+
+.order ul li input {
+    flex: 1;
+    -webkit-flex: 1;
+    width: 100%;
+    padding: 0.5rem 0.667rem;
+    font-size: 1.333rem;
+    color: #666;
+    margin-left: 0.833rem;
+    border: 0.083rem solid #ddd;
+    border-radius: 0.833rem;
+}
+
+.order ul li select {
+    margin-left: 0.833rem;
+    width: 100%;
+    flex: 1;
+    -webkit-flex: 1;
+    text-align: center;
+    padding: 0.5rem 0.667rem;
+    border: 0.083rem solid #ddd;
+    background: #FFF;
+    border-radius: 0.833rem;
+    color: #999;
+}
+
+.btn {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    -khtml-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    margin-top: 5.833rem;
+}
+
+.btn div a {
+    font-size: 1.333rem;
+    display: block;
+    width: 12.917rem;
+    height: 3.333rem;
+    background: #912941;
+    text-align: center;
+    line-height: 3.333rem;
+    color: #fff;
+}
 
 @media screen and (max-width: 600px) {
     /*一栏布局*/
@@ -85,6 +216,7 @@ html {
 
     .order ul li input {
         flex: 1;
+        -webkit-flex: 1;
         width: 100%;
         padding: 0.5rem 0.667rem;
         font-size: 1.333rem;
@@ -98,6 +230,7 @@ html {
         margin-left: 0.833rem;
         width: 100%;
         flex: 1;
+        -webkit-flex: 1;
         text-align: center;
         padding: 0.5rem 0.667rem;
         border: 0.083rem solid #ddd;
@@ -221,6 +354,7 @@ html {
 
     .order ul li input {
         flex: 1;
+        -webkit-flex: 1;
         width: 100%;
         padding: 0.5rem 0.667rem;
         font-size: 1.5rem;
@@ -236,6 +370,7 @@ html {
         width: 100%;
         height: 4.667rem;
         flex: 1;
+        -webkit-flex: 1;
         text-align: center;
         padding: 0.5rem 0.667rem;
         border: 0.083rem solid #ddd;
@@ -358,6 +493,7 @@ html {
 
     .order ul li input {
         flex: 1;
+        -webkit-flex: 1;
         width: 100%;
         padding: 0.5rem 0.667rem;
         font-size: 2.3rem;
@@ -373,6 +509,7 @@ html {
         width: 100%;
         height: 7rem;
         flex: 1;
+        -webkit-flex: 1;
         text-align: center;
         padding: 0.5rem 0.667rem;
         border: 0.083rem solid #ddd;

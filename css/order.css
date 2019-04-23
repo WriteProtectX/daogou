@@ -2,7 +2,385 @@ html {
     height: 100%;
     font-size: 12px;
 }
+body {
+    background: #f2f2f2;
+    height: 100%;
+    padding-top: 7.333rem;
+    z-index: 1;
+}
 
+.top {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    -khtml-justify-content: space-between;
+    justify-content: space-between;
+    padding: 1rem 1.25rem 1rem 0.833rem;
+    box-sizing: border-box;
+    background: #912941;
+    color: #FFF;
+}
+
+.top a {
+    color: #FFF;
+    font-size: 1.167rem;
+}
+
+.top a span {
+    color: #FFF;
+    font-size: 1.333rem;
+}
+
+.top span {
+    font-size: 1.167rem;
+}
+
+.mainback {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.screenmain {
+    display: none;
+    box-sizing: border-box;
+    width: 82%;
+    background: #FFF;
+    z-index: 99;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding-top: 40px;
+}
+
+.screenmain p {
+    margin-left: 22px;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.screenmain .textinput {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    -khtml-justify-content: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.screenmain .textinput span {
+    margin: 0px 10px;
+}
+
+.screenmain .textinput input {
+    background: #f2f2f2;
+    width: 28%;
+    height: 30px;
+    border-radius: 16px;
+    padding: 0px 12px;
+    text-align: center;
+    line-height: 30px;
+    color: #666;
+}
+
+.itemprolist {
+    margin: 0px 20px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    -khtml-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-flex-flow: wrap;
+}
+
+.screenbtn{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    -khtml-justify-content: center;
+    justify-content: center;
+}
+.screenbtn .clear{
+    width: 50%;
+    background: #F0F2F5;
+    height: 3.4rem;
+    line-height: 3.4rem;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.screenbtn .sure{
+    width: 50%;
+    margin-right: 5.666rem;
+    height: 3.4rem;
+    line-height: 3.4rem;
+    background: #912941;
+    text-align: center;
+    color: #FFF;
+    font-size: 1.4rem;
+}
+.itemprolist span {
+    width: 28%;
+    height: 30px;
+    border-radius: 16px;
+    margin-bottom: 12px;
+    text-align: center;
+    line-height: 30px;
+    color: #666;
+    background: #f2f2f2;
+}
+
+.itemprolist .on {
+    background: rgba(145, 41, 65, 1);
+    color: #fff;
+}
+
+.search {
+    width: 100%;
+    background: #FFF;
+    position: fixed;
+    top: 3.333rem;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    font-size: 1.167rem;
+    padding: 0rem 0.833rem 0rem 0.833rem;
+    box-sizing: border-box;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    -khtml-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    border-bottom: 0.083rem solid #ddd;
+}
+
+.screen a {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    -khtml-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    color: #912941;
+    width: 2.5rem;
+}
+
+.searchkuang {
+    /*margin-right: 3.167rem;*/
+    width: 100%;
+    margin: 0rem 0.833rem;
+}
+
+.search .iconfont {
+    font-size: 1.667rem;
+}
+
+.searchkuang from {
+    /*padding: 0rem 3.167rem 0rem 0rem;*/
+    width: 100%;
+    flex: 1;
+    -webkit-flex: 1;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    background: #f2f2f2;
+    border-radius: 0.417rem;
+    overflow: hidden;
+}
+
+.searchkuang from span {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+
+}
+
+.searchkuang from input {
+    height: 2.5rem;
+    flex: 1;
+    -webkit-flex: 1;
+    width: 100%;
+    background: #f2f2f2;
+    font-size: 1.167rem;
+}
+
+.searchsize {
+    padding: 0.333rem 0.5rem;
+    border: 0.083rem solid #ddd;
+    width: 3.667rem;
+}
+
+.searchsize a {
+    width: 100%;
+    height: 100%;
+}
+
+.order {
+    background: #f2f2f2;
+}
+
+.pro-list {
+    background: #FFF;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    -khtml-justify-content: space-between;
+    justify-content: space-between;
+    padding: 0.83rem 0.83rem;
+    box-sizing: border-box;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    border-bottom: 0.083rem solid #ddd;
+    border-top: 0.083rem solid #ddd;
+    margin-bottom: 0.63rem;
+}
+
+.pro-list img {
+    width: 6.66rem;
+    height: 6.66rem;
+    border: 0.083rem solid #ddd;
+    margin-right: 0.333rem;
+}
+
+.pro-list .item-list {
+    width: 56%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    -khtml-flex-direction: column;
+    flex-direction: column;
+}
+
+.pro-list .item-list span {
+    margin-bottom: 0.1rem;
+    font-size: 1.133rem;
+}
+
+.pro-list .item-list p {
+    font-size: 1.133rem;
+}
+
+.title {
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn {
+    border: 0.083rem solid #912941;
+    padding: 0.41rem 0.83rem;
+    background: #912941;
+    /*width: 4.167rem;*/
+}
+
+.btn a {
+    display: block;
+    color: #FFF;
+    width: 100%;
+    text-align: center;
+}
 
 @media screen and (max-width: 600px) {
     /*一栏布局*/
@@ -28,7 +406,7 @@ html {
         -o-align-items: center;
         -khtml-align-items: center;
         align-items: center;
-         -webkit-justify-content: space-between;
+        -webkit-justify-content: space-between;
         -moz-justify-content: space-between;
         -ms-justify-content: space-between;
         -o-justify-content: space-between;
@@ -61,10 +439,13 @@ html {
         background: rgba(0, 0, 0, 0.5);
         top: 0;
         left: 0;
+        display: none;
     }
 
     .screenmain {
-        width: 86%;
+        display: none;
+        box-sizing: border-box;
+        width: 82%;
         background: #FFF;
         z-index: 99;
         position: fixed;
@@ -75,7 +456,7 @@ html {
     }
 
     .screenmain p {
-        margin-left: 58px;
+        margin-left: 22px;
         margin-bottom: 8px;
         font-size: 16px;
     }
@@ -129,16 +510,55 @@ html {
         -o-align-items: center;
         -khtml-align-items: center;
         align-items: center;
-         -webkit-justify-content: space-between;
+        -webkit-justify-content: space-between;
         -moz-justify-content: space-between;
         -ms-justify-content: space-between;
         -o-justify-content: space-between;
         -khtml-justify-content: space-between;
         justify-content: space-between;
-         -webkit-flex-flow: wrap;
+        -webkit-flex-flow: wrap;
     }
 
-
+    .screenbtn{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
+        justify-content: center;
+    }
+    .screenbtn .clear{
+        width: 50%;
+        background: #F0F2F5;
+        height: 3.4rem;
+        line-height: 3.4rem;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+    .screenbtn .sure{
+        width: 50%;
+        margin-right: 5.666rem;
+        height: 3.4rem;
+        line-height: 3.4rem;
+        background: #912941;
+        text-align: center;
+        color: #FFF;
+        font-size: 1.4rem;
+    }
     .itemprolist span {
         width: 28%;
         height: 30px;
@@ -149,10 +569,12 @@ html {
         color: #666;
         background: #f2f2f2;
     }
-    .itemprolist .on{
-        background:rgba(145,41,65,0.6);
+
+    .itemprolist .on {
+        background: rgba(145, 41, 65, 1);
         color: #fff;
     }
+
     .search {
         width: 100%;
         background: #FFF;
@@ -166,7 +588,7 @@ html {
         font-size: 1.167rem;
         padding: 0rem 0.833rem 0rem 0.833rem;
         box-sizing: border-box;
-         -webkit-justify-content: space-between;
+        -webkit-justify-content: space-between;
         -moz-justify-content: space-between;
         -ms-justify-content: space-between;
         -o-justify-content: space-between;
@@ -187,7 +609,7 @@ html {
         display: -ms-flex;
         display: -o-flex;
         display: flex;
-       -webkit-flex-direction: column;
+        -webkit-flex-direction: column;
         -moz-flex-direction: column;
         -ms-flex-direction: column;
         -o-flex-direction: column;
@@ -217,6 +639,7 @@ html {
         /*padding: 0rem 3.167rem 0rem 0rem;*/
         width: 100%;
         flex: 1;
+        -webkit-flex: 1;
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flex;
@@ -242,6 +665,7 @@ html {
     .searchkuang from input {
         height: 2.5rem;
         flex: 1;
+        -webkit-flex: 1;
         width: 100%;
         background: #f2f2f2;
         font-size: 1.167rem;
@@ -269,7 +693,7 @@ html {
         display: -ms-flex;
         display: -o-flex;
         display: flex;
-         -webkit-justify-content: space-between;
+        -webkit-justify-content: space-between;
         -moz-justify-content: space-between;
         -ms-justify-content: space-between;
         -o-justify-content: space-between;
@@ -302,7 +726,7 @@ html {
         display: -ms-flex;
         display: -o-flex;
         display: flex;
-       -webkit-flex-direction: column;
+        -webkit-flex-direction: column;
         -moz-flex-direction: column;
         -ms-flex-direction: column;
         -o-flex-direction: column;
@@ -348,9 +772,11 @@ html {
         height: 100%;
         padding-top: 10.93rem;
     }
-    .screenmain{
+
+    .screenmain {
         display: none;
     }
+
     .top {
         width: 100%;
         position: fixed;
@@ -366,7 +792,7 @@ html {
         -o-align-items: center;
         -khtml-align-items: center;
         align-items: center;
-         -webkit-justify-content: space-between;
+        -webkit-justify-content: space-between;
         -moz-justify-content: space-between;
         -ms-justify-content: space-between;
         -o-justify-content: space-between;
@@ -406,7 +832,7 @@ html {
         font-size: 1.167rem;
         padding: 0rem 0.833rem 0rem 0.833rem;
         box-sizing: border-box;
-         -webkit-justify-content: space-between;
+        -webkit-justify-content: space-between;
         -moz-justify-content: space-between;
         -ms-justify-content: space-between;
         -o-justify-content: space-between;
@@ -428,7 +854,7 @@ html {
         display: -ms-flex;
         display: -o-flex;
         display: flex;
-       -webkit-flex-direction: column;
+        -webkit-flex-direction: column;
         -moz-flex-direction: column;
         -ms-flex-direction: column;
         -o-flex-direction: column;
@@ -465,6 +891,7 @@ html {
         /*padding: 0rem 3.167rem 0rem 0rem;*/
         width: 100%;
         flex: 1;
+        -webkit-flex: 1;
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flex;
@@ -490,6 +917,7 @@ html {
     .searchkuang from input {
         height: 3.8rem;
         flex: 1;
+        -webkit-flex: 1;
         width: 100%;
         background: #f2f2f2;
         font-size: 1.77rem;
@@ -514,6 +942,153 @@ html {
         height: 100%;
     }
 
+
+    .mainback {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        top: 0;
+        left: 0;
+        display: none;
+    }
+
+    .screenmain {
+        display: none;
+        box-sizing: border-box;
+        width: 82%;
+        background: #FFF;
+        z-index: 99;
+        position: fixed;
+        height: 100%;
+        top: 0;
+        right: 0;
+        padding-top: 40px;
+    }
+
+    .screenmain p {
+        margin-left: 22px;
+        margin-bottom: 24px;
+        font-size: 20px;
+    }
+
+    .screenmain .textinput {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .screenmain .textinput span {
+        margin: 0px 10px;
+    }
+
+    .screenmain .textinput input {
+        background: #f2f2f2;
+        width: 35%;
+        height: 56px;
+        border-radius: 33px;
+        padding: 0px 14px;
+        text-align: center;
+        line-height: 56px;
+        color: #666;
+        font-size: 20px;
+    }
+
+    .itemprolist {
+        margin: 0px 46px;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
+        align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
+        justify-content: space-between;
+        -webkit-flex-flow: wrap;
+    }
+
+    .screenbtn{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
+        justify-content: center;
+    }
+    .screenbtn .clear{
+        background: #F0F2F5;
+        width: 50%;
+        height: 5.4rem;
+        line-height: 5.4rem;
+        text-align: center;
+        font-size: 2rem;
+    }
+    .screenbtn .sure{
+        width: 50%;
+        margin-right: 10.666rem;
+        height: 5.4rem;
+        line-height: 5.4rem;
+        background: #912941;
+        text-align: center;
+        color: #FFF;
+        font-size: 2rem;
+    }
+    .itemprolist span {
+        width: 31%;
+        height: 56px;
+        border-radius: 34px;
+        margin-bottom: 30px;
+        text-align: center;
+        line-height: 56px;
+        color: #666;
+        background: #f2f2f2;
+        font-size: 20px;
+    }
+
+    .itemprolist .on {
+        background: rgba(145, 41, 65, 1);
+        color: #fff;
+    }
+
+
     .order {
         background: #f2f2f2;
     }
@@ -525,7 +1100,7 @@ html {
         display: -ms-flex;
         display: -o-flex;
         display: flex;
-         -webkit-justify-content: space-between;
+        -webkit-justify-content: space-between;
         -moz-justify-content: space-between;
         -ms-justify-content: space-between;
         -o-justify-content: space-between;
@@ -558,7 +1133,7 @@ html {
         display: -ms-flex;
         display: -o-flex;
         display: flex;
-       -webkit-flex-direction: column;
+        -webkit-flex-direction: column;
         -moz-flex-direction: column;
         -ms-flex-direction: column;
         -o-flex-direction: column;
@@ -624,7 +1199,7 @@ html {
         -o-align-items: center;
         -khtml-align-items: center;
         align-items: center;
-         -webkit-justify-content: space-between;
+        -webkit-justify-content: space-between;
         -moz-justify-content: space-between;
         -ms-justify-content: space-between;
         -o-justify-content: space-between;
@@ -664,7 +1239,7 @@ html {
         font-size: 1.167rem;
         padding: 0rem 0.833rem 0rem 0.833rem;
         box-sizing: border-box;
-         -webkit-justify-content: space-between;
+        -webkit-justify-content: space-between;
         -moz-justify-content: space-between;
         -ms-justify-content: space-between;
         -o-justify-content: space-between;
@@ -686,7 +1261,7 @@ html {
         display: -ms-flex;
         display: -o-flex;
         display: flex;
-       -webkit-flex-direction: column;
+        -webkit-flex-direction: column;
         -moz-flex-direction: column;
         -ms-flex-direction: column;
         -o-flex-direction: column;
@@ -723,6 +1298,7 @@ html {
         /*padding: 0rem 3.167rem 0rem 0rem;*/
         width: 100%;
         flex: 1;
+        -webkit-flex: 1;
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flex;
@@ -748,6 +1324,7 @@ html {
     .searchkuang from input {
         height: 6rem;
         flex: 1;
+        -webkit-flex: 1;
         width: 100%;
         background: #f2f2f2;
         font-size: 1.77rem;
@@ -772,6 +1349,155 @@ html {
         height: 100%;
     }
 
+
+
+    .mainback {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        top: 0;
+        left: 0;
+        display: none;
+    }
+
+    .screenmain {
+        display: none;
+        box-sizing: border-box;
+        width: 82%;
+        background: #FFF;
+        z-index: 99;
+        position: fixed;
+        height: 100%;
+        top: 0;
+        right: 0;
+        padding-top: 40px;
+    }
+
+    .screenmain p {
+        margin-left: 30px;
+        margin-bottom: 30px;
+        font-size: 36px;
+    }
+
+    .screenmain .textinput {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
+        justify-content: center;
+        margin-bottom: 90px;
+    }
+
+    .screenmain .textinput span {
+        margin: 0px 10px;
+    }
+
+    .screenmain .textinput input {
+        background: #f2f2f2;
+        width: 36%;
+        height: 80px;
+        border-radius: 40px;
+        padding: 0px 18px;
+        text-align: center;
+        line-height: 80px;
+        color: #666;
+        font-size: 30px;
+    }
+
+    .itemprolist {
+        margin: 0px 20px;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
+        align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
+        justify-content: space-between;
+        -webkit-flex-flow: wrap;
+    }
+
+    .screenbtn{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
+        justify-content: center;
+    }
+    .screenbtn .clear{
+        width: 50%;
+        background: #F0F2F5;
+        height: 8.4rem;
+        line-height: 8.4rem;
+        text-align: center;
+        font-size: 3rem;
+    }
+    .screenbtn .sure{
+        width: 50%;
+        margin-right: 14.666rem;
+        height: 8.4rem;
+        line-height: 8.4rem;
+        background: #912941;
+        text-align: center;
+        color: #FFF;
+        font-size: 3rem;
+    }
+    .itemprolist span {
+        width: 28%;
+        height: 80px;
+        border-radius: 40px;
+        margin-bottom: 40px;
+        text-align: center;
+        line-height: 80px;
+        color: #666;
+        background: #f2f2f2;
+        font-size: 30px;
+    }
+
+    .itemprolist .on {
+        background: rgba(145, 41, 65, 1);
+        color: #fff;
+    }
+
+
+
     .order {
         background: #f2f2f2;
     }
@@ -783,7 +1509,7 @@ html {
         display: -ms-flex;
         display: -o-flex;
         display: flex;
-         -webkit-justify-content: space-between;
+        -webkit-justify-content: space-between;
         -moz-justify-content: space-between;
         -ms-justify-content: space-between;
         -o-justify-content: space-between;
@@ -816,7 +1542,7 @@ html {
         display: -ms-flex;
         display: -o-flex;
         display: flex;
-       -webkit-flex-direction: column;
+        -webkit-flex-direction: column;
         -moz-flex-direction: column;
         -ms-flex-direction: column;
         -o-flex-direction: column;

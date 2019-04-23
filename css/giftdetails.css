@@ -2,7 +2,189 @@ html {
     background: #f2f2f2 !important;
     font-size: 12px !important;
 }
+body {
+    font-size: 1rem;
+    background: #f2f2f2;
+    height: 100%;
+}
 
+.top {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    -khtml-display: flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    -khtml-justify-content: space-between;
+    justify-content: space-between;
+    padding: 1rem 1.25rem 1rem 0.833rem;
+    box-sizing: border-box;
+    background: #912941;
+    color: #FFF;
+}
+
+.top a {
+    color: #FFF;
+    font-size: 1.167rem;
+}
+
+.top a span {
+    color: #FFF;
+    font-size: 1.333rem;
+}
+
+.top span {
+    font-size: 1.167rem;
+}
+
+.buydetails {
+    padding-top: 5rem;
+    background: #f2f2f2;
+
+}
+
+.order-list {
+
+    padding-bottom: 1rem;
+    background: #f2f2f2;
+}
+
+.order {
+    box-sizing: border-box;
+    margin: 0rem 0.6rem;
+    padding: 0.83rem 0.83rem;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    -khtml-flex-direction: column;
+    flex-direction: column;
+    font-size: 1.3rem;
+    background: #fff;
+    border-bottom: 0.083rem solid #f2f2f2;
+    /*margin-bottom: 0.83rem;*/
+}
+
+.order span {
+    margin-bottom: 0.83rem;
+}
+
+.pro-list {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0rem 0.6rem;
+    padding: 0.83rem 0.83rem;
+    background: #fff;
+    border-bottom: 0.083rem solid #f2f2f2;
+    /*margin-bottom: 0.5rem;*/
+}
+
+.pro-list img {
+    height: 6.66rem;
+    width: 6.66rem;
+    border: 0.083rem solid #ddd;
+    margin-right: 0.80rem;
+}
+
+.pro-mes {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    -khtml-flex-direction: column;
+    flex-direction: column;
+    font-size: 1.133rem;
+}
+
+.pro-mes .pirce {
+    color: red;
+    font-size: 1.5rem;
+}
+
+.title {
+    font-size: 1.133rem;
+}
+
+.pro-mes span {
+    margin-bottom: 0.1rem;
+}
+
+.list ul li {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    -khtml-justify-content: space-between;
+    justify-content: space-between;
+    margin: 0rem 0.6rem;
+    padding: 0.83rem 0.83rem;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    background: #fff;
+    border-bottom: 0.083rem solid #f2f2f2;
+    font-size: 1.3rem;
+}
+
+.newpirce {
+    color: red;
+    font-size: 1.5rem;
+}
+
+.mes {
+    margin-top: 0.833rem;
+    padding: 0rem 0.833rem;
+    box-sizing: border-box;
+}
+
+.mes .transition {
+    padding: 0.667rem;
+    box-sizing: border-box;
+    width: 100%;
+    height: 8.333rem;
+    font-size: 1.333rem;
+}
 
 @media screen and (max-width: 600px) {
     /*一栏布局*/

@@ -30,9 +30,54 @@
     </div>
     <div class="searchsize"><a href="#">搜索</a></div>
 </div>
+<div class="mainback"></div>
+<div class="screenmain">
+    <p>价格区间</p>
+    <div class="textinput">
+        <input type="text" placeholder="最低价"><span>——</span><input type="text" placeholder="最高价">
+    </div>
+    <div class="itemprolist">
+        <ul>
+            <li>
+                <span>创建时间:</span>
+                <input type="text">
+            </li>
+            <li>
+                <span>店铺名称:</span>
+                <input type="text">
+            </li>
+            <li>
+                <span>所在地区:</span>
+                <input type="text">
+            </li>
+            <li>
+                <span>购买品牌：</span>
+                <select>
+                    <option value="1">更换表带</option>
+                    <option value="2">机芯检查</option>
+                </select>
+            </li>
+            <li>
+                <span>活动名称:</span>
+                <input type="text">
+            </li>
+            <li>
+                <span>礼品名称:</span>
+                <input type="text">
+            </li>
+
+        </ul>
+    </div>
+    <div class="screenbtn">
+        <div class="clear">重置</div>
+        <div class="sure">确定</div>
+    </div>
+</div>
+
+
+
 <div class="order">
     <div class="pro-list">
-
         <div class="mes-item">
             <img src="#" alt="">
             <div class="item-list">
@@ -48,11 +93,33 @@
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script>
     $(function () {
-        //加入HTML
+
+        $(".screen").on("click",function (e) {
+            $(".mainback").show()
+            $(".screenmain").show()
+            document.documentElement.style.overflow = "hidden";
+        })
+        $(".mainback").on("click",function (e) {
+            $(".mainback").hide()
+            $(".screenmain").hide()
+            document.documentElement.style.overflow = "scroll";
+        })
+        //
+        // $('.itemprolist').find('span').click(function(){
+        //     var index = $(this).index();
+        //     $(this).addClass('on').siblings().removeClass('on');
+        // })
+
+        // 加入HTML
         // let html = ''
         // html = '
-
+        //
         // $('.icon-list').append(html)
+        // document.documentElement.style.overflow = "hidden";
+        // document.documentElement.style.overflow = "scroll";
+        // $.get("http://zdf.dev.hyplmm.com/platform/v1/guide/order", function (data) {
+        //     console.log(data)
+        // })
 
     })
 </script>

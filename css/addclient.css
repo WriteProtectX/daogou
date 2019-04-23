@@ -1,7 +1,176 @@
 html {
     font-size: 12px;
 }
+body {
+    font-size: 1rem;
+    margin-top: 3.667rem;
+    background: #f2f2f2;
+}
 
+.top {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    -khtml-justify-content: space-between;
+    justify-content: space-between;
+    padding: 1rem 1.25rem 1rem 0.833rem;
+    box-sizing: border-box;
+    background: #912941;
+    color: #FFF;
+}
+
+.top a {
+    color: #FFF;
+    font-size: 1.167rem;
+}
+
+.top a span {
+    color: #FFF;
+    font-size: 1.333rem;
+}
+
+.top span {
+    font-size: 1.167rem;
+}
+
+.addclient {
+    font-size: 1.333rem;
+    box-sizing: border-box;
+    padding-top: 0.333rem;
+}
+
+.mes-list {
+}
+
+.mes-list ul {
+}
+
+.mes-list ul li {
+    background: #fff;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    -khtml-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    padding: 0.5rem 1.667rem;
+    border-bottom: 0.083rem solid #ddd;
+
+}
+
+.mes-list ul li span {
+    width: 11.667rem;
+    text-align: right;
+}
+
+.mes-list ul li input {
+    width: 100%;
+    height: 3rem;
+    border-radius: 0.667rem;
+    padding: 0rem 0.833rem;
+    border: 0.083rem solid #f2f2f2;
+    background: #f2f2f2;
+}
+
+.mes-list ul li .shifou {
+    width: 100%;
+    height: 3rem;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+.mes-list ul li .shifou label {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    margin-right: 1.667rem;
+    width: 5.333rem;
+    height: 3rem;
+}
+
+.mes-list ul li .shifou label .radios {
+    margin-left: 0.833rem;
+}
+
+.mes-list ul li select {
+    width: 100%;
+    height: 3rem;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+.btn {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    -khtml-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    padding: 1.667rem 0rem;
+    background: #f2f2f2;
+}
+
+.btn div a {
+    font-size: 1.333rem;
+    display: block;
+    width: 12.917rem;
+    height: 3.333rem;
+    background: #912941;
+    text-align: center;
+    line-height: 3.333rem;
+    color: #FFF;
+}
 
 @media screen and (max-width: 600px) {
     /*一栏布局*/
@@ -274,6 +443,7 @@ html {
         width: 100%;
         height: 4rem;
         flex: 1;
+        -webkit-flex: 1;
         border-radius: 0.667rem;
         padding: 0rem 0.833rem;
         border: 0.083rem solid #f2f2f2;
@@ -289,6 +459,7 @@ html {
         display: -o-flex;
         display: flex;
         flex: 1;
+        -webkit-flex: 1;
     }
 
     .mes-list ul li .shifou label {
@@ -321,6 +492,8 @@ html {
         display: -o-flex;
         display: flex;
         flex: 1;
+        -webkit-flex: 1;
+
     }
 
     .btn {
@@ -453,6 +626,7 @@ html {
         width: 100%;
         height: 6rem;
         flex: 1;
+        -webkit-flex: 1;
         border-radius: 0.667rem;
         padding: 0rem 0.833rem;
         border: 0.083rem solid #f2f2f2;
@@ -469,6 +643,7 @@ html {
         display: -o-flex;
         display: flex;
         flex: 1;
+        -webkit-flex: 1;
         -webkit-align-items: center;
         -moz-align-items: center;
         -ms-align-items: center;
@@ -519,6 +694,7 @@ html {
         display: -o-flex;
         display: flex;
         flex: 1;
+        -webkit-flex: 1;
         font-size: 2.833rem;
     }
 
