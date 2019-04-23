@@ -4,7 +4,8 @@ html {
 
 }
 
-@media screen and (max-width:600px) { /*一栏布局*/
+@media screen and (max-width: 600px) {
+    /*一栏布局*/
     body {
         background: #f2f2f2;
         height: 100%;
@@ -15,8 +16,22 @@ html {
         width: 100%;
         position: fixed;
         top: 0;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
         padding: 1rem 1.25rem 1rem 0.833rem;
         box-sizing: border-box;
@@ -43,18 +58,40 @@ html {
         background: #FFF;
         position: fixed;
         top: 3.333rem;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
         font-size: 1.167rem;
         padding: 0.5rem 0.833rem 0.5rem 0.833rem;
         box-sizing: border-box;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         border-bottom: 0.083rem solid #ddd;
     }
 
     .screen a {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
-        flex-direction: column;
+        -webkit--webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         color: #912941;
     }
@@ -70,7 +107,16 @@ html {
     .searchkuang from {
         padding: 0rem 3.167rem 0rem 0rem;
         flex: 1;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         background: #f2f2f2;
         border-radius: 0.417rem;
@@ -101,10 +147,24 @@ html {
 
     .pro-list {
         background: #FFF;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
         padding: 0.83rem 0.83rem;
         box-sizing: border-box;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         border-bottom: 0.083rem solid #ddd;
         border-top: 0.083rem solid #ddd;
@@ -121,7 +181,16 @@ html {
     .pro-list .item-list {
         /*width: 16.66rem;*/
         width: 50%;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        -khtml-flex-direction: column;
         flex-direction: column;
     }
 
@@ -140,7 +209,6 @@ html {
     /*    overflow: hidden;*/
     /*    text-overflow: ellipsis;*/
     /*}*/
-
     .allbtn .btn {
         border: 0.083rem solid #912941;
         padding: 0.6rem 0rem;
@@ -172,18 +240,35 @@ html {
         text-align: center;
     }
 }
-@media screen and (min-width:768px) and (max-width:1024px){ /*二栏布局*/
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /*二栏布局*/
     body {
         background: #f2f2f2;
         height: 100%;
         padding-top: 5.4rem;
     }
+
     .top {
         width: 100%;
         position: fixed;
         top: 0;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
         padding: 1rem 1.25rem 1rem 0.833rem;
         box-sizing: border-box;
@@ -205,16 +290,31 @@ html {
     .top span {
         font-size: 2.167rem;
     }
+
     .order {
         background: #f2f2f2;
     }
 
     .pro-list {
         background: #FFF;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
         padding: 0.83rem 1.83rem;
         box-sizing: border-box;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         border-bottom: 0.083rem solid #ddd;
         border-top: 0.083rem solid #ddd;
@@ -231,7 +331,16 @@ html {
     .pro-list .item-list {
         /*width: 16.66rem;*/
         width: 60%;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        -khtml-flex-direction: column;
         flex-direction: column;
     }
 
@@ -250,7 +359,6 @@ html {
     /*    overflow: hidden;*/
     /*    text-overflow: ellipsis;*/
     /*}*/
-
     .allbtn .btn {
         border: 0.083rem solid #912941;
         /* padding: 0.6rem 0rem; */
@@ -291,18 +399,35 @@ html {
         text-align: center;
     }
 }
-@media screen and (min-width:1024px) and (max-width:1400px){ /*三栏布局*/
+
+@media screen and (min-width: 1024px) and (max-width: 1400px) {
+    /*三栏布局*/
     body {
         background: #f2f2f2;
         height: 100%;
         padding-top: 7.6rem;
     }
+
     .top {
         width: 100%;
         position: fixed;
         top: 0;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
         padding: 1rem 1.25rem 1rem 0.833rem;
         box-sizing: border-box;
@@ -324,16 +449,31 @@ html {
     .top span {
         font-size: 3rem;
     }
+
     .order {
         background: #f2f2f2;
     }
 
     .pro-list {
         background: #FFF;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
         padding: 0.83rem 2.83rem;
         box-sizing: border-box;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         border-bottom: 0.083rem solid #ddd;
         border-top: 0.083rem solid #ddd;
@@ -350,7 +490,16 @@ html {
     .pro-list .item-list {
         /*width: 16.66rem;*/
         width: 54%;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        -khtml-flex-direction: column;
         flex-direction: column;
     }
 

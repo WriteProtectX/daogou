@@ -11,23 +11,99 @@
 
 <body>
 <div class="login">
-    <div class="welcome"><img src="images/user_logo.jpeg"></div>
-    <div class="login-form">
-        <div class="login-inp">
-            <label>
-                <span class="iconfont" style="font-size: 20px;vertical-align: middle">&#xe611;</span>
-            </label>
-            <input type="text" placeholder="请输入导购账号">
-        </div>
-        <div class="login-inp">
-            <label>
-                <span class="iconfont" style="font-size: 20px;vertical-align: middle">&#xe61a;</span>
-            </label>
-            <input type="password" placeholder="请输入密码">
-        </div>
-        <div class="login-inp"><a href="#">立即登录</a></div>
-    </div>
-    <div class="login-txt"><a href="./forgetpassword.html">忘记密码？</a></div>
+<!--    <div class="welcome"><img src="images/user_logo.jpeg"></div>-->
+<!--    <div class="login-form">-->
+<!--        <div class="login-inp">-->
+<!--            <label>-->
+<!--                <span class="iconfont" style="font-size: 20px;vertical-align: middle">&#xe611;</span>-->
+<!--            </label>-->
+<!--            <input type="text" id="phone" placeholder="请输入导购账号">-->
+<!--        </div>-->
+<!--        <div class="login-inp">-->
+<!--            <label>-->
+<!--                <span class="iconfont" style="font-size: 20px;vertical-align: middle">&#xe61a;</span>-->
+<!--            </label>-->
+<!--            <input type="password" id="password" placeholder="请输入密码">-->
+<!--        </div>-->
+<!--        <div class="login-inp"><a href="#">立即登录</a></div>-->
+<!--    </div>-->
+<!--    <div class="login-txt"><a href="./forgetpassword.html">忘记密码？</a></div>-->
 </div>
 </body>
+
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script>
+    $(function () {
+        let html = '<div class="welcome"><img src="images/user_logo.jpeg"></div>\n' +
+            '    <div class="login-form">\n' +
+            '        <div class="login-inp">\n' +
+            '            <label>\n' +
+            '                <span class="iconfont" style="font-size: 20px;vertical-align: middle">&#xe611;</span>\n' +
+            '            </label>\n' +
+            '            <input type="text" id="phone" placeholder="请输入导购账号">\n' +
+            '        </div>\n' +
+            '        <div class="login-inp">\n' +
+            '            <label>\n' +
+            '                <span class="iconfont" style="font-size: 20px;vertical-align: middle">&#xe61a;</span>\n' +
+            '            </label>\n' +
+            '            <input type="password" id="password" placeholder="请输入密码">\n' +
+            '        </div>\n' +
+            '        <div class="login-inp" id="login"><a href="#">立即登录</a></div>\n' +
+            '    </div>\n' +
+            '    <div class="login-txt"><a href="./forgetpassword.html">忘记密码？</a></div>'
+        $('.login').append(html)
+        // 验证手机号
+        function checkmobileNo() {
+            let phone = $("#phone").val()
+            let password = $("#password").val()
+            let numberphone = /^1[3|7|5|8|9]\d{9}$/;
+            console.log(phone)
+            if (phone == '') {
+                alert("请输入手机号码")
+            }
+            else if(!numberphone.test(phone)){
+                alert("输入的手机号码有误")
+            }
+            else if(password == ''){
+                alert("请输入密码")
+            }
+            else if(password.length < 6){
+                alert("密码不能少于6位")
+            }
+            else if(phone.length = 11 && numberphone.test(phone) && password.length >= 6){
+                console.log("成功")
+                $.ajax({
+                    url: "http://zdf.dev.hyplmm.com/platform/v1/user/login",
+                    type: "GET",
+                    data: {
+                        "password": password,
+                        "mobile": phone,
+                    },
+                    dataType: "json",
+                    success: function (data) {
+                        console.log(data);
+                        if (data.errorcode == 0){
+                            alert("登录成功")
+                            window.location.href = "./index.html";
+                        }else {
+                            alert(data.message)
+                        }
+
+
+                    },
+                    error: function () {
+                        alert(data.result.message);
+                    },
+
+                });
+            }
+        }
+        $("#login").on("click", function (e) {
+            // 判断手机号码
+            checkmobileNo();
+        })
+
+
+    })
+</script>
 </html>

@@ -1,21 +1,37 @@
-html{
+html {
     font-size: 12px;
     height: 100%;
 }
 
 
-@media screen and (max-width:600px) { /*一栏布局*/
-    body{
+@media screen and (max-width: 600px) {
+    /*一栏布局*/
+    body {
         background: #f2f2f2;
         height: 100%;
         padding-top: 7.5rem;
     }
+
     .top {
         width: 100%;
         position: fixed;
         top: 0;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
         padding: 0.833rem 1.25rem 0.833rem 0.833rem;
         box-sizing: border-box;
@@ -27,117 +43,198 @@ html{
         color: #FFF;
         font-size: 1.167rem;
     }
-    .top a span{
+
+    .top a span {
         color: #FFF;
         font-size: 1.333rem;
     }
+
     .top span {
         font-size: 1.167rem;
     }
-    .search{
+
+    .search {
         width: 100%;
         background: #FFF;
         position: fixed;
-        top:3.833rem;
+        top: 3.833rem;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
         font-size: 1.167rem;
-        padding:0.5rem 0.833rem 0.5rem 0.833rem;
+        padding: 0.5rem 0.833rem 0.5rem 0.833rem;
         box-sizing: border-box;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         border-bottom: 0.083rem solid #ddd;
     }
-    .screen a{
+
+    .screen a {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        -khtml-flex-direction: column;
         flex-direction: column;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
-        color:#912941;
+        color: #912941;
     }
-    .searchkuang{
+
+    .searchkuang {
         /*margin-right: 3.167rem;*/
         width: 100%;
         margin: 0rem 1.833rem;
     }
-    .search .iconfont{
+
+    .search .iconfont {
         font-size: 1.667rem;
     }
-    .searchkuang from{
+
+    .searchkuang from {
         /*padding: 0rem 3.167rem 0rem 0rem;*/
         width: 100%;
         flex: 1;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         background: #f2f2f2;
         border-radius: 0.417rem;
         overflow: hidden;
     }
-    .searchkuang from span{
-        padding-right:0.5rem;
-        padding-left:0.5rem ;
+
+    .searchkuang from span {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
 
     }
-    .searchkuang from input{
+
+    .searchkuang from input {
         height: 2.5rem;
         flex: 1;
         width: 100%;
         background: #f2f2f2;
         font-size: 1.167rem;
     }
-    .searchsize{
+
+    .searchsize {
         padding: 0.333rem 0.5rem;
         border: 0.083rem solid #ddd;
         width: 3.667rem;
     }
-    .searchsize a{
+
+    .searchsize a {
         width: 100%;
         height: 100%;
     }
-    .order{
+
+    .order {
         background: #f2f2f2;
     }
-    .pro-list{
+
+    .pro-list {
         background: #FFF;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
         padding: 0.83rem 0.93rem;
         box-sizing: border-box;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         border-bottom: 0.083rem solid #ddd;
         border-top: 0.083rem solid #ddd;
         margin-bottom: 0.63rem;
     }
-    .pro-list img{
+
+    .pro-list img {
         width: 6.66rem;
         height: 6.66rem;
         border: 0.083rem solid #ddd;
         margin-right: 0.5rem;
     }
-    .pro-list .item-list{
+
+    .pro-list .item-list {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        -khtml-flex-direction: column;
         flex-direction: column;
     }
-    .pro-list .item-list h3{
+
+    .pro-list .item-list h3 {
         margin-bottom: 0.1rem;
         font-size: 1.133rem;
     }
-    .pro-list .item-list span{
+
+    .pro-list .item-list span {
         margin-bottom: 0.1rem;
         font-size: 1.167rem;
     }
-    .pro-list .item-list p{
+
+    .pro-list .item-list p {
         font-size: 1.167rem;
     }
-    .order .item-list .title{
+
+    .order .item-list .title {
         font-weight: bold;
         font-size: 1.217rem;
     }
-    .btn{
+
+    .btn {
         border: 0.083rem solid #912941;
         padding: 0.41rem 0rem;
         background: #912941;
         width: 5.833rem;
     }
-    .btn a{
+
+    .btn a {
         width: 100%;
         height: 100%;
         text-align: center;
@@ -145,18 +242,35 @@ html{
         color: #FFF;
     }
 }
-@media screen and (min-width:768px) and (max-width:1024px){ /*二栏布局*/
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /*二栏布局*/
     body {
         background: #f2f2f2;
         height: 100%;
         padding-top: 10.93rem;
     }
+
     .top {
         width: 100%;
         position: fixed;
         top: 0;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
         padding: 1rem 1.25rem 1rem 0.833rem;
         box-sizing: border-box;
@@ -184,22 +298,50 @@ html{
         background: #FFF;
         position: fixed;
         top: 5rem;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
         font-size: 1.167rem;
         padding: 0rem 0.833rem 0rem 0.833rem;
         box-sizing: border-box;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         border-bottom: 0.083rem solid #ddd;
         height: 5.833rem;
     }
 
     .screen a {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        -khtml-flex-direction: column;
         flex-direction: column;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         color: #912941;
-        width:5.5rem;
+        width: 5.5rem;
         font-size: 1.167rem;
     }
 
@@ -208,10 +350,12 @@ html{
         width: 100%;
         margin: 0rem 0.833rem;
     }
-    .searchkuang .iconfont{
+
+    .searchkuang .iconfont {
         font-size: 2.667rem;
         /*margin-bottom: 0rem!important;*/
     }
+
     .search .iconfont {
         font-size: 2.667rem;
         /*margin-bottom: -1.167rem;*/
@@ -221,7 +365,16 @@ html{
         /*padding: 0rem 3.167rem 0rem 0rem;*/
         width: 100%;
         flex: 1;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         background: #f2f2f2;
         border-radius: 0.417rem;
@@ -254,51 +407,85 @@ html{
         font-size: 1.5rem;
 
     }
-    .searchsize a{
+
+    .searchsize a {
         display: block;
         width: 100%;
         height: 100%;
     }
-    .order{
+
+    .order {
         background: #f2f2f2;
     }
-    .pro-list{
+
+    .pro-list {
         background: #FFF;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
         padding: 0.83rem 0.93rem;
         box-sizing: border-box;
+        -webkit-align-content: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         border-bottom: 0.083rem solid #ddd;
         border-top: 0.083rem solid #ddd;
         margin-bottom: 0.63rem;
     }
-    .pro-list img{
+
+    .pro-list img {
         width: 6.66rem;
         height: 6.66rem;
         border: 0.083rem solid #ddd;
         margin-right: 0.5rem;
     }
-    .pro-list .item-list{
+
+    .pro-list .item-list {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        -khtml-flex-direction: column;
         flex-direction: column;
     }
-    .pro-list .item-list h3{
+
+    .pro-list .item-list h3 {
         margin-bottom: 0.1rem;
         font-size: 1.133rem;
     }
-    .pro-list .item-list span{
+
+    .pro-list .item-list span {
         margin-bottom: 0.1rem;
         font-size: 2rem;
     }
-    .pro-list .item-list p{
+
+    .pro-list .item-list p {
         font-size: 2rem;
     }
-    .order .item-list .title{
+
+    .order .item-list .title {
         font-weight: bold;
         font-size: 2.1rem;
     }
-    .btn{
+
+    .btn {
         border: 0.083rem solid #912941;
         padding: 0.41rem 0rem;
         background: #912941;
@@ -308,7 +495,8 @@ html{
         line-height: 2.833rem;
         font-size: 1.667rem;
     }
-    .btn a{
+
+    .btn a {
         width: 100%;
         height: 100%;
         text-align: center;
@@ -316,18 +504,35 @@ html{
         color: #FFF;
     }
 }
-@media screen and (min-width:1024px) and (max-width:1400px){ /*三栏布局*/
+
+@media screen and (min-width: 1024px) and (max-width: 1400px) {
+    /*三栏布局*/
     body {
         background: #f2f2f2;
         height: 100%;
         padding-top: 16.2rem;
     }
+
     .top {
         width: 100%;
         position: fixed;
         top: 0;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
         padding: 1rem 1.25rem 1rem 0.833rem;
         box-sizing: border-box;
@@ -355,22 +560,52 @@ html{
         background: #FFF;
         position: fixed;
         top: 7rem;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
         font-size: 1.167rem;
         padding: 0rem 0.833rem 0rem 0.833rem;
         box-sizing: border-box;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
+        -webkit-align-content: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         border-bottom: 0.083rem solid #ddd;
         height: 9rem;
     }
 
     .screen a {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        -khtml-flex-direction: column;
         flex-direction: column;
+        -webkit-align-content: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         color: #912941;
-        width:5.5rem;
+        width: 5.5rem;
         font-size: 2.5rem;
     }
 
@@ -379,12 +614,14 @@ html{
         width: 100%;
         margin: 0rem 0.833rem;
     }
-    .searchkuang .iconfont{
+
+    .searchkuang .iconfont {
         font-size: 2.667rem;
         /*margin-bottom: 0rem!important;*/
     }
+
     .search .iconfont {
-        font-size:3.667rem;
+        font-size: 3.667rem;
         /*margin-bottom: -1.667rem;*/
     }
 
@@ -392,7 +629,16 @@ html{
         /*padding: 0rem 3.167rem 0rem 0rem;*/
         width: 100%;
         flex: 1;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         background: #f2f2f2;
         border-radius: 0.417rem;
@@ -425,45 +671,76 @@ html{
         font-size: 2.5rem;
 
     }
-    .searchsize a{
+
+    .searchsize a {
         display: block;
         width: 100%;
         height: 100%;
     }
-    .order{
+
+    .order {
         background: #f2f2f2;
     }
-    .pro-list{
-        background: #FFF;
+
+    .pro-list {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
         padding: 0.83rem 0.93rem;
         box-sizing: border-box;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         border-bottom: 0.083rem solid #ddd;
         border-top: 0.083rem solid #ddd;
         margin-bottom: 0.63rem;
     }
-    .pro-list .item-list{
+
+    .pro-list .item-list {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        -khtml-flex-direction: column;
         flex-direction: column;
     }
-    .pro-list .item-list h3{
+
+    .pro-list .item-list h3 {
         margin-bottom: 0.1rem;
         font-size: 1.133rem;
     }
-    .pro-list .item-list span{
+
+    .pro-list .item-list span {
         margin-bottom: 0.1rem;
         font-size: 2.6rem;
     }
-    .pro-list .item-list p{
+
+    .pro-list .item-list p {
         font-size: 2.6rem;
     }
-    .order .item-list .title{
+
+    .order .item-list .title {
         font-weight: bold;
         font-size: 2.8rem;
     }
-    .btn{
+
+    .btn {
         border: 0.083rem solid #912941;
         padding: 0.41rem 0rem;
         background: #912941;
@@ -473,7 +750,8 @@ html{
         line-height: 4.333rem;
         font-size: 2.333rem;
     }
-    .btn a{
+
+    .btn a {
         width: 100%;
         height: 100%;
         text-align: center;

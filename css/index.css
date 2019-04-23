@@ -8,8 +8,23 @@ body {
     width: 100%;
     position: fixed;
     top: 0;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    -khtml-display: flex;
     display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
     align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    -khtml-justify-content: space-between;
     justify-content: space-between;
     padding: 1rem 1.25rem 1rem 0.833rem;
     box-sizing: border-box;
@@ -31,21 +46,51 @@ body {
     font-size: 1.167rem;
 }
 
-@media screen and (max-width: 600px)and (max-width:1024px) {
+@media screen and (max-width: 600px) {
     /*1栏布局*/
     .head {
         height: 12.167rem;
         width: 100%;
         background: #912941;
+        -webkit-display: flex;
+        -moz-display: flex;
+        -ms-display: flex;
+        -o-display: flex;
+        -khtml-display: flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        -khtml-flex-direction: column;
         flex-direction: column;
         z-index: 99;
     }
 
     .head .logo {
+        -webkit-display: flex;
+        -moz-display: flex;
+        -ms-display: flex;
+        -o-display: flex;
+        -khtml-display: flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
     }
 
@@ -64,62 +109,184 @@ body {
     .indexmain {
         /*padding: 1.667rem;*/
         margin-top: 1.667rem;
+        padding-bottom: 2.667rem;
     }
 
     .indexmain ul li a {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        -khtml-flex-direction: column;
         flex-direction: column;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
     }
 
     .indexmain ul {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
         flex-wrap: wrap;
+        -webkit-flex-flow:wrap;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
     }
 
     .indexmain ul li {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
         width: 30%;
         height: 8.667rem;
         background: #eee;
-        margin:0.083rem;
+        margin: 0.083rem;
         /*border-radius: 50%;*/
     }
 
     .indexmain ul li a {
         height: 100%;
         width: 100%;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
     }
-    .indexmain ul li a .iconfont{
+
+    .indexmain ul li a .iconfont {
         font-size: 3rem;
     }
-    .indexmain ul li a .size{
+
+    .indexmain ul li a .size {
         font-size: 1.167rem;
         /*margin-top: 0.333rem;*/
     }
+
+    .clickbtn {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
+        align-items: center;
+        font-size: 2.8rem;
+        margin-bottom: 2.8rem;
+
+    }
+
+    .clicktwobtn {
+        width: 13.3rem;
+        height: 4rem;
+        font-size: 1.4rem;
+        background: #912941;
+        color: #FFF;
+        text-align: center;
+        line-height: 4rem;
+    }
 }
-@media screen and (min-width:768px) and (max-width:1024px){
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     /*2栏布局*/
     .head {
         height: 18.167rem;
         width: 100%;
         background: #912941;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        -khtml-flex-direction: column;
         flex-direction: column;
         z-index: 99;
     }
 
     .head .logo {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
     }
 
@@ -141,59 +308,179 @@ body {
     }
 
     .indexmain ul li a {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        -khtml-flex-direction: column;
         flex-direction: column;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
     }
 
     .indexmain ul {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
         flex-wrap: wrap;
+        -webkit-flex-flow:wrap;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
     }
 
     .indexmain ul li {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
         width: 30%;
         height: 17.667rem;
         background: #eee;
-        margin:0.083rem;
+        margin: 0.083rem;
         /*border-radius: 50%;*/
     }
 
     .indexmain ul li a {
         height: 100%;
         width: 100%;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
     }
-    .indexmain ul li a .iconfont{
+
+    .indexmain ul li a .iconfont {
         font-size: 5.667rem;
     }
-    .indexmain ul li a .size{
+
+    .indexmain ul li a .size {
         font-size: 1.667rem;
     }
+
+    .clickbtn {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
+        align-items: center;
+        font-size: 2.8rem;
+        margin-bottom: 2.8rem;
+
+    }
+
+    .clicktwobtn {
+        width: 20.3rem;
+        height: 6rem;
+        font-size: 2rem;
+        background: #912941;
+        color: #FFF;
+        text-align: center;
+        line-height: 6rem;
+    }
 }
 
-@media screen and (min-width:600px) and (max-width:1800px){
+@media screen and (min-width: 1024px) and (max-width: 1800px) {
     /*3栏布局*/
     .head {
         height: 30.167rem;
         width: 100%;
         background: #912941;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        -khtml-flex-direction: column;
         flex-direction: column;
         z-index: 99;
     }
 
     .head .logo {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
     }
 
@@ -216,21 +503,64 @@ body {
     }
 
     .indexmain ul li a {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        -khtml-flex-direction: column;
         flex-direction: column;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
     }
 
     .indexmain ul {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
         flex-wrap: wrap;
+        -webkit-flex-flow:wrap;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
     }
 
     .indexmain ul li {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
         width: 30%;
         height: 24.667rem;
@@ -242,89 +572,63 @@ body {
     .indexmain ul li a {
         height: 100%;
         width: 100%;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
     }
-    .indexmain ul li a .iconfont{
+
+    .indexmain ul li a .iconfont {
         font-size: 8.333rem;
     }
-    .indexmain ul li a .size{
+
+    .indexmain ul li a .size {
         font-size: 2.5rem;
     }
-}
-@media screen and (min-width:1024px) and (max-width:1800px){
-    /*3栏布局*/
-    .head {
-        height: 30.167rem;
-        width: 100%;
+
+    .clickbtn {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
+        align-items: center;
+        margin-bottom: 2.8rem;
+
+    }
+
+    .clicktwobtn {
+        width: 24.3rem;
+        height: 8rem;
+        font-size: 2.8rem;
         background: #912941;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        z-index: 99;
-    }
-
-    .head .logo {
-        display: flex;
-        justify-content: center;
-    }
-
-    .head .logo img {
-        width: 20.667rem;
-        height: 14.167rem;
-    }
-
-    .head .admin {
-        margin-top: 0.833rem;
-        font-size: 3.5rem;
-        color: #ffffff;
-    }
-
-
-    .indexmain {
-        /*padding: 1.667rem;*/
-        margin-top: 4.667rem;
-        padding-bottom: 4.667rem;
-    }
-
-    .indexmain ul li a {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .indexmain ul {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-
-    .indexmain ul li {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 30%;
-        height: 24.667rem;
-        background: #eee;
-        margin: 0.083rem;
-        /*border-radius: 50%;*/
-    }
-
-    .indexmain ul li a {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .indexmain ul li a .iconfont{
-        font-size: 8.333rem;
-    }
-    .indexmain ul li a .size{
-        font-size: 2.5rem;
+        color: #FFF;
+        text-align: center;
+        line-height: 8rem;
     }
 }
 

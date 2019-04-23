@@ -3,7 +3,8 @@ html {
     height: 100%;
 }
 
-@media screen and (max-width:600px) { /*一栏布局*/
+@media screen and (max-width: 600px) {
+    /*一栏布局*/
     body {
         background: #f2f2f2;
         height: 100%;
@@ -14,8 +15,22 @@ html {
         width: 100%;
         /*position: fixed;*/
         /*top: 0;*/
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
         padding: 1rem 1.25rem 1rem 0.833rem;
         box-sizing: border-box;
@@ -43,10 +58,18 @@ html {
     }
 
     .pro-list {
-        background: #FFF;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
         padding: 0.83rem 0.83rem;
         box-sizing: border-box;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         border-bottom: 0.083rem solid #ddd;
         border-top: 0.083rem solid #ddd;
@@ -62,7 +85,16 @@ html {
 
     .pro-list .item-list {
         /*width: 16.66rem;*/
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        -khtml-flex-direction: column;
         flex-direction: column;
     }
 
@@ -75,12 +107,27 @@ html {
         font-size: 1.3rem;
     }
 
-    .btn{
+    .btn {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         margin-top: 5.833rem;
     }
+
     .btn div a {
         font-size: 1.333rem;
         display: block;
@@ -93,13 +140,29 @@ html {
     }
 
 }
-@media screen and (min-width:768px) and (max-width:1024px){ /*二栏布局*/
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /*二栏布局*/
     .top {
         width: 100%;
         position: fixed;
         top: 0;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
         padding: 1rem 1.25rem 1rem 0.833rem;
         box-sizing: border-box;
@@ -121,6 +184,7 @@ html {
     .top span {
         font-size: 2.167rem;
     }
+
     .order {
         margin-top: 5.333rem;
         background: #f2f2f2;
@@ -128,9 +192,18 @@ html {
 
     .pro-list {
         background: #FFF;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
         padding: 0.83rem 0.83rem;
         box-sizing: border-box;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         border-bottom: 0.083rem solid #ddd;
         border-top: 0.083rem solid #ddd;
@@ -146,7 +219,16 @@ html {
 
     .pro-list .item-list {
         /*width: 16.66rem;*/
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        -khtml-flex-direction: column;
         flex-direction: column;
     }
 
@@ -159,12 +241,27 @@ html {
         font-size: 1.7rem;
     }
 
-    .btn{
+    .btn {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         margin-top: 5.833rem;
     }
+
     .btn div a {
         font-size: 2rem;
         display: block;
@@ -176,13 +273,29 @@ html {
         color: #fff;
     }
 }
-@media screen and (min-width:1024px) and (max-width:1400px){ /*三栏布局*/
+
+@media screen and (min-width: 1024px) and (max-width: 1400px) {
+    /*三栏布局*/
     .top {
         width: 100%;
         position: fixed;
         top: 0;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
         padding: 1rem 1.25rem 1rem 0.833rem;
         box-sizing: border-box;
@@ -204,6 +317,7 @@ html {
     .top span {
         font-size: 3rem;
     }
+
     .order {
         margin-top: 7.333rem;
         background: #f2f2f2;
@@ -211,9 +325,18 @@ html {
 
     .pro-list {
         background: #FFF;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
         padding: 0.83rem 0.83rem;
         box-sizing: border-box;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         border-bottom: 0.083rem solid #ddd;
         border-top: 0.083rem solid #ddd;
@@ -229,7 +352,16 @@ html {
 
     .pro-list .item-list {
         /*width: 16.66rem;*/
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        -khtml-flex-direction: column;
         flex-direction: column;
     }
 
@@ -242,12 +374,27 @@ html {
         font-size: 2.7rem;
     }
 
-    .btn{
+    .btn {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         margin-top: 5.833rem;
     }
+
     .btn div a {
         font-size: 2.667rem;
         display: block;

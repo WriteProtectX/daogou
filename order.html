@@ -30,6 +30,24 @@
     </div>
     <div class="searchsize"><a href="#">搜索</a></div>
 </div>
+<div class="mainback"></div>
+<div class="screenmain">
+    <p>价格区间</p>
+    <div class="textinput">
+        <input type="text" placeholder="最低价"><span>——</span><input type="text" placeholder="最高价">
+    </div>
+    <p>价格区间</p>
+    <div class="itemprolist">
+        <span>0-3</span>
+        <span>3-5</span>
+        <span>5-7</span>
+        <span>7-10</span>
+    </div>
+    <div class="screenbtn">
+        <div class="clear">重置</div>
+        <div class="sure">确定</div>
+    </div>
+</div>
 <div class="order">
     <div class="pro-list">
         <img src="./images/pic.jpeg" alt="">
@@ -65,11 +83,16 @@
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script>
     $(function () {
-        //加入HTML
+        // 加入HTML
         // let html = ''
         // html = '
-
+        //
         // $('.icon-list').append(html)
+        // document.documentElement.style.overflow = "hidden";
+        // document.documentElement.style.overflow = "scroll";
+        $.get("http://zdf.dev.hyplmm.com/platform/v1/guide/order", function (data) {
+            console.log(data)
+        })
 
     })
 </script>

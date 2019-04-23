@@ -2,7 +2,8 @@ html {
     font-size: 12px;
 }
 
-@media screen and (max-width:600px) { /*一栏布局*/
+@media screen and (max-width: 600px) {
+    /*一栏布局*/
     body {
         background: #fff;
         /*padding-top: 7.5rem;*/
@@ -12,8 +13,22 @@ html {
         width: 100%;
         /*position: fixed;*/
         /*top: 0;*/
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
         padding: 0.833rem 1.25rem 0.833rem 0.833rem;
         box-sizing: border-box;
@@ -43,9 +58,23 @@ html {
     }
 
     .order .list {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
         margin-bottom: 1.667rem;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
     }
 
@@ -58,7 +87,16 @@ html {
     }
 
     .order .text {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
         margin-bottom: 1.667rem;
     }
@@ -73,8 +111,17 @@ html {
     }
 
     .demoBox {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
         border-radius: 0.833rem;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         margin-bottom: 1.667rem;
     }
@@ -92,12 +139,27 @@ html {
         border: 0.083rem solid #ddd;
     }
 
-    .btn{
+    .btn {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         margin-top: 5.833rem;
     }
+
     .btn div a {
         font-size: 1.333rem;
         display: block;
@@ -110,14 +172,29 @@ html {
     }
 
 }
-@media screen and (min-width:768px) and (max-width:1024px){ /*二栏布局*/
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /*二栏布局*/
     .top {
         width: 100%;
         position: fixed;
         top: 0;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
         padding: 1rem 1.25rem 1rem 0.833rem;
         box-sizing: border-box;
@@ -139,6 +216,7 @@ html {
     .top span {
         font-size: 2.167rem;
     }
+
     .order {
         margin-top: 10.167rem;
         /*background: #ddd;*/
@@ -147,9 +225,23 @@ html {
     }
 
     .order .list {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
         margin-bottom: 1.667rem;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
     }
 
@@ -161,11 +253,22 @@ html {
         border-radius: 0.833rem;
         font-size: 1.667rem;
     }
-    .order .list span{
+
+    .order .list span {
         font-size: 2rem;
     }
+
     .order .text {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
         margin-bottom: 1.667rem;
         font-size: 2rem;
@@ -182,8 +285,17 @@ html {
     }
 
     .demoBox {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
         border-radius: 0.833rem;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         margin-bottom: 1.667rem;
         font-size: 2rem;
@@ -202,12 +314,27 @@ html {
         border: 0.083rem solid #ddd;
     }
 
-    .btn{
+    .btn {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         margin-top: 5.833rem;
     }
+
     .btn div a {
         display: block;
         width: 15.917rem;
@@ -219,13 +346,29 @@ html {
         font-size: 2.167rem;
     }
 }
-@media screen and (min-width:1024px) and (max-width:1400px){ /*三栏布局*/
+
+@media screen and (min-width: 1024px) and (max-width: 1400px) {
+    /*三栏布局*/
     .top {
         width: 100%;
         position: fixed;
         top: 0;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
         padding: 1rem 1.25rem 1rem 0.833rem;
         box-sizing: border-box;
@@ -247,6 +390,7 @@ html {
     .top span {
         font-size: 3rem;
     }
+
     .order {
         margin-top: 15.167rem;
         /*background: #ddd;*/
@@ -255,9 +399,23 @@ html {
     }
 
     .order .list {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
         margin-bottom: 1.667rem;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
     }
 
@@ -269,11 +427,22 @@ html {
         border-radius: 0.833rem;
         font-size: 2.333rem;
     }
-    .order .list span{
+
+    .order .list span {
         font-size: 2.833rem;
     }
+
     .order .text {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
         margin-bottom: 1.667rem;
         font-size: 2.833rem;
@@ -290,8 +459,17 @@ html {
     }
 
     .demoBox {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
         border-radius: 0.833rem;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         margin-bottom: 1.667rem;
         font-size: 2.833rem;
@@ -310,12 +488,27 @@ html {
         border: 0.083rem solid #ddd;
     }
 
-    .btn{
+    .btn {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         margin-top: 5.833rem;
     }
+
     .btn div a {
         display: block;
         width: 22.917rem;

@@ -1,10 +1,11 @@
-html{
+html {
     font-size: 12px;
 }
 
 
-@media screen and (max-width:600px) { /*一栏布局*/
-    body{
+@media screen and (max-width: 600px) {
+    /*一栏布局*/
+    body {
         font-size: 1rem;
         margin-top: 3.667rem;
         background: #f2f2f2;
@@ -14,8 +15,22 @@ html{
         width: 100%;
         position: fixed;
         top: 0;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
         padding: 1rem 1.25rem 1rem 0.833rem;
         box-sizing: border-box;
@@ -27,34 +42,58 @@ html{
         color: #FFF;
         font-size: 1.167rem;
     }
-    .top a span{
+
+    .top a span {
         color: #FFF;
         font-size: 1.333rem;
     }
+
     .top span {
         font-size: 1.167rem;
     }
-    .addclient{
+
+    .addclient {
         font-size: 1.333rem;
         box-sizing: border-box;
         padding-top: 0.333rem;
     }
-    .mes-list{}
-    .mes-list ul{}
-    .mes-list ul li{
+
+    .mes-list {
+    }
+
+    .mes-list ul {
+    }
+
+    .mes-list ul li {
         background: #fff;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         padding: 0.5rem 1.667rem;
         border-bottom: 0.083rem solid #ddd;
 
     }
-    .mes-list ul li span{
-        width:11.667rem;
+
+    .mes-list ul li span {
+        width: 11.667rem;
         text-align: right;
     }
-    .mes-list ul li input{
+
+    .mes-list ul li input {
         width: 100%;
         height: 3rem;
         border-radius: 0.667rem;
@@ -62,58 +101,110 @@ html{
         border: 0.083rem solid #f2f2f2;
         background: #f2f2f2;
     }
-    .mes-list ul li .shifou{
+
+    .mes-list ul li .shifou {
         width: 100%;
         height: 3rem;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
     }
-    .mes-list ul li .shifou label{
+
+    .mes-list ul li .shifou label {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         margin-right: 1.667rem;
         width: 5.333rem;
         height: 3rem;
     }
 
-    .mes-list ul li .shifou label .radios{
+    .mes-list ul li .shifou label .radios {
         margin-left: 0.833rem;
     }
-    .mes-list ul li select{
+
+    .mes-list ul li select {
         width: 100%;
         height: 3rem;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
     }
 
-    .btn{
+    .btn {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         padding: 1.667rem 0rem;
         background: #f2f2f2;
     }
-    .btn div a{
+
+    .btn div a {
         font-size: 1.333rem;
         display: block;
         width: 12.917rem;
-        height:3.333rem;
-        background:#912941;
+        height: 3.333rem;
+        background: #912941;
         text-align: center;
         line-height: 3.333rem;
         color: #FFF;
     }
 }
-@media screen and (min-width:768px) and (max-width:1024px){ /*二栏布局*/
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /*二栏布局*/
     body {
         background: #f2f2f2;
         height: 100%;
         padding-top: 5rem;
     }
+
     .top {
         width: 100%;
         position: fixed;
         top: 0;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
         padding: 1rem 1.25rem 1rem 0.833rem;
         box-sizing: border-box;
@@ -135,28 +226,51 @@ html{
     .top span {
         font-size: 2.167rem;
     }
-    .addclient{
+
+    .addclient {
         font-size: 1.333rem;
         box-sizing: border-box;
         padding-top: 0.333rem;
     }
-    .mes-list{}
-    .mes-list ul{}
-    .mes-list ul li{
+
+    .mes-list {
+    }
+
+    .mes-list ul {
+    }
+
+    .mes-list ul li {
         background: #fff;
+        -webkit-display: flex;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         padding: 0.5rem 1.667rem;
         border-bottom: 0.083rem solid #ddd;
         font-size: 2rem;
     }
-    .mes-list ul li span{
-        width:12.667rem;
+
+    .mes-list ul li span {
+        width: 12.667rem;
         text-align: right;
 
     }
-    .mes-list ul li input{
+
+    .mes-list ul li input {
         width: 100%;
         height: 4rem;
         flex: 1;
@@ -165,60 +279,112 @@ html{
         border: 0.083rem solid #f2f2f2;
         background: #f2f2f2;
     }
-    .mes-list ul li .shifou{
+
+    .mes-list ul li .shifou {
         width: 100%;
         height: 3rem;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
         flex: 1;
     }
-    .mes-list ul li .shifou label{
+
+    .mes-list ul li .shifou label {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         margin-right: 1.667rem;
         width: 5.333rem;
         height: 3rem;
     }
 
-    .mes-list ul li .shifou label .radios{
+    .mes-list ul li .shifou label .radios {
         margin-left: 0.833rem;
     }
-    .mes-list ul li select{
+
+    .mes-list ul li select {
         width: 100%;
         height: 3rem;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
         flex: 1;
     }
 
-    .btn{
+    .btn {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         padding: 1.667rem 0rem;
         background: #f2f2f2;
     }
-    .btn div a{
+
+    .btn div a {
         display: block;
         width: 14.917rem;
-        height:4.333rem;
-        background:#912941;
+        height: 4.333rem;
+        background: #912941;
         text-align: center;
         line-height: 4.333rem;
         color: #FFF;
         font-size: 1.833rem;
     }
 }
-@media screen and (min-width:1024px) and (max-width:1400px){ /*三栏布局*/
+
+@media screen and (min-width: 1024px) and (max-width: 1400px) {
+    /*三栏布局*/
     body {
         background: #f2f2f2;
         height: 100%;
         padding-top: 7.5rem;
     }
+
     .top {
         width: 100%;
         position: fixed;
         top: 0;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
         justify-content: space-between;
         padding: 1rem 1.25rem 1rem 0.833rem;
         box-sizing: border-box;
@@ -240,28 +406,50 @@ html{
     .top span {
         font-size: 3rem;
     }
-    .addclient{
+
+    .addclient {
         font-size: 1.333rem;
         box-sizing: border-box;
         padding-top: 0.333rem;
     }
-    .mes-list{}
-    .mes-list ul{}
-    .mes-list ul li{
+
+    .mes-list {
+    }
+
+    .mes-list ul {
+    }
+
+    .mes-list ul li {
         background: #fff;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         padding: 0.6rem 1.667rem;
         border-bottom: 0.083rem solid #ddd;
 
     }
-    .mes-list ul li span{
-        width:19.667rem;
+
+    .mes-list ul li span {
+        width: 19.667rem;
         text-align: right;
         font-size: 2.833rem;
     }
-    .mes-list ul li input{
+
+    .mes-list ul li input {
         width: 100%;
         height: 6rem;
         flex: 1;
@@ -271,49 +459,96 @@ html{
         background: #f2f2f2;
         font-size: 2.833rem;
     }
-    .mes-list ul li .shifou{
+
+    .mes-list ul li .shifou {
         width: 100%;
         height: 6rem;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
         flex: 1;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
     }
-    .mes-list ul li .shifou label{
+
+    .mes-list ul li .shifou label {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         /* margin-right: 1.667rem; */
         width: 8rem;
         height: 100%;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
     }
-    .mes-list ul li .shifou label span{
-        width: 0!important;
+
+    .mes-list ul li .shifou label span {
+        width: 0 !important;
     }
-    .mes-list ul li .shifou label .radios{
-        margin-left:3.2rem;
+
+    .mes-list ul li .shifou label .radios {
+        margin-left: 3.2rem;
         height: 3.333rem;
         width: 3.333rem;
     }
-    .mes-list ul li select{
+
+    .mes-list ul li select {
         width: 100%;
         height: 6rem;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
         flex: 1;
-        font-size:2.833rem ;
+        font-size: 2.833rem;
     }
 
-    .btn{
+    .btn {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
         justify-content: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
         align-items: center;
         padding: 1.667rem 0rem;
         background: #f2f2f2;
     }
-    .btn div a{
+
+    .btn div a {
         display: block;
         width: 20.917rem;
-        height:6.333rem;
-        background:#912941;
+        height: 6.333rem;
+        background: #912941;
         text-align: center;
         line-height: 6.333rem;
         color: #FFF;
