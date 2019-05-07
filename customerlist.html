@@ -11,7 +11,7 @@
 
 <body>
 <div class="top">
-    <span><a href="javascript:;" onclick="javascript:history.back(-1);" class="iconfont">&#xe675;<span>返回</span></a></span>
+    <span><a href="javascript:;" onclick="window.location.href = './guidelist.html'" class="iconfont">&#xe675;<span>返回</span></a></span>
     <span>顾客列表</span>
     <span><a href="#" class="iconfont">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
 </div>
@@ -74,26 +74,34 @@
     </div>
 </div>
 
-
-
 <div class="order">
-    <div class="pro-list">
-        <div class="mes-item">
-            <img src="#" alt="">
-            <div class="item-list">
-                <span>王梓</span>
-                <p>18720094586</p>
-            </div>
-        </div>
-        <div class="allbtn">
-            <div class="btn"><a href="./customeredit.html">更改编辑</a></div>
-        </div>
-    </div>
+<!--    <div class="pro-list">-->
+<!--        <div class="mes-item">-->
+<!--            <img src="#" alt="">-->
+<!--            <div class="item-list">-->
+<!--                <span>王梓</span>-->
+<!--                <p>18720094586</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="allbtn">-->
+<!--            <div class="btn"><a href="./customeredit.html">更改编辑</a></div>-->
+<!--        </div>-->
+<!--    </div>-->
 </div>
-<script src="./js/jquery-3.2.1.min.js"></script>
-<script>
-    $(function () {
 
+</body>
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./components/zdialog.js"></script>
+<script>
+    function getUrlParam(name) { //封装方法
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg); //匹配目标参数
+        if (r != null) return unescape(r[2]);
+        return null; //返回参数值
+    }
+
+    let id = getUrlParam('id')
+    $(function () {
         $(".screen").on("click",function (e) {
             $(".mainback").show()
             $(".screenmain").show()
@@ -104,24 +112,53 @@
             $(".screenmain").hide()
             document.documentElement.style.overflow = "scroll";
         })
-        //
-        // $('.itemprolist').find('span').click(function(){
-        //     var index = $(this).index();
-        //     $(this).addClass('on').siblings().removeClass('on');
-        // })
 
-        // 加入HTML
-        // let html = ''
-        // html = '
-        //
-        // $('.icon-list').append(html)
-        // document.documentElement.style.overflow = "hidden";
-        // document.documentElement.style.overflow = "scroll";
-        // $.get("http://zdf.dev.hyplmm.com/platform/v1/guide/order", function (data) {
-        //     console.log(data)
-        // })
+        if (!window.localStorage) {
+            // console.log("浏览器支持localstorage");
+        } else {
+            var storage = window.localStorage;
+            var Token = storage.getItem("Authorization");
+        }
+
+        $.ajax({
+            url: "http://zdf.dev.hyplmm.com/platform/v1/guide/customer",
+            type: "GET",
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': Token,
+            },
+            data: {
+                'user_id':id,
+            },
+            dataType: "json",
+            success: function (res) {
+                let newlist =res.result.data
+                console.log(res.result.data)
+                let html = ''
+                $.each(newlist, function (index, item) {
+                    html = '<div class="pro-list">\n' +
+                        '        <div class="mes-item">\n' +
+                        '            <img src="' + item.headimgurl + '" alt="">\n' +
+                        '            <div class="item-list">\n' +
+                        '                <span>' + item.name + '</span>\n' +
+                        '                <p>' + item.mobile + '</p>\n' +
+                        '            </div>\n' +
+                        '        </div>\n' +
+                        '        <div class="allbtn">\n' +
+                        '            <div class="btn"><a href="./customeredit.html?id=' + item.id + '">更改编辑</a></div>\n' +
+                        '        </div>\n' +
+                        '    </div>'
+                    $('.order').append(html)
+                });
+            },
+            error: function (res) {
+            },
+        });
+
+
+
 
     })
 </script>
-</body>
 </html>
+

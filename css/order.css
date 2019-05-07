@@ -70,13 +70,13 @@ body {
     height: 100%;
     top: 0;
     right: 0;
-    padding-top: 40px;
+    padding-top: 3.333rem;
 }
 
 .screenmain p {
-    margin-left: 22px;
-    margin-bottom: 8px;
-    font-size: 16px;
+    margin-left: 1.833rem;
+    margin-bottom: 0.667rem;
+    font-size: 1.333rem;
 }
 
 .screenmain .textinput {
@@ -97,26 +97,26 @@ body {
     -o-justify-content: center;
     -khtml-justify-content: center;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 3.333rem;
 }
 
 .screenmain .textinput span {
-    margin: 0px 10px;
+    margin: 0rem 0.833rem;
 }
 
 .screenmain .textinput input {
     background: #f2f2f2;
     width: 28%;
-    height: 30px;
-    border-radius: 16px;
-    padding: 0px 12px;
+    height: 2.5rem;
+    border-radius: 1.333rem;
+    padding: 0rem 1rem;
     text-align: center;
-    line-height: 30px;
+    line-height: 2.5rem;
     color: #666;
 }
 
 .itemprolist {
-    margin: 0px 20px;
+    margin: 0rem 1.667rem;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -179,11 +179,11 @@ body {
 }
 .itemprolist span {
     width: 28%;
-    height: 30px;
-    border-radius: 16px;
-    margin-bottom: 12px;
+    height: 2.5rem;
+    border-radius: 1.333rem;
+    margin-bottom: 1rem;
     text-align: center;
-    line-height: 30px;
+    line-height: 2.5rem;
     color: #666;
     background: #f2f2f2;
 }
@@ -325,15 +325,15 @@ body {
     -o-align-items: center;
     -khtml-align-items: center;
     align-items: center;
-    border-bottom: 0.083rem solid #ddd;
-    border-top: 0.083rem solid #ddd;
-    margin-bottom: 0.63rem;
+    border-bottom: 0.17rem solid #f2f2f2;
+    border-top: 0.083rem solid #f2f2f2;
+    /*margin-bottom: 0.63rem;*/
 }
 
 .pro-list img {
     width: 6.66rem;
     height: 6.66rem;
-    border: 0.083rem solid #ddd;
+    /*border: 0.083rem solid #ddd;*/
     margin-right: 0.333rem;
 }
 
@@ -382,12 +382,12 @@ body {
     text-align: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width:600px) {
     /*一栏布局*/
     body {
         background: #f2f2f2;
         height: 100%;
-        padding-top: 7.333rem;
+        padding-top: 7.77rem;
         z-index: 1;
     }
 
@@ -452,13 +452,13 @@ body {
         height: 100%;
         top: 0;
         right: 0;
-        padding-top: 40px;
+        padding-top: 3.333rem;
     }
 
     .screenmain p {
-        margin-left: 22px;
-        margin-bottom: 8px;
-        font-size: 16px;
+        margin-left: 1.833rem;
+        margin-bottom: 0.667rem;
+        font-size: 1.333rem;
     }
 
     .screenmain .textinput {
@@ -479,26 +479,26 @@ body {
         -o-justify-content: center;
         -khtml-justify-content: center;
         justify-content: center;
-        margin-bottom: 40px;
+        margin-bottom: 3.333rem;
     }
 
     .screenmain .textinput span {
-        margin: 0px 10px;
+        margin: 0rem 0.833rem;
     }
 
     .screenmain .textinput input {
         background: #f2f2f2;
         width: 28%;
-        height: 30px;
-        border-radius: 16px;
-        padding: 0px 12px;
+        height: 2.5rem;
+        border-radius: 1.333rem;
+        padding: 0rem 1rem;
         text-align: center;
-        line-height: 30px;
+        line-height: 2.5rem;
         color: #666;
     }
 
     .itemprolist {
-        margin: 0px 20px;
+        margin: 0rem 1.667rem;
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flex;
@@ -561,11 +561,11 @@ body {
     }
     .itemprolist span {
         width: 28%;
-        height: 30px;
-        border-radius: 16px;
-        margin-bottom: 12px;
+        height: 2.5rem;
+        border-radius: 1.333rem;
+        margin-bottom: 1rem;
         text-align: center;
-        line-height: 30px;
+        line-height: 2.5rem;
         color: #666;
         background: #f2f2f2;
     }
@@ -707,20 +707,20 @@ body {
         -o-align-items: center;
         -khtml-align-items: center;
         align-items: center;
-        border-bottom: 0.083rem solid #ddd;
-        border-top: 0.083rem solid #ddd;
-        margin-bottom: 0.63rem;
+        border-bottom: 0.17rem solid #f2f2f2;
+        border-top: 0.083rem solid #f2f2f2;
+        /*margin-bottom: 0.63rem;*/
     }
 
     .pro-list img {
         width: 6.66rem;
         height: 6.66rem;
-        border: 0.083rem solid #ddd;
+        /*border: 0.083rem solid #ddd;*/
         margin-right: 0.333rem;
     }
 
     .pro-list .item-list {
-        width: 56%;
+        width: 64%;
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flex;
@@ -765,7 +765,7 @@ body {
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width:768px) and (max-width:1024px) {
     /*二栏布局*/
     body {
         background: #f2f2f2;
@@ -963,13 +963,13 @@ body {
         height: 100%;
         top: 0;
         right: 0;
-        padding-top: 40px;
+        padding-top: 3.333rem;
     }
 
     .screenmain p {
-        margin-left: 22px;
-        margin-bottom: 24px;
-        font-size: 20px;
+        margin-left: 1.833rem;
+        margin-bottom: 2rem;
+        font-size: 1.667rem;
     }
 
     .screenmain .textinput {
@@ -990,27 +990,27 @@ body {
         -o-justify-content: center;
         -khtml-justify-content: center;
         justify-content: center;
-        margin-bottom: 40px;
+        margin-bottom: 3.333rem;
     }
 
     .screenmain .textinput span {
-        margin: 0px 10px;
+        margin: 0rem 0.833rem;
     }
 
     .screenmain .textinput input {
         background: #f2f2f2;
         width: 35%;
-        height: 56px;
-        border-radius: 33px;
-        padding: 0px 14px;
+        height: 4.667rem;
+        border-radius: 2.75rem;
+        padding: 0rem 1.167rem;
         text-align: center;
-        line-height: 56px;
+        line-height: 4.667rem;
         color: #666;
-        font-size: 20px;
+        font-size: 1.667rem;
     }
 
     .itemprolist {
-        margin: 0px 46px;
+        margin: 0rem 3.833rem;
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flex;
@@ -1073,14 +1073,14 @@ body {
     }
     .itemprolist span {
         width: 31%;
-        height: 56px;
-        border-radius: 34px;
-        margin-bottom: 30px;
+        height: 4.667rem;
+        border-radius: 2.833rem;
+        margin-bottom: 2.5rem;
         text-align: center;
-        line-height: 56px;
+        line-height: 4.667rem;
         color: #666;
         background: #f2f2f2;
-        font-size: 20px;
+        font-size: 1.667rem;
     }
 
     .itemprolist .on {
@@ -1114,16 +1114,16 @@ body {
         -o-align-items: center;
         -khtml-align-items: center;
         align-items: center;
-        border-bottom: 0.083rem solid #ddd;
-        border-top: 0.083rem solid #ddd;
-        margin-bottom: 0.63rem;
+        border-bottom: 0.17rem solid #f2f2f2;
+        border-top: 0.083rem solid #f2f2f2;
+        /*margin-bottom: 0.63rem;*/
     }
 
     .pro-list img {
         width: 10.66rem;
         height: 10.66rem;
-        border: 0.083rem solid #ddd;
-        margin-right: 0.333rem;
+        /*border: 0.083rem solid #ddd;*/
+        margin-right: 1rem;
     }
 
     .pro-list .item-list {
@@ -1176,7 +1176,7 @@ body {
     }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1400px) {
+@media screen and (min-width:1024px) and (max-width:1400px) {
     /*3栏布局*/
     body {
         background: #f2f2f2;
@@ -1327,9 +1327,8 @@ body {
         -webkit-flex: 1;
         width: 100%;
         background: #f2f2f2;
-        font-size: 1.77rem;
-
-
+        font-size: 2.77rem;
+        line-height: 6rem;
     }
 
     .searchsize {
@@ -1371,13 +1370,13 @@ body {
         height: 100%;
         top: 0;
         right: 0;
-        padding-top: 40px;
+        padding-top: 3.333rem;
     }
 
     .screenmain p {
-        margin-left: 30px;
-        margin-bottom: 30px;
-        font-size: 36px;
+        margin-left: 2.5rem;
+        margin-bottom: 2.5rem;
+        font-size: 3rem;
     }
 
     .screenmain .textinput {
@@ -1398,27 +1397,27 @@ body {
         -o-justify-content: center;
         -khtml-justify-content: center;
         justify-content: center;
-        margin-bottom: 90px;
+        margin-bottom: 7.5rem;
     }
 
     .screenmain .textinput span {
-        margin: 0px 10px;
+        margin: 0rem 0.833rem;
     }
 
     .screenmain .textinput input {
         background: #f2f2f2;
         width: 36%;
-        height: 80px;
-        border-radius: 40px;
-        padding: 0px 18px;
+        height: 6.667rem;
+        border-radius: 3.333rem;
+        padding: 0rem 1.5rem;
         text-align: center;
-        line-height: 80px;
+        line-height: 6.667rem;
         color: #666;
-        font-size: 30px;
+        font-size: 2.5rem;
     }
 
     .itemprolist {
-        margin: 0px 20px;
+        margin: 0rem 1.667rem;
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flex;
@@ -1481,14 +1480,14 @@ body {
     }
     .itemprolist span {
         width: 28%;
-        height: 80px;
-        border-radius: 40px;
-        margin-bottom: 40px;
+        height: 6.667rem;
+        border-radius: 3.333rem;
+        margin-bottom: 3.333rem;
         text-align: center;
-        line-height: 80px;
+        line-height: 6.667rem;
         color: #666;
         background: #f2f2f2;
-        font-size: 30px;
+        font-size: 2.5rem;
     }
 
     .itemprolist .on {
@@ -1523,16 +1522,16 @@ body {
         -o-align-items: center;
         -khtml-align-items: center;
         align-items: center;
-        border-bottom: 0.083rem solid #ddd;
-        border-top: 0.083rem solid #ddd;
-        margin-bottom: 0.63rem;
+        border-bottom: 0.3rem solid #f2f2f2;
+        border-top: 0.083rem solid #f2f2f2;
+        /*margin-bottom: 0.63rem;*/
     }
 
     .pro-list img {
         width: 18.66rem;
         height: 18.66rem;
-        border: 0.083rem solid #ddd;
-        margin-right: 0.333rem;
+        /*border: 0.083rem solid #ddd;*/
+        margin-right: 1.5rem;
     }
 
     .pro-list .item-list {

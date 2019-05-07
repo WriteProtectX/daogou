@@ -1,16 +1,60 @@
 {
 	"index.html": {
 		"refer": [
+			"housekeeper.html",
+			"login.html",
+			"Scan.html",
+			"activity.html",
 			"order.html",
+			"gift.html",
+			"keepservicing.html",
+			"servicing.html"
+		]
+	},
+	"housekeeper.html": {
+		"refer": [
+			"addclient.html",
+			"index.html"
+		]
+	},
+	"addclient.html": {
+		"refer": [
 			"housekeeper.html"
+		]
+	},
+	"orderdetails.html": {
+		"refer": [
+			"order.html"
 		]
 	},
 	"order.html": {
 		"refer": [
+			"orderdetails.html",
 			"index.html"
 		]
 	},
-	"housekeeper.html": {
+	"activity.html": {
+		"refer": [
+			"index.html",
+			"addactivity.html"
+		]
+	},
+	"gift.html": {
+		"refer": [
+			"index.html"
+		]
+	},
+	"addactivity.html": {
+		"refer": [
+			"activity.html"
+		]
+	},
+	"keepservicing.html": {
+		"refer": [
+			"index.html"
+		]
+	},
+	"servicing.html": {
 		"refer": [
 			"index.html"
 		]

@@ -1,98 +1,158 @@
 <!doctype html>
 <html>
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-		<title>会员服务信息系统</title>
-		<link rel="stylesheet" href="./components/common.css" />
-		<link rel="stylesheet" href="css/index.css" />
-		<link rel="stylesheet" href="./components/iconfont/iconfont.css" />
-	</head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <title>会员服务信息系统</title>
+    <link rel="stylesheet" href="./components/common.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="./components/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="./components/zdialog.css">
+</head>
 
-	<body>
-		<div class="index">
-			<div class="head">
-				<div class="logo">
-					<img src="images/user_logo.jpeg" alt="">
-				</div>
-				<div class="admin">
-					<p>admin</p>
-				</div>
-			</div>
-			<div class="main">
-			</div>
-			<div class="indexmain">
-				<ul>
-					<li>
-						<a href="./order.html">
-							<span class="iconfont">&#xe605;</span>
-							<span class="size">订单查询修改</span>
-						</a>
-					</li>
-					<li>
-						<a href="./housekeeper.html">
-							<span class="iconfont">&#xe62a;</span>
-							<span class="size">添加历史客户</span>
-						</a>
-					</li>
-					<li class="none-list">
-						<a href="./Scan.html">
-							<span class="iconfont">&#xe661;</span>
-							<span class="size">扫码绑定</span>
-						</a>
-					</li>
-					<li>
-						<a href="./gift.html">
-							<span class="iconfont">&#xe6bf;</span>
-							<span class="size">礼品赠送</span>
-						</a>
-					</li>
-					<li>
-						<a href="./guidelist.html">
-							<span class="iconfont">&#xe69e;</span>
-							<span class="size">修改腕表管家</span>
-						</a>
-					</li>
-					<li class="none-list">
-						<a href="#">
-							<span class="iconfont">&#xe608;</span>
-							<span class="size">一键制表</span>
-						</a>
-					</li>
-					<li class="none-item">
-						<a href="./servicing.html">
-							<span class="iconfont">&#xe683;</span>
-							<span class="size">维修登记</span>
-						</a>
-					</li>
-					<li class="none-item">
-						<a href="./keepservicing.html">
-							<span class="iconfont">&#xe618;</span>
-							<span class="size">维修记录</span>
-						</a>
-					</li>
-					<li class="none-list none-item">
-						<a href="./activity.html">
-							<span class="iconfont">&#xe610;</span>
-							<span class="size">活动登记</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="clickbtn">
-				<div class="clicktwobtn">退出登录</div>
-			</div>
-		</div>
-		<script src="./js/jquery-3.2.1.min.js"></script>
-		<script>
-			$(function() {
-				//加入HTML
-//				let html = ''
-//				html = ''
-//				$('.indexmain').append(html)
-			})
-		</script>
-	</body>
+<body>
+<div class="index">
+    <div class="head">
+        <div class="logo">
+            <img src="images/user_logo.jpeg" alt="">
+        </div>
+        <div class="admin">
+            <p>admin</p>
+        </div>
+    </div>
+    <div class="main">
+    </div>
+    <div class="indexmain">
+        <ul>
+            <li>
+                <a href="./order.html">
+                    <span class="iconfont">&#xe605;</span>
+                    <span class="size">订单查询</span>
+                </a>
+            </li>
+            <li>
+                <a href="./housekeeper.html">
+                    <span class="iconfont">&#xe62a;</span>
+                    <span class="size">客户管理</span>
+                </a>
+            </li>
+            <li class="none-list">
+                <a href="./Scan.html">
+                    <span class="iconfont">&#xe661;</span>
+                    <span class="size">扫码绑定</span>
+                </a>
+            </li>
+            <li>
+                <a href="./gift.html">
+                    <span class="iconfont">&#xe6bf;</span>
+                    <span class="size">礼品赠送</span>
+                </a>
+            </li>
+            <li>
+                <a href="./guidelist.html">
+                    <span class="iconfont">&#xe69e;</span>
+                    <span class="size">腕表管家</span>
+                </a>
+            </li>
+            <li class="none-list">
+                <a href="#">
+                    <span class="iconfont">&#xe608;</span>
+                    <span class="size">一键制表</span>
+                </a>
+            </li>
+            <li class="none-item">
+                <a href="./servicing.html">
+                    <span class="iconfont">&#xe683;</span>
+                    <span class="size">维修登记</span>
+                </a>
+            </li>
+            <li class="none-item">
+                <a href="./keepservicing.html">
+                    <span class="iconfont">&#xe618;</span>
+                    <span class="size">维修记录</span>
+                </a>
+            </li>
+            <li class="none-list none-item">
+                <a href="./activity.html">
+                    <span class="iconfont">&#xe610;</span>
+                    <span class="size">活动登记</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="clickbtn">
+        <div class="clicktwobtn">退出登录</div>
+    </div>
+</div>
+</body>
+<script src="./js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="./components/zdialog.js"></script>
+<script>
+    function getUrlParam(name) { //封装方法
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg); //匹配目标参数
+        if (r != null) return unescape(r[2]);
+        return null; //返回参数值
+    }
 
+    let id = getUrlParam('id')
+    $(function () {
+        if (!window.localStorage) {
+        } else {
+            var storage = window.localStorage;
+            var Token = storage.getItem("Authorization");
+        }
+        if(window.localStorage.length == 0){
+            $('.clickbtn').hide()
+            // $.DialogByZ.Confirm({Title: "", Content: "请登录导购账户！</br>", FunL: confirmL, FunR: Immediate})
+            alert('请登录导购账户！')
+            window.location.href = './login.html'
+            // setTimeout("window.location.href = './login.html'", 1000)
+        }else {
+            $('.clickbtn').show()
+        }
+
+
+        $('.clicktwobtn').on('click',function () {
+            $.DialogByZ.Confirm({Title: "", Content: "亲！要退出登录吗？</br>", FunL: confirmL, FunR: Immediate})
+        })
+
+        function confirmL() {
+            $.ajax({
+                url: "http://zdf.dev.hyplmm.com/platform/v1/user/logout",
+                type: "GET",
+                headers: {
+                    'Accept': 'application/json',
+                    'Authorization': Token,
+                },
+                data: {},
+                dataType: "json",
+                success: function (res) {
+                    console.log(res)
+                    if(res.message == 'success'){
+                        storage.clear()
+                        window.location.href = './login.html'
+                        $(".zbox-popup-backdrop").css("display", "none")
+                        $(".zbox-active").css("display", "none")
+                        $(".zbox-popup").css("display", "none")
+                        $(".zbox-popup-in").css("display", "none")
+                    }
+                },
+                error: function (res) {
+                },
+            });
+
+
+        }
+
+        function Immediate() {
+            $(".zbox-popup-in").css("display", "none")
+            $(".zbox-active").css("display", "none")
+        }
+
+
+
+    })
+</script>
 </html>

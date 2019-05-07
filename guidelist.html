@@ -11,17 +11,11 @@
 
 <body>
 <div class="top">
-    <span><a href="javascript:;" onclick="javascript:history.back(-1);" class="iconfont">&#xe675;<span>返回</span></a></span>
+    <span><a href="javascript:;" onclick="window.location.href = './index.html'" class="iconfont">&#xe675;<span>返回</span></a></span>
     <span>导购列表</span>
     <span><a href="#" class="iconfont">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
 </div>
 <div class="search">
-<!--    <div class="screen">-->
-<!--        <a href="#">-->
-<!--            <span class="iconfont">&#xe626;</span>-->
-<!--            <span>筛选</span>-->
-<!--        </a>-->
-<!--    </div>-->
     <div class="searchkuang">
         <from>
             <span class="iconfont">&#xe60f;</span>
@@ -31,31 +25,80 @@
     <div class="searchsize"><a href="#">搜索</a></div>
 </div>
 <div class="order">
-    <div class="pro-list">
-
-        <div class="mes-item">
-            <img src="#" alt="">
-            <div class="item-list">
-                <span>王梓</span>
-                <p>18720094586</p>
-            </div>
-        </div>
-        <div class="allbtn">
-            <div class="btn"><a href="./guideedit.html">更改编辑</a></div>
-            <div class="btn2"><a href="./customerlist.html">查看顾客</a></div>
-        </div>
-    </div>
+<!--    <div class="pro-list">-->
+<!--        <div class="mes-item">-->
+<!--            <img src="#" alt="">-->
+<!--            <div class="item-list">-->
+<!--                <span>王梓</span>-->
+<!--                <p>18720094586</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="allbtn">-->
+<!--            <div class="btn"><a href="./guideedit.html">更改编辑</a></div>-->
+<!--            <div class="btn2"><a href="./customerlist.html">查看顾客</a></div>-->
+<!--        </div>-->
+<!--    </div>-->
 </div>
-<script src="./js/jquery-3.2.1.min.js"></script>
-<script>
-    $(function () {
-        //加入HTML
-        // let html = ''
-        // html = '
 
-        // $('.icon-list').append(html)
+</body>
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./components/zdialog.js"></script>
+<script>
+    function getUrlParam(name) { //封装方法
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg); //匹配目标参数
+        if (r != null) return unescape(r[2]);
+        return null; //返回参数值
+    }
+
+    let id = getUrlParam('id')
+    $(function () {
+
+        if (!window.localStorage) {
+            // console.log("浏览器支持localstorage");
+        } else {
+            var storage = window.localStorage;
+            var Token = storage.getItem("Authorization");
+        }
+
+        $.ajax({
+            url: "http://zdf.dev.hyplmm.com/platform/v1/guide/personal",
+            type: "GET",
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': Token,
+            },
+            data: {
+
+            },
+            dataType: "json",
+            success: function (res) {
+                let newlist =res.result.data
+                console.log(res.result.data)
+                let html = ''
+                $.each(newlist, function (index, item) {
+                    html = '<div class="pro-list">\n' +
+                        '        <div class="mes-item">\n' +
+                        '            <img src="' + item.head_portrait + '" alt="">\n' +
+                        '            <div class="item-list">\n' +
+                        '                <span>' + item.user_name + '</span>\n' +
+                        '                <p>导购工号：' + item.job_num + '</p>\n' +
+                        '                <p>所属门店：' + item.shop_name + '</p>\n' +
+                        '                <p>联系电话：' + item.mobile + '</p>\n' +
+                        '            </div>\n' +
+                        '        </div>\n' +
+                        '        <div class="allbtn">\n' +
+                        '            <div class="btn"><a href="./guideedit.html?id=' + item.id + '">更改编辑</a></div>\n' +
+                        '            <div class="btn2"><a href="./customerlist.html?id=' + item.id + '">查看顾客</a></div>\n' +
+                        '        </div>\n' +
+                        '    </div>'
+                    $('.order').append(html)
+                });
+            },
+            error: function (res) {
+            },
+        });
 
     })
 </script>
-</body>
 </html>

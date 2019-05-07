@@ -177,7 +177,7 @@ body {
     align-items: center;
     border-bottom: 0.083rem solid #ddd;
     border-top: 0.083rem solid #ddd;
-    margin-bottom: 0.63rem;
+    /*margin-bottom: 0.63rem;*/
 }
 
 .mes-item {
@@ -447,7 +447,7 @@ body {
         align-items: center;
         border-bottom: 0.083rem solid #ddd;
         border-top: 0.083rem solid #ddd;
-        margin-bottom: 0.63rem;
+        /*margin-bottom: 0.63rem;*/
     }
 
     .mes-item {
@@ -525,10 +525,11 @@ body {
 
     .btn {
         border: 0.083rem solid #912941;
-        padding: 0.6rem 0.167rem;
+        padding: 0.2rem 0.2rem;
         background: #912941;
         margin-bottom: 0.833rem;
-        width: 4.167rem;
+        width: 2.167rem;
+        font-size: 1rem;
     }
 
     .btn a {
@@ -741,7 +742,7 @@ body {
         align-items: center;
         border-bottom: 0.083rem solid #ddd;
         border-top: 0.083rem solid #ddd;
-        margin-bottom: 0.63rem;
+        /*margin-bottom: 0.63rem;*/
     }
 
     .mes-item {
@@ -756,6 +757,12 @@ body {
         -o-align-items: center;
         -khtml-align-items: center;
         align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        -khtml-justify-content: space-between;
+        justify-content: space-between;
     }
 
     .pro-list img {
@@ -819,10 +826,11 @@ body {
 
     .btn {
         border: 0.083rem solid #912941;
-        padding: 0.6rem 0.167rem;
+        padding: 0.6rem 1rem;
         background: #912941;
         margin-bottom: 0.833rem;
         width: 4.167rem;
+        font-size: 1.6rem;
     }
 
     .btn a {
@@ -1034,7 +1042,7 @@ body {
         align-items: center;
         border-bottom: 0.083rem solid #ddd;
         border-top: 0.083rem solid #ddd;
-        margin-bottom: 0.63rem;
+        /*margin-bottom: 0.63rem;*/
     }
 
     .mes-item {
@@ -1112,10 +1120,11 @@ body {
 
     .btn {
         border: 0.083rem solid #912941;
-        padding: 0.6rem 0.167rem;
+        padding: 1rem 2rem;
         background: #912941;
         margin-bottom: 0.833rem;
-        width: 4.167rem;
+        width: 6.167rem;
+        font-size: 2.4rem;
     }
 
     .btn a {

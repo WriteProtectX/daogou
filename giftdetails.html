@@ -1,61 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-    <title>礼品赠送详情</title>
-    <link rel="stylesheet" href="css/giftdetails.css">
-    <link rel="stylesheet" href="./components/common.css">
-    <link rel="stylesheet" href="./components/iconfont/iconfont.css">
+    <title>领取记录</title>
+    <link rel="stylesheet" href="./components/common.css"/>
+    <link rel="stylesheet" href="css/gift.css"/>
+    <link rel="stylesheet" href="./components/iconfont/iconfont.css"/>
 </head>
+
 <body>
-<div class="buydetails">
-    <div class="top">
-        <span><a href="javascript:;" onclick="javascript:history.back(-1);" class="iconfont">&#xe675;<span>返回</span></a></span>
-        <span>礼品赠送详情</span>
-        <span><a href="#" class="iconfont">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
-    </div>
-    <div class="order-list">
-        <div class="order">
-            <span>订单编号：843828339</span>
-            <p>购买时间：2019-02-03</p>
-        </div>
-        <div class="pro-list">
-            <img src="" alt="">
-            <div class="pro-mes">
-                <span class="title">浪琴手表   康卡斯系列石英男表</span>
-                <span>数量：1</span>
-                <span>折扣：五折</span>
-                <p>售价：<span class="pirce">¥15000</span></p>
-            </div>
-        </div>
-        <div class="list">
-            <ul>
-                <li>
-                    <span>支付方式：</span>
-                    <span>在线支付</span>
-                </li>
-                <li>
-                    <span>购买人姓名：</span>
-                    <span>王梓轩</span>
-                </li>
-                <li>
-                    <span>购买人手机号：</span>
-                    <span>18720094586</span>
-                </li>
-                <li>
-                    <span>实付金额：</span>
-                    <span class="newpirce">¥15000</span>
-                </li>
-                <li>
-                    <span>选取礼品：</span>
-                    <span class="title">得力文具精美套盒幼儿园奖品套餐</span>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-
+<div class="top">
+    <span><a href="javascript:;" onclick="window.location.href = './gift.html'"
+             class="iconfont">&#xe675;<span>返回</span></a></span>
+    <span>领取记录</span>
+    <span><a href="#" class="iconfont">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+</div>
+<div class="order">
+<!--    <div class="pro-list">-->
+<!--        <img src="./images/pic.jpeg" alt="">-->
+<!--        <div class="item-list">-->
+<!--            <span class="title">礼品名字</span>-->
+<!--            <span>领取人</span>-->
+<!--            <span>数量</span>-->
+<!--            <p>时间</p>-->
+<!--        </div>-->
+<!--        <div class="allbtn">-->
+<!--        </div>-->
+<!--    </div>-->
 </div>
 </body>
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./components/zdialog.js"></script>
+<script>
+    function getUrlParam(name) { //封装方法
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg); //匹配目标参数
+        if (r != null) return unescape(r[2]);
+        return null; //返回参数值
+    }
+
+    let id = getUrlParam('id')
+    $(function () {
+
+        if (!window.localStorage) {
+            // console.log("浏览器支持localstorage");
+        } else {
+            var storage = window.localStorage;
+            var Token = storage.getItem("Authorization");
+        }
+
+        $.ajax({
+            url: "http://zdf.dev.hyplmm.com/platform/v1/guide/giveGift",
+            type: "GET",
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': Token,
+            },
+            data: {
+                'gift_id':id,
+            },
+            dataType: "json",
+            success: function (res) {
+                let newlist =res.result.data
+                console.log(res.result.data)
+                let html = ''
+                $.each(newlist, function (index, item) {
+                    html = '<div class="pro-list">\n' +
+                        '        <img src="' + item.img + '" alt="">\n' +
+                        '        <div class="item-list">\n' +
+                        '            <span class="title">' + item.gift_name + '</span>\n' +
+                        '            <span>领取人:' + item.customer_name + '</span>\n' +
+                        '            <span>领取数量:' + item.receive_num + '</span>\n' +
+                        '            <p>领取时间:' + item.created_at + '</p>\n' +
+                        '        </div>\n' +
+                        '        <div class="allbtn">\n' +
+                        '        </div>\n' +
+                        '    </div>'
+                    $('.order').append(html)
+                });
+
+            },
+            error: function (res) {
+            },
+        });
+
+    })
+</script>
 </html>

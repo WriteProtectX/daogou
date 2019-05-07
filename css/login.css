@@ -73,6 +73,8 @@ h1, h2, h3, h4, h5, h6 {
     -o-align-items: center;
     -khtml-align-items: center;
     align-items: center;
+    line-height: 3.333rem;
+    height: 3.333rem;
 }
 
 .login-inp label {
@@ -80,17 +82,18 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     display: inline-block;
     color: #fff;
+
 }
 
 .login-inp input {
     width: 80%;
     flex: 1;
     -webkit-flex: 1;
-    line-height: 3.333rem;
     color: #fff;
     background-color: transparent;
     border: none;
     outline: none;
+    font-size: 1.333rem;
 }
 
 .login-inp input::-webkit-input-placeholder {
@@ -163,6 +166,8 @@ h1, h2, h3, h4, h5, h6 {
         -o-align-items: center;
         -khtml-align-items: center;
         align-items: center;
+        line-height: 3.333rem;
+        height: 3.333rem;
     }
 
     .login-inp label {
@@ -176,11 +181,11 @@ h1, h2, h3, h4, h5, h6 {
         width: 80%;
         flex: 1;
         -webkit-flex: 1;
-        line-height: 3.333rem;
         color: #fff;
         background-color: transparent;
         border: none;
         outline: none;
+        font-size: 1.333rem;
     }
 
     .login-inp input::-webkit-input-placeholder {
@@ -255,6 +260,8 @@ h1, h2, h3, h4, h5, h6 {
         -o-align-items: center;
         -khtml-align-items: center;
         align-items: center;
+        line-height: 4.8rem;
+        height: 4.8rem;
     }
 
     .login-inp label {
@@ -268,12 +275,12 @@ h1, h2, h3, h4, h5, h6 {
         width: 80%;
         flex: 1;
         -webkit-flex: 1;
-        line-height: 4.8rem;
         color: #fff;
         background-color: transparent;
         border: none;
         outline: none;
         font-size: 1.667rem;
+        padding-left: 0.83rem;
     }
 
     .login-form label .iconfont {
@@ -353,6 +360,8 @@ h1, h2, h3, h4, h5, h6 {
         -o-align-items: center;
         -khtml-align-items: center;
         align-items: center;
+        line-height: 7rem;
+        height: 7rem;
     }
 
     .login-inp label {
@@ -366,7 +375,6 @@ h1, h2, h3, h4, h5, h6 {
         width: 80%;
         flex: 1;
         -webkit-flex: 1;
-        line-height: 7rem;
         color: #fff;
         background-color: transparent;
         border: none;

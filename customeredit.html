@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./components/common.css"/>
     <link rel="stylesheet" href="css/guideedit.css"/>
     <link rel="stylesheet" href="./components/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="./components/zdialog.css">
 </head>
 
 <body>
@@ -20,35 +21,80 @@
     <ul>
         <li>
             <span>客户姓名：</span>
-            <input type="text" name="" id="">
+            <input type="text" name="" placeholder="请输入客户姓名！" id="name">
         </li>
         <li>
             <span>客户电话：</span>
-            <input type="text" name="" id="">
-        </li>
-        <li>
-            <span>导购工号：</span>
-            <select>
-                <option value="广州市天河城门店">广州市天河城门店</option>
-                <option value="2">广州市天河城门店</option>
-                <option value="3">广州市天河城门店</option>
-            </select>
+            <input type="text" name="" placeholder="请输入客户电话！" id="phone">
         </li>
     </ul>
 </div>
 <div class="btn">
-    <div><a href="#">保存更改</a></div>
+    <div class="btmlist">
+        <div class="btns">保存更改</div>
+    </div>
 </div>
+</body>
 <script src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./components/zdialog.js"></script>
 <script>
-    $(function () {
-        //加入HTML
-        // let html = ''
-        // html = '
+    function getUrlParam(name) { //封装方法
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg); //匹配目标参数
+        if (r != null) return unescape(r[2]);
+        return null; //返回参数值
+    }
 
-        // $('.icon-list').append(html)
+    let id = getUrlParam('id')
+    $(function () {
+
+        if (!window.localStorage) {
+            // console.log("浏览器支持localstorage");
+        } else {
+            var storage = window.localStorage;
+            var Token = storage.getItem("Authorization");
+        }
+
+        $('.btns').on('click',function () {
+            let Name = $('#name').val()
+            let Phone = $('#phone').val()
+
+            if(Name == ''){
+                alert('请输入导购姓名！')
+            }else if(Phone == ''){
+                alert('请输入导购电话！')
+            }
+            if(Name !== '' && Phone !== ''){
+                $.ajax({
+                    url: "http://zdf.dev.hyplmm.com/platform/v1/guide/upCustomer",
+                    type: "POST",
+                    headers: {
+                        'Accept': 'application/json',
+                        'Authorization': Token,
+                    },
+                    data: {
+                        'customer_id':id,                                     //顾客ID
+                        'name':Name,                                    //顾客姓名
+                        'mobile':Phone,                                      //顾客手机
+                    },
+                    dataType: "json",
+                    success: function (data) {
+                        console.log(data)
+                        $.DialogByZ.Autofade({Content: "保存成功"})
+                    },
+                    error: function () {
+                        alert("网络故障！")
+                    },
+                });
+            }
+
+
+
+
+        })
+
+
 
     })
 </script>
-</body>
 </html>

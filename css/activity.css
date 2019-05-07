@@ -180,9 +180,9 @@ body {
     -o-align-items: center;
     -khtml-align-items: center;
     align-items: center;
-    border-bottom: 0.083rem solid #ddd;
-    border-top: 0.083rem solid #ddd;
-    margin-bottom: 0.63rem;
+    border-bottom: 0.17rem solid #f2f2f2;
+    border-top: 0.083rem solid #f2f2f2;
+    /*margin-bottom: 0.63rem;*/
 }
 
 .pro-list img {
@@ -232,12 +232,75 @@ body {
     width: 5.833rem;
 }
 
-.btn a {
+.btn .btnlists {
     width: 100%;
     height: 100%;
     text-align: center;
     display: block;
     color: #FFF;
+}
+.show{
+    position:fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:rgba(0,0,0,0.3);
+    z-index: 99999;
+    padding: 2.5rem;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    /*display: flex;*/
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    -khtml-justify-content: center;
+    justify-content: center;
+    display: none
+}
+.show .showtwo{
+    background: #fff;
+    width: 84%;
+    height: 66.66rem;
+    margin: 0 auto;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -khtml-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    -khtml-justify-content: center;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    -khtml-flex-direction: column;
+    flex-direction: column;
+}
+.show .showtwo .text{
+    font-size: 2.2rem;
+}
+.show .showtwo .codepic img{
+    width: 41.7rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -420,8 +483,8 @@ body {
         -o-align-items: center;
         -khtml-align-items: center;
         align-items: center;
-        border-bottom: 0.083rem solid #ddd;
-        border-top: 0.083rem solid #ddd;
+        border-bottom: 0.17rem solid #f2f2f2;
+        border-top: 0.083rem solid #f2f2f2;
         margin-bottom: 0.63rem;
     }
 
@@ -444,6 +507,7 @@ body {
         -o-flex-direction: column;
         -khtml-flex-direction: column;
         flex-direction: column;
+        width: 76%;
     }
 
     .pro-list .item-list h3 {
@@ -472,13 +536,79 @@ body {
         width: 5.833rem;
     }
 
-    .btn a {
+    .btn .btnlists {
         width: 100%;
         height: 100%;
         text-align: center;
         display: block;
         color: #FFF;
     }
+
+    .show{
+        position:fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background:rgba(0,0,0,0.3);
+        z-index: 99999;
+        padding: 2.5rem;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        box-sizing: border-box;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
+        justify-content: center;
+        display: none
+    }
+    .show .showtwo{
+        background: #fff;
+        width: 100%;
+        height: 33.66rem;
+        margin: 0 auto;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
+        justify-content: center;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        -khtml-flex-direction: column;
+        flex-direction: column;
+        padding: 0.83rem;
+    }
+    .show .showtwo .text{
+        font-size: 1.3rem;
+    }
+    .show .showtwo .codepic img{
+        width: 21rem;
+    }
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -680,9 +810,9 @@ body {
         -o-align-items: center;
         -khtml-align-items: center;
         align-items: center;
-        border-bottom: 0.083rem solid #ddd;
-        border-top: 0.083rem solid #ddd;
-        margin-bottom: 0.63rem;
+        border-bottom: 0.2rem solid #f2f2f2;
+        border-top: 0.083rem solid #f2f2f2;
+        /*margin-bottom: 0.63rem;*/
     }
 
     .pro-list img {
@@ -736,13 +866,79 @@ body {
         font-size: 1.667rem;
     }
 
-    .btn a {
+    .btn .btnlists {
         width: 100%;
         height: 100%;
         text-align: center;
         display: block;
         color: #FFF;
     }
+
+
+    .show{
+        position:fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background:rgba(0,0,0,0.3);
+        z-index: 99999;
+        padding: 2.5rem;
+        box-sizing: border-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
+        justify-content: center;
+        display: none
+    }
+    .show .showtwo{
+        background: #fff;
+        width: 84%;
+        height: 66.66rem;
+        margin: 0 auto;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
+        justify-content: center;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        -khtml-flex-direction: column;
+        flex-direction: column;
+    }
+    .show .showtwo .text{
+        font-size: 2.2rem;
+    }
+    .show .showtwo .codepic img{
+        width: 41.7rem;
+    }
+
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1400px) {
@@ -944,9 +1140,9 @@ body {
         -o-align-items: center;
         -khtml-align-items: center;
         align-items: center;
-        border-bottom: 0.083rem solid #ddd;
-        border-top: 0.083rem solid #ddd;
-        margin-bottom: 0.63rem;
+        border-bottom: 0.2rem solid #f2f2f2;
+        border-top: 0.083rem solid #f2f2f2;
+        /*margin-bottom: 0.63rem;*/
     }
 
     .pro-list .item-list {
@@ -993,11 +1189,75 @@ body {
         font-size: 2.333rem;
     }
 
-    .btn a {
+    .btn .btnlists {
         width: 100%;
         height: 100%;
         text-align: center;
         display: block;
         color: #FFF;
+    }
+
+    .show{
+        position:fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background:rgba(0,0,0,0.3);
+        z-index: 99999;
+        padding: 2.5rem;
+        box-sizing: border-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
+        justify-content: center;
+        display: none
+    }
+    .show .showtwo{
+        background: #fff;
+        width: 84%;
+        height: 66.66rem;
+        margin: 0 auto;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
+        justify-content: center;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        -khtml-flex-direction: column;
+        flex-direction: column;
+    }
+    .show .showtwo .text{
+        font-size: 2.2rem;
+    }
+    .show .showtwo .codepic img{
+        width: 41.7rem;
     }
 }

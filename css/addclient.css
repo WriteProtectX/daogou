@@ -1,11 +1,57 @@
 html {
     font-size: 12px;
 }
+
 body {
     font-size: 1rem;
     margin-top: 3.667rem;
     background: #f2f2f2;
 }
+
+
+input[type=radio] {
+    z-index: 2;
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.7rem;
+    height: 1.7rem;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 0;
+    outline: 0 !important;
+    line-height: 1.7rem;
+    color: #d8d8d8;
+    z-index: 2;
+}
+
+input[type=radio]:after {
+    z-index: 2;
+    content: "";
+    display: block;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.166rem;
+    font-size: 1rem;
+    color: #fff;
+    border: 3px solid #ddd;
+    background-color: #fff;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+input[type=radio]:checked:after {
+    z-index: 2;
+    content: "L";
+    transform: matrix(-0.766044, -0.642788, -0.642788, 0.766044, 0, 0);
+    -webkit-transform: matrix(-0.766044, -0.642788, -0.642788, 0.766044, 0, 0);
+    border-color: #099414;
+    background-color: #099414;
+    z-index: 2;
+    font-size: 1rem;
+}
+
 
 .top {
     width: 100%;
@@ -32,6 +78,7 @@ body {
     box-sizing: border-box;
     background: #912941;
     color: #FFF;
+    z-index: 9999;
 }
 
 .top a {
@@ -89,13 +136,13 @@ body {
     text-align: right;
 }
 
-.mes-list ul li input {
+.mes-list ul li #name, #age, #Telephone, #Model, #Features, #retailpirces, #datas, #Cost, #hobby, #Birthday {
     width: 100%;
     height: 3rem;
     border-radius: 0.667rem;
     padding: 0rem 0.833rem;
-    border: 0.083rem solid #f2f2f2;
-    background: #f2f2f2;
+    border: 0.083rem solid #ddd;
+    background: none;
 }
 
 .mes-list ul li .shifou {
@@ -180,6 +227,50 @@ body {
         background: #f2f2f2;
     }
 
+    input[type=radio] {
+        z-index: 2;
+        display: inline-block;
+        vertical-align: middle;
+        width: 1.7rem;
+        height: 1.7rem;
+        -webkit-appearance: none;
+        background-color: transparent;
+        border: 0;
+        outline: 0 !important;
+        line-height: 1.7rem;
+        color: #d8d8d8;
+        z-index: 2;
+    }
+
+    input[type=radio]:after {
+        z-index: 2;
+        content: "";
+        display: block;
+        width: 1.7rem;
+        height: 1.7rem;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 1.166rem;
+        font-size: 1rem;
+        color: #fff;
+        border: 3px solid #ddd;
+        background-color: #fff;
+        box-sizing: border-box;
+        z-index: 2;
+
+    }
+
+    input[type=radio]:checked:after {
+        z-index: 2;
+        content: "L";
+        transform: matrix(-0.766044, -0.642788, -0.642788, 0.766044, 0, 0);
+        -webkit-transform: matrix(-0.766044, -0.642788, -0.642788, 0.766044, 0, 0);
+        border-color: #099414;
+        background-color: #099414;
+        z-index: 2;
+        font-size: 1rem;
+    }
+
     .top {
         width: 100%;
         position: fixed;
@@ -262,13 +353,13 @@ body {
         text-align: right;
     }
 
-    .mes-list ul li input {
+    .mes-list ul li #name, #age, #Telephone, #Model, #Features, #retailpirces, #datas, #Cost, #hobby, #Birthday {
         width: 100%;
         height: 3rem;
         border-radius: 0.667rem;
         padding: 0rem 0.833rem;
-        border: 0.083rem solid #f2f2f2;
-        background: #f2f2f2;
+        border: 0.083rem solid #dddddd;
+        background: none;
     }
 
     .mes-list ul li .shifou {
@@ -310,6 +401,9 @@ body {
         display: -ms-flex;
         display: -o-flex;
         display: flex;
+        background: none;
+        border: 0.083rem solid #ddd;
+        border-radius: 0.667rem;
     }
 
     .btn {
@@ -351,9 +445,47 @@ body {
     body {
         background: #f2f2f2;
         height: 100%;
-        padding-top: 5rem;
+        padding-top: 1.4rem;
+    }
+    input[type=radio] {
+        z-index: 2;
+        display: inline-block;
+        vertical-align: middle;
+        width: 1.7rem;
+        height: 1.7rem;
+        -webkit-appearance: none;
+        background-color: transparent;
+        border: 0;
+        outline: 0 !important;
+        line-height: 1.7rem;
+        color: #d8d8d8;
     }
 
+    input[type=radio]:after {
+        z-index: 2;
+        content: "";
+        display: block;
+        width: 1.7rem;
+        height: 1.7rem;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 1.166rem;
+        color: #fff;
+        border: 3px solid #ddd;
+        background-color: #fff;
+        box-sizing: border-box;
+        font-size: 1rem;
+    }
+
+    input[type=radio]:checked:after {
+        content: "L";
+        transform: matrix(-0.766044, -0.642788, -0.642788, 0.766044, 0, 0);
+        -webkit-transform: matrix(-0.766044, -0.642788, -0.642788, 0.766044, 0, 0);
+        border-color: #099414;
+        background-color: #099414;
+        z-index: 2;
+        font-size: 1rem;
+    }
     .top {
         width: 100%;
         position: fixed;
@@ -428,7 +560,7 @@ body {
         -o-align-items: center;
         -khtml-align-items: center;
         align-items: center;
-        padding: 0.5rem 1.667rem;
+        padding: 0.7rem 1.667rem;
         border-bottom: 0.083rem solid #ddd;
         font-size: 2rem;
     }
@@ -439,15 +571,15 @@ body {
 
     }
 
-    .mes-list ul li input {
+    .mes-list ul li #name, #age, #Telephone, #Model, #Features, #retailpirces, #datas, #Cost, #hobby, #Birthday {
         width: 100%;
         height: 4rem;
         flex: 1;
         -webkit-flex: 1;
         border-radius: 0.667rem;
         padding: 0rem 0.833rem;
-        border: 0.083rem solid #f2f2f2;
-        background: #f2f2f2;
+        border: 0.083rem solid #ddd;
+        background: none;
     }
 
     .mes-list ul li .shifou {
@@ -485,7 +617,7 @@ body {
 
     .mes-list ul li select {
         width: 100%;
-        height: 3rem;
+        height: 4.3rem;
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flex;
@@ -493,7 +625,9 @@ body {
         display: flex;
         flex: 1;
         -webkit-flex: 1;
-
+        background: none;
+        border: 0.083rem solid #ddd;
+        border-radius: 0.667rem;
     }
 
     .btn {
@@ -535,9 +669,52 @@ body {
     body {
         background: #f2f2f2;
         height: 100%;
-        padding-top: 7.5rem;
+        padding-top: 3.5rem;
     }
 
+    input[type=radio] {
+        z-index: 2;
+        display: inline-block;
+        vertical-align: middle;
+        width: 1.7rem;
+        height: 1.7rem;
+        -webkit-appearance: none;
+        background-color: transparent;
+        border: 0;
+        outline: 0 !important;
+        line-height: 1.7rem;
+        color: #d8d8d8;
+    }
+
+    input[type=radio]:after {
+        z-index: 2;
+        content: "";
+        display: block;
+        width: 1.7rem;
+        height: 1.7rem;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 1.166rem;
+        color: #fff;
+        border: 3px solid #ddd;
+        background-color: #fff;
+        box-sizing: border-box;
+        font-size: 1rem;
+    }
+
+    input[type=radio]:checked:after {
+        z-index: 2;
+        content: "L";
+        transform: matrix(-0.766044, -0.642788, -0.642788, 0.766044, 0, 0);
+        -webkit-transform: matrix(-0.766044, -0.642788, -0.642788, 0.766044, 0, 0);
+        -ms-transform: matrix(-0.766044, -0.642788, -0.642788, 0.766044, 0, 0);
+        -moz-transform: matrix(-0.766044, -0.642788, -0.642788, 0.766044, 0, 0);
+        -o-transform: matrix(-0.766044, -0.642788, -0.642788, 0.766044, 0, 0);
+        -khtml-transform: matrix(-0.766044, -0.642788, -0.642788, 0.766044, 0, 0);
+        border-color: #099414;
+        background-color: #099414;
+        font-size: 1rem;
+    }
     .top {
         width: 100%;
         position: fixed;
@@ -622,15 +799,15 @@ body {
         font-size: 2.833rem;
     }
 
-    .mes-list ul li input {
+    .mes-list ul li #name, #age, #Telephone, #Model, #Features, #retailpirces, #datas, #Cost, #hobby, #Birthday {
         width: 100%;
         height: 6rem;
         flex: 1;
         -webkit-flex: 1;
         border-radius: 0.667rem;
         padding: 0rem 0.833rem;
-        border: 0.083rem solid #f2f2f2;
-        background: #f2f2f2;
+        border: 0.083rem solid #ddd;
+        background: none;
         font-size: 2.833rem;
     }
 
@@ -696,6 +873,9 @@ body {
         flex: 1;
         -webkit-flex: 1;
         font-size: 2.833rem;
+        background: none;
+        border: 0.083rem solid #ddd;
+        border-radius: 0.667rem;
     }
 
     .btn {

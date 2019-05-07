@@ -1,21 +1,20 @@
-
-
-
 <!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <title>活动登记</title>
-    <link rel="stylesheet" href="./components/common.css"/>
     <link rel="stylesheet" href="css/addactivity.css"/>
     <link rel="stylesheet" href="./components/iconfont/iconfont.css"/>
-    <link rel="stylesheet" href="css/Mdate.css">
+    <link rel="stylesheet" href="./components/date.css">
+    <link rel="stylesheet" href="./components/common.css"/>
+    <link rel="stylesheet" href="./components/zdialog.css">
 </head>
 
 <body>
 <div class="top">
-    <span><a href="javascript:;" onclick="javascript:history.back(-1);" class="iconfont">&#xe675;<span>返回</span></a></span>
+    <span><a href="javascript:;" onclick="window.location.href = './activity.html'"
+             class="iconfont">&#xe675;<span>返回</span></a></span>
     <span>活动登记</span>
     <span><a href="#" class="iconfont">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
 </div>
@@ -23,7 +22,7 @@
 <div class="order">
     <div class="list">
         <span>活动名称：</span>
-        <input type="text">
+        <input type="text" id="name" placeholder="请输入活动名称">
     </div>
     <div class="text">
         <span>活动详情：</span>
@@ -31,55 +30,96 @@
     </div>
     <div class="demoBox">
         <span>开始时间：</span>
-        <input type="text" id="dateSelectorOne" placeholder="选择日期">
+        <div id="datePlugin"></div>
+        <input type="text" id="dateinput" placeholder="选择开始日期"/>
     </div>
     <div class="demoBox">
         <span>结束时间：</span>
-        <input type="text" id="dateSelectorTwo" placeholder="选择日期">
+        <div id="dateSelector"></div>
+        <input type="text" id="dateSelectorTwo" placeholder="选择结束日期">
     </div>
 </div>
 <div class="btn">
-    <div><a href="#">保存</a></div>
+    <div>
+        <div class="btnlist">添加</div>
+    </div>
 </div>
 
-<script src="./js/jquery-3.2.1.min.js"></script>
-<script src="./js/iScroll.js"></script>
-<script src="./js/Mdate.js"></script>
+</body>
+<!--<script src="./js/jquery-3.2.1.min.js"></script>-->
+<script src="./js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="./components/zdialog.js"></script>
+<script type="text/javascript" src="./js/iscroll_date.js"></script>
+<script type="text/javascript" src="./js/date.js"></script>
+<script type="text/javascript" src="./components/zdialog.js"></script>
 <script>
+    function getUrlParam(name) { //封装方法
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg); //匹配目标参数
+        if (r != null) return unescape(r[2]);
+        return null; //返回参数值
+    }
+
+    let id = getUrlParam('id')
     $(function () {
-        //加入HTML
-        // let html = ''
-        // html = '
+        $('#dateinput').date();
+        $('#dateSelectorTwo').date();
+        if (!window.localStorage) {
+            // console.log("浏览器支持localstorage");
+        } else {
+            var storage = window.localStorage;
+            var Token = storage.getItem("Authorization");
+        }
 
-        // $('.icon-list').append(html)
+        $('.btnlist').on('click', function () {
+            let activityName = $('#name').val()                 //活动名字
+            let activitymain = $('.transition').val()           //活动内容
+            let starttime = $('#dateinput').val()               //开始日期
+            let endtime = $('#dateSelectorTwo').val()           //结束日期
 
-        new Mdate("dateSelectorOne");
+            if (activityName == '') {
+                alert('请输入活动名称！')
+            } else if (activitymain == '') {
+                alert('请输入活动详情！')
+            } else if (starttime == '') {
+                alert('请选择开始时间！')
+            } else if (endtime == '') {
+                alert('请选择结束时间！')
+            }
 
-        new Mdate("dateShowBtn", {
-            acceptId: "dateSelectorTwo",
-            beginYear: "2002",
-            beginMonth: "10",
-            beginDay: "24",
-            endYear: "2017",
-            endMonth: "1",
-            endDay: "1",
-            format: "-"
+
+            if (activityName !== '' && activitymain !== '' && starttime !== '' && endtime !== '') {
+                $.ajax({
+                    url: "http://zdf.dev.hyplmm.com/platform/v1/activity/add",
+                    type: "POST",
+                    headers: {
+                        'Accept': 'application/json',
+                        'Authorization': Token,
+                    },
+                    data: {
+                        'title': activityName,                                    //活动标题
+                        'content': activitymain,                                  //活动内容
+                        'start_time': starttime,                                  //开始时间
+                        'end_time': endtime,                                      //结束时间
+                    },
+                    dataType: "json",
+                    success: function (res) {
+                        console.log(res)
+                        $.DialogByZ.Autofade({Content: "添加成功！"})
+                        setTimeout("window.location.href = './activity.html'", 1000)
+                    },
+                    error: function () {
+                        alert('网络故障！')
+                    },
+                });
+            } else {
+
+            }
+
+
         })
 
-        new Mdate("dateSelectorTwo");
-
-        new Mdate("dateShowBtn", {
-            acceptId: "dateSelectorTwo",
-            beginYear: "2002",
-            beginMonth: "10",
-            beginDay: "24",
-            endYear: "2017",
-            endMonth: "1",
-            endDay: "1",
-            format: "-"
-        })
 
     })
 </script>
-</body>
 </html>

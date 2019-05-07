@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="./components/common.css"/>
     <link rel="stylesheet" href="./css/addclient.css"/>
     <link rel="stylesheet" href="./components/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="./components/zdialog.css">
 </head>
 
 <body>
 <div class="top">
-    <span><a href="javascript:;" onclick="javascript:history.back(-1);" class="iconfont">&#xe675;<span>返回</span></a></span>
+    <span><a href="javascript:;" onclick="window.location.href = './housekeeper.html'"
+             class="iconfont">&#xe675;<span>返回</span></a></span>
     <span>添加历史客户</span>
     <span><a href="#" class="iconfont">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
 </div>
@@ -20,77 +22,192 @@
         <ul>
             <li>
                 <span>顾客姓名：</span>
-                <input type="text">
+                <input id="name" type="text">
             </li>
             <li>
                 <span>性别：</span>
-                <input type="text">
+                <div class="shifou">
+                    <label><span>男</span><input class="radios" name="Sex" checked type="radio" value="1"></label>
+                    <label><span>女</span><input class="radios" name="Sex" type="radio" value="0"></label>
+                </div>
             </li>
             <li>
                 <span>年龄：</span>
-                <input type="text">
+                <input id="age" type="text">
             </li>
             <li>
-                <span>电话：</span>
-                <input type="text">
+                <span>手机号码：</span>
+                <input id="Telephone" type="text">
             </li>
             <li>
                 <span>是否为会员：</span>
                 <div class="shifou">
-                    <label><span>是</span><input class="radios" name="one" type="radio" value="是"></label>
-                    <label><span>否</span><input class="radios" name="one" type="radio" value="否"></label>
+                    <label><span>是</span><input class="radios" name="Vip"  type="radio" value="1"></label>
+                    <label><span>否</span><input class="radios" name="Vip" checked type="radio" value="0"></label>
                 </div>
             </li>
             <li>
                 <span>购买品牌：</span>
-                <select>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
+                <select id="Selectbrand">
+                    <!--                    <option value="1">1</option>-->
+                    <!--                    <option value="2">2</option>-->
+                    <!--                    <option value="3">3</option>-->
                 </select>
             </li>
             <li>
                 <span>型号：</span>
-                <input type="text">
+                <input id="Model" type="text">
             </li>
             <li>
                 <span>特征描述：</span>
-                <input type="text">
+                <input id="Features" type="text">
             </li>
             <li>
                 <span>零售价格：</span>
-                <input type="text">
+                <input id="retailpirces" type="text">
             </li>
             <li>
                 <span>日期：</span>
-                <input type="text">
+                <input id="datas" type="text">
             </li>
             <li>
                 <span>售后类型：</span>
-                <select>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
+                <select id="selecttype">
+                    <option value="0">外观清洗</option>
+                    <option value="1">更换表带</option>
+                    <option value="2">其他</option>
                 </select>
             </li>
             <li>
                 <span>售后费用：</span>
-                <input type="text">
+                <input id="Cost" type="text">
             </li>
             <li>
                 <span>活动喜好：</span>
-                <input type="text">
+                <input id="hobby" type="text">
             </li>
             <li>
                 <span>生日：</span>
-                <input type="text">
+                <input id="Birthday" type="text">
             </li>
         </ul>
         <div class="btn">
-            <div><a href="#">保存</a></div>
+            <div><a class="buttoms" href="#">添加</a></div>
         </div>
     </div>
 
 </div>
 </body>
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./components/zdialog.js"></script>
+<script>
+    $(function () {
+        if (!window.localStorage) {
+            // alert("浏览器支持localstorage");
+        } else {
+            var storage = window.localStorage;
+            var Token = storage.getItem("Authorization");
+        }
+
+        $.ajax({
+            url: "http://zdf.dev.hyplmm.com/platform/v1/brand/all",
+            type: "GET",
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': Token,
+            },
+            data: {},
+            dataType: "json",
+            success: function (data) {
+                console.log(data.result);
+                let newlist = data.result
+                // 加入HTML
+                let html = ''
+                // ' + item.customer.name + '
+                $.each(newlist, function (index, item) {
+                    html = '<option value="' + item.brand_name + '"  data-id="' + item.id + '" >' + item.brand_name + ' </option>'
+
+
+                    $('#Selectbrand').append(html)
+                });
+            },
+            error: function () {
+                alert("请求错误");
+            },
+        });
+
+        $('.buttoms').on('click', function () {
+
+            let Sex = $('input[name="Sex"]:checked').val();                     //性别
+            let Vip = $('input[name="Vip"]:checked').val();                     //会员
+            let Name = $('#name').val()                                         //名字
+            let Age = $('#Age').val()                                           //年龄
+            let Telephone = $('#Telephone').val()                               //电话
+            let Model = $('#Model').val()                                       //型号
+            let Features = $('#Features').val()                                //特征
+            let retailpirces = $('#retailpirces').val()                        //零售价
+            let datas = $('#datas').val()                                      //日期
+            let Cost = $('#Cost').val()                                         //费用
+            let hobby = $('#hobby').val()                                      //爱好
+            let Birthday = $('#Birthday').val()                                //生日
+            let selectedtype = $("#selecttype  option:selected").val();         //售后类型
+            let selectedbrand = $("#Selectbrand  option:selected").text();        //品牌
+            let Brandid = $("#Selectbrand  option:selected")[0].dataset.id      //品牌id
+            // console.log(Brandid)
+            let numberphone = /^1[3|7|5|8|9]\d{9}$/;
+
+
+            if(Name == ''){
+                alert('请输入顾客姓名！')
+            }else if(Telephone == ''){
+                alert('请输入顾客手机号码！')
+            }else if(!numberphone.test(Telephone)){
+                alert("输入的手机号码有误")
+            }
+
+            if(Name !== '' && numberphone.test(Telephone) ){
+                    $.ajax({
+                    url: "http://zdf.dev.hyplmm.com/platform/v1/guide/customerAdd",
+                    type: "post",
+                    headers: {
+                        'Accept': 'application/json',
+                        'Authorization': Token,
+                    },
+                    dataType: "json",
+                    data: {
+                        'name': Name,                                    //姓名
+                        'sex': Sex,                                      //性别
+                        'age': Age,                                      //年龄
+                        'birthday': Birthday,                            //生日
+                        'mobile': Telephone,                             //手机
+                        'is_member': Vip,                                //是否会员
+                        'like_activity': hobby,                          //活动喜好
+                        'marking': Model,                                //类型
+                        'describe': Features,                            //描述
+                        'retail_price': retailpirces,                    //零售价
+                        'date': datas,                                   //日期
+                        'after_sale_type': selectedtype,                 //售后类型
+                        'after_sale_fee': Cost,                          //售后费用
+                        // 'source':'',                                  //来源(0:扫码,1:历史添加)
+                        'brand_id': Brandid,                             //品牌ID
+                        'brand_name': selectedbrand,                     //品牌名
+                    },
+
+                    success: function (data) {
+                        console.log(data)
+                        $.DialogByZ.Autofade({Content: "添加成功"})
+                        setTimeout("window.location.href = './index.html'", 1000)
+                    },
+                    error: function () {
+                        alert("请求错误");
+                    },
+                });
+            }
+
+
+    })
+
+
+    })
+</script>
 </html>

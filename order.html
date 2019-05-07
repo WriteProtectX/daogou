@@ -11,7 +11,8 @@
 
 <body>
 <div class="top">
-    <span><a href="javascript:;" onclick="javascript:history.back(-1);" class="iconfont">&#xe675;<span>返回</span></a></span>
+    <span><a href="javascript:;" onclick="window.location.href = './index.html'"
+             class="iconfont">&#xe675;<span>返回</span></a></span>
     <span>订单查询</span>
     <span><a href="#" class="iconfont">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
 </div>
@@ -23,10 +24,10 @@
         </a>
     </div>
     <div class="searchkuang">
-       <from>
-           <span class="iconfont">&#xe60f;</span>
-           <input type="text">
-       </from>
+        <from>
+            <span class="iconfont">&#xe60f;</span>
+            <input type="text" id="searchinput" placeholder="商品名称/购买人/订单号/手机号">
+        </from>
     </div>
     <div class="searchsize"><a href="#">搜索</a></div>
 </div>
@@ -49,53 +50,33 @@
     </div>
 </div>
 <div class="order">
-    <div class="pro-list">
-        <img src="./images/pic.jpeg" alt="">
-        <div class="item-list">
-            <span class="title">浪琴手表   康卡斯系列石英男表</span>
-            <span>单号：223456789</span>
-            <span>购买人：王梓</span>
-            <p>购买时间：2019-03-05</p>
-        </div>
-        <div class="btn"><a href="./orderdetails.html">详情</a></div>
-    </div>
-    <div class="pro-list">
-        <img src="" alt="">
-        <div class="item-list">
-            <span class="title">浪琴手表   康卡斯系列石英男表</span>
-            <span>单号：223456789</span>
-            <span>购买人：王梓</span>
-            <p>购买时间：2019-03-05</p>
-        </div>
-        <div class="btn"><a href="./orderdetails.html">详情</a></div>
-    </div>
-    <div class="pro-list">
-        <img src="./images/pic.jpeg" alt="">
-        <div class="item-list">
-            <span class="title">浪琴手表   康卡斯系列石英男表</span>
-            <span>单号：223456789</span>
-            <span>购买人：王梓</span>
-            <p>购买时间：2019-03-05</p>
-        </div>
-        <div class="btn"><a href="./orderdetails.html">详情</a></div>
-    </div>
+    <!--        <div class="pro-list">-->
+    <!--            <img src="./images/pic.jpeg" alt="">-->
+    <!--            <div class="item-list">-->
+    <!--                <span class="title">浪琴手表   康卡斯系列石英男表</span>-->
+    <!--                <span>单号：223456789</span>-->
+    <!--                <span>购买人：王梓</span>-->
+    <!--                <p>购买时间：2019-03-05</p>-->
+    <!--            </div>-->
+    <!--            <div class="btn"><a href="./orderdetails.html">详情</a></div>-->
+    <!--        </div>-->
 </div>
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script>
     $(function () {
-        
-        $(".screen").on("click",function (e) {
+
+        $(".screen").on("click", function (e) {
             $(".mainback").show()
             $(".screenmain").show()
             document.documentElement.style.overflow = "hidden";
         })
-        $(".mainback").on("click",function (e) {
+        $(".mainback").on("click", function (e) {
             $(".mainback").hide()
             $(".screenmain").hide()
             document.documentElement.style.overflow = "scroll";
         })
 
-        $('.itemprolist').find('span').click(function(){
+        $('.itemprolist').find('span').click(function () {
             var index = $(this).index();
             $(this).addClass('on').siblings().removeClass('on');
         })
@@ -103,13 +84,51 @@
         // 加入HTML
         // let html = ''
         // html = '
-        //
+
         // $('.icon-list').append(html)
         // document.documentElement.style.overflow = "hidden";
         // document.documentElement.style.overflow = "scroll";
-        $.get("http://zdf.dev.hyplmm.com/platform/v1/guide/order", function (data) {
-            console.log(data)
-        })
+        if (!window.localStorage) {
+            // alert("浏览器支持localstorage");
+        } else {
+            var storage = window.localStorage;
+            var Token = storage.getItem("Authorization");
+        }
+
+        $.ajax({
+            url: "http://zdf.dev.hyplmm.com/platform/v1/guide/order",
+            type: "GET",
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': Token,
+            },
+            data: {},
+            dataType: "json",
+            success: function (data) {
+                console.log(data.result.list.data);
+                let newlist = data.result.list.data
+                // 加入HTML
+                let html = ''
+                $.each(newlist, function (index, item) {
+                    html = '    <div class="pro-list">\n' +
+                        '            <img src="' + item.item[0].img + '" alt="">\n' +
+                        '            <div class="item-list">\n' +
+                        '                <span class="title">' + item.title + '</span>\n' +
+                        '                <span>单号：' + item.order_code + '</span>\n' +
+                        '                <span>购买人：' + item.customer_name + '</span>\n' +
+                        '                <p>购买时间：' + item.created_at + '</p>\n' +
+                        '            </div>\n' +
+                        '            <div class="btn"><a href="./orderdetails.html?id=' + item.id + '">详情</a></div>\n' +
+                        '        </div>'
+                    $('.order').append(html)
+                });
+            },
+            error: function () {
+                alert("请求错误");
+            },
+
+        });
+
 
     })
 </script>

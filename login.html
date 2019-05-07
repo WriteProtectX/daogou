@@ -7,6 +7,7 @@
 <!--    <link rel="stylesheet" href="../components/common.css"/>-->
     <link rel="stylesheet" href="css/login.css"/>
     <link rel="stylesheet" href="./components/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="./components/zdialog.css">
 </head>
 
 <body>
@@ -32,6 +33,7 @@
 </body>
 
 <script src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./components/zdialog.js"></script>
 <script>
     $(function () {
         let html = '<div class="welcome"><img src="images/user_logo.jpeg"></div>\n' +
@@ -40,7 +42,7 @@
             '            <label>\n' +
             '                <span class="iconfont" style="font-size: 20px;vertical-align: middle">&#xe611;</span>\n' +
             '            </label>\n' +
-            '            <input type="text" id="phone" placeholder="请输入导购账号">\n' +
+            '            <input type="text" id="phone" value="13429337283" placeholder="请输入导购账号">\n' +
             '        </div>\n' +
             '        <div class="login-inp">\n' +
             '            <label>\n' +
@@ -50,7 +52,7 @@
             '        </div>\n' +
             '        <div class="login-inp" id="login"><a href="#">立即登录</a></div>\n' +
             '    </div>\n' +
-            '    <div class="login-txt"><a href="./forgetpassword.html">忘记密码？</a></div>'
+            '    <div class="login-txt"></div>'
         $('.login').append(html)
         // 验证手机号
         function checkmobileNo() {
@@ -82,23 +84,30 @@
                     dataType: "json",
                     success: function (data) {
                         console.log(data);
+                        let Token = data.result.token
                         if (data.errorcode == 0){
-                            alert("登录成功")
-                            window.location.href = "./index.html";
+                            // alert("登录成功")
+                            $.DialogByZ.Autofade({Content: "登录成功"})
+                            if(!window.localStorage){
+                                // alert("浏览器支持localstorage");
+                                return false;
+                            }else{
+                                var storage=window.localStorage;
+                                storage.setItem('Authorization','Bearer '+Token);
+                            }
+                            setTimeout("window.location.href = './index.html'", 1000)
+
                         }else {
                             alert(data.message)
                         }
-
-
                     },
                     error: function () {
-                        alert(data.result.message);
+                        // alert(data.result.message);
                     },
-
                 });
             }
         }
-        $("#login").on("click", function (e) {
+        $("#login").on("click", function () {
             // 判断手机号码
             checkmobileNo();
         })

@@ -1,8 +1,9 @@
 html {
     font-size: 12px;
+    background: #f2f2f2!important;
 }
 body {
-    background: #fff;
+    background: #f2f2f2;
     /*padding-top: 7.5rem;*/
 }
 
@@ -159,7 +160,7 @@ body {
     margin-top: 5.833rem;
 }
 
-.btn div a {
+.btn div .btnlist {
     font-size: 1.333rem;
     display: block;
     width: 12.917rem;
@@ -222,7 +223,7 @@ body {
     .order {
         margin-top: 4.167rem;
         /*background: #ddd;*/
-        padding: 0rem 2.5rem;
+        padding: 0rem 2rem;
         box-sizing: border-box;
     }
 
@@ -309,7 +310,6 @@ body {
         font-size: 1.167rem;
         border: 0.083rem solid #ddd;
     }
-
     .btn {
         display: -webkit-flex;
         display: -moz-flex;
@@ -328,10 +328,10 @@ body {
         -o-align-items: center;
         -khtml-align-items: center;
         align-items: center;
-        margin-top: 5.833rem;
+        margin-top: 2.833rem;
     }
 
-    .btn div a {
+    .btn div .btnlist {
         font-size: 1.333rem;
         display: block;
         width: 12.917rem;
@@ -508,7 +508,7 @@ body {
         margin-top: 5.833rem;
     }
 
-    .btn div a {
+    .btn div .btnlist {
         display: block;
         width: 15.917rem;
         height: 5.333rem;
@@ -684,7 +684,7 @@ body {
         margin-top: 5.833rem;
     }
 
-    .btn div a {
+    .btn div .btnlist {
         display: block;
         width: 22.917rem;
         height: 7.333rem;

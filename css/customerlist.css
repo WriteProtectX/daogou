@@ -1,10 +1,11 @@
 html {
-    height: 100%;
+    /*height: 100%;*/
     font-size: 12px;
+    background: #f2f2f2 !important;
 }
 body {
     background: #f2f2f2;
-    height: 100%;
+    /*height: 100%;*/
     padding-top: 8.167rem;
 }
 
@@ -341,9 +342,9 @@ body {
     -o-align-items: center;
     -khtml-align-items: center;
     align-items: center;
-    border-bottom: 0.083rem solid #ddd;
-    border-top: 0.083rem solid #ddd;
-    margin-bottom: 0.63rem;
+    border-bottom: 0.17rem solid #f2f2f2;
+    border-top: 0.083rem solid #f2f2f2;
+    /*margin-bottom: 0.63rem;*/
 }
 
 .mes-item {
@@ -363,7 +364,7 @@ body {
 .pro-list img {
     width: 6.66rem;
     height: 6.66rem;
-    border: 0.083rem solid #ddd;
+    /*border: 0.083rem solid #ddd;*/
     margin-right: 1rem;
 }
 
@@ -430,7 +431,7 @@ body {
     /*一栏布局*/
     body {
         background: #f2f2f2;
-        height: 100%;
+        /*height: 100%;*/
         padding-top: 8.167rem;
     }
 
@@ -767,9 +768,9 @@ body {
         -o-align-items: center;
         -khtml-align-items: center;
         align-items: center;
-        border-bottom: 0.083rem solid #ddd;
-        border-top: 0.083rem solid #ddd;
-        margin-bottom: 0.63rem;
+        border-bottom: 0.17rem solid #f2f2f2;
+        border-top: 0.083rem solid #f2f2f2;
+        /*margin-bottom: 0.63rem;*/
     }
 
     .mes-item {
@@ -789,7 +790,7 @@ body {
     .pro-list img {
         width: 6.66rem;
         height: 6.66rem;
-        border: 0.083rem solid #ddd;
+        /*border: 0.083rem solid #ddd;*/
         margin-right: 1rem;
     }
 
@@ -858,7 +859,7 @@ body {
     /*二栏布局*/
     body {
         background: #f2f2f2;
-        height: 100%;
+        /*height: 100%;*/
         padding-top: 10.93rem;
     }
 
@@ -1025,6 +1026,161 @@ body {
         height: 100%;
     }
 
+
+
+    .mainback {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        top: 0;
+        left: 0;
+        display: none;
+    }
+
+    .screenmain {
+        display: none;
+        box-sizing: border-box;
+        width: 82%;
+        background: #FFF;
+        z-index: 99;
+        position: fixed;
+        height: 100%;
+        top: 0;
+        right: 0;
+        padding-top: 40px;
+    }
+
+    .screenmain p {
+        margin-left: 22px;
+        margin-bottom: 8px;
+        font-size: 24px;
+    }
+
+    .screenmain .textinput {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .screenmain .textinput span {
+        margin: 0px 10px;
+    }
+
+    .screenmain .textinput input {
+        background: #f2f2f2;
+        width: 40%;
+        height: 50px;
+        border-radius: 34px;
+        padding: 0px 12px;
+        text-align: center;
+        line-height: 30px;
+        color: #666;
+        font-size: 24px;
+    }
+
+    .itemprolist {
+        width: 100%;
+        padding: 0px 20px;
+        box-sizing: border-box;
+    }
+
+    .itemprolist ul li {
+        display: flex;
+        flex-direction: column;
+        /*width: 100%;*/
+        margin-bottom: 12px;
+    }
+
+    .itemprolist ul li span {
+        /*width: 100%;*/
+        margin-bottom: 12px;
+        font-size: 24px;
+    }
+
+    .itemprolist ul li input {
+        border: 1px solid #ddd;
+        border-radius: 50px;
+        padding: 0px 26px;
+        height: 50px;
+        flex: 1;
+        -webkit-flex: 1;
+        /* width: 100%; */
+        color: #666;
+        font-size: 24px;
+        line-height: 50px;
+    }
+    .itemprolist ul li select {
+        border: 1px solid #ddd;
+        border-radius: 81px;
+        padding: 0px 14px;
+        height: 50px;
+        flex: 1;
+        -webkit-flex: 1;
+        background: #fff;
+        color: #666;
+        font-size: 24px;
+        line-height: 50px;
+    }
+
+    .screenbtn {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
+        justify-content: center;
+    }
+
+    .screenbtn .clear{
+        background: #F0F2F5;
+        width: 50%;
+        height: 5.4rem;
+        line-height: 5.4rem;
+        text-align: center;
+        font-size: 2rem;
+    }
+    .screenbtn .sure{
+        width: 50%;
+        margin-right: 10.666rem;
+        height: 5.4rem;
+        line-height: 5.4rem;
+        background: #912941;
+        text-align: center;
+        color: #FFF;
+        font-size: 2rem;
+    }
+
+
     .order {
         background: #f2f2f2;
     }
@@ -1050,9 +1206,9 @@ body {
         -o-align-items: center;
         -khtml-align-items: center;
         align-items: center;
-        border-bottom: 0.083rem solid #ddd;
-        border-top: 0.083rem solid #ddd;
-        margin-bottom: 0.63rem;
+        border-bottom: 0.2rem solid #f2f2f2;
+        border-top: 0.083rem solid #f2f2f2;
+        /*margin-bottom: 0.63rem;*/
     }
 
     .mes-item {
@@ -1072,7 +1228,7 @@ body {
     .pro-list img {
         width: 10.66rem;
         height: 10.66rem;
-        border: 0.083rem solid #ddd;
+        /*border: 0.083rem solid #ddd;*/
         margin-right: 1rem;
     }
 
@@ -1174,7 +1330,7 @@ body {
     /*三栏布局*/
     body {
         background: #f2f2f2;
-        height: 100%;
+        /*height: 100%;*/
         padding-top: 16.2rem;
     }
 
@@ -1343,6 +1499,160 @@ body {
         height: 100%;
     }
 
+
+    .mainback {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        top: 0;
+        left: 0;
+        display: none;
+    }
+
+    .screenmain {
+        display: none;
+        box-sizing: border-box;
+        width: 82%;
+        background: #FFF;
+        z-index: 99;
+        position: fixed;
+        height: 100%;
+        top: 0;
+        right: 0;
+        padding-top: 40px;
+    }
+
+    .screenmain p {
+        margin-left: 22px;
+        margin-bottom: 8px;
+        font-size: 36px;
+    }
+
+    .screenmain .textinput {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .screenmain .textinput span {
+        margin: 0px 10px;
+    }
+
+    .screenmain .textinput input {
+        background: #f2f2f2;
+        width: 42%;
+        height: 74px;
+        border-radius: 34px;
+        padding: 0px 12px;
+        text-align: center;
+        line-height: 30px;
+        color: #666;
+        font-size: 34px;
+    }
+
+    .itemprolist {
+        width: 100%;
+        padding: 0px 20px;
+        box-sizing: border-box;
+    }
+
+    .itemprolist ul li {
+        display: flex;
+        flex-direction: column;
+        /*width: 100%;*/
+        margin-bottom: 12px;
+    }
+
+    .itemprolist ul li span {
+        /*width: 100%;*/
+        margin-bottom: 12px;
+        font-size: 36px;
+    }
+
+    .itemprolist ul li input {
+        border: 1px solid #ddd;
+        border-radius: 50px;
+        padding: 0px 26px;
+        height: 72px;
+        flex: 1;
+        -webkit-flex: 1;
+        /* width: 100%; */
+        color: #666;
+        font-size: 34px;
+        line-height: 72px;
+    }
+    .itemprolist ul li select {
+        border: 1px solid #ddd;
+        border-radius: 81px;
+        padding: 0px 14px;
+        height: 80px;
+        flex: 1;
+        -webkit-flex: 1;
+        background: #fff;
+        color: #666;
+        font-size: 34px;
+        line-height: 80px;
+    }
+
+    .screenbtn {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -khtml-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        -khtml-justify-content: center;
+        justify-content: center;
+    }
+
+    .screenbtn .clear{
+        width: 50%;
+        background: #F0F2F5;
+        height: 8.4rem;
+        line-height: 8.4rem;
+        text-align: center;
+        font-size: 3rem;
+    }
+    .screenbtn .sure{
+        width: 50%;
+        margin-right: 14.666rem;
+        height: 8.4rem;
+        line-height: 8.4rem;
+        background: #912941;
+        text-align: center;
+        color: #FFF;
+        font-size: 3rem;
+    }
+
+
     .order {
         background: #f2f2f2;
     }
@@ -1368,9 +1678,9 @@ body {
         -o-align-items: center;
         -khtml-align-items: center;
         align-items: center;
-        border-bottom: 0.083rem solid #ddd;
-        border-top: 0.083rem solid #ddd;
-        margin-bottom: 0.63rem;
+        border-bottom: 0.4rem solid #f2f2f2;
+        border-top: 0.083rem solid #f2f2f2;
+        /*margin-bottom: 0.63rem;*/
     }
 
     .mes-item {
@@ -1390,7 +1700,7 @@ body {
     .pro-list img {
         width: 15.66rem;
         height: 15.66rem;
-        border: 0.083rem solid #ddd;
+        /*border: 0.083rem solid #ddd;*/
         margin-right: 1rem;
     }
 

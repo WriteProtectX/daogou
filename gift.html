@@ -11,33 +11,134 @@
 
 <body>
 <div class="top">
-    <span><a href="javascript:;" onclick="javascript:history.back(-1);" class="iconfont">&#xe675;<span>返回</span></a></span>
+    <span><a href="javascript:;" onclick="window.location.href = './index.html'"
+             class="iconfont">&#xe675;<span>返回</span></a></span>
     <span>礼品列表</span>
     <span><a href="#" class="iconfont">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
 </div>
 <div class="order">
-    <div class="pro-list">
-        <img src="./images/pic.jpeg" alt="">
-        <div class="item-list">
-            <span class="title">得力文具精美套盒幼儿园奖品套餐</span>
-            <p>剩余库存：150件</p>
-        </div>
-        <div class="allbtn">
-            <div class="btn"><a href="./giftdetails.html">查看详情</a></div>
-            <div class="btn2"><a href="#">生成领取码</a></div>
+<!--    <div class="pro-list">-->
+<!--        <img src="./images/pic.jpeg" alt="">-->
+<!--        <div class="item-list">-->
+<!--            <span class="title">得力文具精美套盒幼儿园奖品套餐</span>-->
+<!--            <p>剩余库存：150件</p>-->
+<!--        </div>-->
+<!--        <div class="allbtn">-->
+<!--            <div class="btn"><a href="./giftdetails.html">领取记录</a></div>-->
+<!--            <div class="btn2"><a href="#">生成领取码</a></div>-->
+<!--        </div>-->
+<!--    </div>-->
+</div>
+<div class="show"  >
+    <div class="showtwo">
+<!--        <p style="margin-bottom: 30px;font-size: 26px">sdasdasdadadasda</p>-->
+        <div class="text"></div>
+        <div class="codepic">
+<!--            <img  src="./images/user_logo.jpeg" alt="">-->
         </div>
     </div>
 </div>
+</body>
 <script src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./components/zdialog.js"></script>
 <script>
-    $(function () {
-        //加入HTML
-        // let html = ''
-        // html = '
+    function getUrlParam(name) { //封装方法
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg); //匹配目标参数
+        if (r != null) return unescape(r[2]);
+        return null; //返回参数值
+    }
 
-        // $('.icon-list').append(html)
+    let id = getUrlParam('id')
+    $(function () {
+
+        if (!window.localStorage) {
+            // console.log("浏览器支持localstorage");
+        } else {
+            var storage = window.localStorage;
+            var Token = storage.getItem("Authorization");
+        }
+
+
+
+        $.ajax({
+            url: "http://zdf.dev.hyplmm.com/platform/v1/gift/list",
+            type: "GET",
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': Token,
+            },
+            data: {},
+            dataType: "json",
+            success: function (res) {
+                let newlist =res.result.lists.data
+                console.log(res.result.lists.data)
+               let html = ''
+                $.each(newlist, function (index, item) {
+                    html = '<div class="pro-list">\n' +
+                        '        <img src="' + item.img + '" alt="">\n' +
+                        '        <div class="item-list">\n' +
+                        '            <span class="title">' + item.gift_name + '</span>\n' +
+                        '            <span>礼品编号：' + item.gift_code + '</span>\n' +
+                        '            <p>剩余库存:' + item.gift_num + '件</p>\n' +
+                        '        </div>\n' +
+                        '        <div class="allbtn">\n' +
+                        '            <div class="btn"><a href="./giftdetails.html?id=' + item.id + '">领取记录</a></div>\n' +
+                        '            <div class="btn2  btn2' + item.id + '" data-code="' + item.gift_code + '"><a href="#">生成领取码</a></div>\n' +
+                        '        </div>\n' +
+                        '    </div>'
+                    $('.order').append(html)
+
+                    $(".btn2"+item.id).on("click", function (e) {
+
+                        let codeid = e.currentTarget.dataset.code
+                        console.log(codeid)
+                        $.ajax({
+                            url: "http://zdf.dev.hyplmm.com/platform/v1/giftReceive/giftQrCode",
+                            type: "GET",
+                            headers: {
+                                'Accept': 'application/json',
+                                'Authorization': Token,
+                            },
+                            data: {
+                                'gift_code':codeid,
+                            },
+                            dataType: "json",
+                            success: function (res) {
+                                console.log(res)
+                                $(".text").append("<p>"+item.gift_name+"</p>");
+                                $(".codepic").append("<img  src='http://"+res.result+"'>");
+
+                            // <p style='margin-bottom: 30px;font-size: 26px'>sdasdasdadadasda</p>
+                                $(".show").show();
+                                $('.show').css('display', 'flex')
+                                $(".show").one("click", function () {
+                                    $(".show").hide();
+                                    $(".text p").remove();
+                                    $(".codepic img").remove();
+                                });
+                                e.stopPropagation();
+                            },
+                            error: function (res) {
+                            },
+                        });
+
+
+
+
+                    });
+
+                    $(".show").on("click", function (e) {
+                        e.stopPropagation();
+                    });
+                });
+
+
+            },
+            error: function (res) {
+            },
+        });
 
     })
 </script>
-</body>
 </html>

@@ -12,7 +12,7 @@
 
 <body>
 <div class="top">
-    <span><a href="javascript:;" onclick="javascript:history.back(-1);" class="iconfont">&#xe675;<span>返回</span></a></span>
+    <span><a href="javascript:;" onclick="window.location.href = './index.html'" class="iconfont">&#xe675;<span>返回</span></a></span>
     <span>活动查询</span>
     <span><a href="#" class="iconfont">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
 </div>
@@ -31,28 +31,126 @@
     <div class="searchsize"><a href="#">搜索</a></div>
 </div>
 <div class="order">
-    <div class="pro-list">
-<!--        <img src="./images/pic.jpeg" alt="">-->
-        <div class="item-list">
-            <h3 class="title">活动名称：天河城店国庆优惠活动</h3>
-            <span>开始时间：2019-10-01   10:00:00</span>
-            <p>结束时间：2019-10-07  10:00:00</p>
+<!--    <div class="pro-list">-->
+<!--        <div class="item-list">-->
+<!--            <h3 class="title">活动名称：天河城店国庆优惠活动</h3>-->
+<!--            <span>开始时间：2019-10-01   10:00:00</span>-->
+<!--            <p>结束时间：2019-10-07  10:00:00</p>-->
 
+<!--        </div>-->
+<!--        <div></div>-->
+<!--        <div class="btn"><a href="#">生成二维码</a></div>-->
+<!--    </div>-->
+</div>
+
+<div class="show"  >
+    <div class="showtwo">
+        <!--        <p style="margin-bottom: 30px;font-size: 26px">sdasdasdadadasda</p>-->
+        <div class="text"></div>
+        <div class="codepic">
+            <!--            <img  src="./images/user_logo.jpeg" alt="">-->
         </div>
-        <div></div>
-        <div class="btn"><a href="#">生成二维码</a></div>
     </div>
 </div>
+</body>
 <script src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./components/zdialog.js"></script>
 <script>
-    $(function () {
-        //加入HTML
-        // let html = ''
-        // html = '
+    function getUrlParam(name) { //封装方法
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg); //匹配目标参数
+        if (r != null) return unescape(r[2]);
+        return null; //返回参数值
+    }
 
-        // $('.icon-list').append(html)
+    let id = getUrlParam('id')
+    $(function () {
+
+        if (!window.localStorage) {
+            // console.log("浏览器支持localstorage");
+        } else {
+            var storage = window.localStorage;
+            var Token = storage.getItem("Authorization");
+        }
+
+
+
+        $.ajax({
+            url: "http://zdf.dev.hyplmm.com/platform/v1/activity/list",
+            type: "GET",
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': Token,
+            },
+            data: {},
+            dataType: "json",
+            success: function (res) {
+                let newlist =res.result.lists.data
+                console.log(res.result.lists.data)
+                let html = ''
+                $.each(newlist, function (index, item) {
+                    html = '<div class="pro-list">\n' +
+                        '        <div class="item-list">\n' +
+                        '            <h3 class="title">活动名称：' + item.title + '</h3>\n' +
+                        '            <span>活动内容：' + item.content + '</span>\n' +
+                        '            <span>开始时间：' + item.created_at + '</span>\n' +
+                        '            <p>结束时间：' + item.end_time + '</p>\n' +
+                        '\n' +
+                        '        </div>\n' +
+                        '        <div></div>\n' +
+                        '        <div class="btn"><div class="btnlists btnlists' + item.id + '" data-code="' + item.id + '" >二维码</></div>\n' +
+                        '    </div>'
+                    $('.order').append(html)
+
+
+                    $(".btnlists"+item.id).on("click", function (e) {
+
+                        let codeid = e.currentTarget.dataset.code
+                        console.log(codeid)
+                        $.ajax({
+                            url: "http://zdf.dev.hyplmm.com/platform/v1/activity/qrCode",
+                            type: "GET",
+                            headers: {
+                                'Accept': 'application/json',
+                                'Authorization': Token,
+                            },
+                            data: {
+                                'activity_id':codeid,
+                            },
+                            dataType: "json",
+                            success: function (res) {
+                                console.log(res)
+                                $(".text").append("<p>"+item.content+"</p>");
+                                $(".codepic").append("<img  src='http://"+res.result+"'>");
+                                $(".show").show();
+                                $('.show').css('display', 'flex')
+                                $(".show").one("click", function () {
+                                    $(".show").hide();
+                                    $(".text p").remove();
+                                    $(".codepic img").remove();
+                                });
+                                e.stopPropagation();
+                            },
+                            error: function (res) {
+                            },
+                        });
+
+
+
+
+                    });
+
+                    $(".show").on("click", function (e) {
+                        e.stopPropagation();
+                    });
+                });
+
+
+            },
+            error: function (res) {
+            },
+        });
 
     })
 </script>
-</body>
 </html>
