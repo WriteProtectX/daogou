@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <title>维修记录详情</title>
+    <link rel="stylesheet" href="css/servicingdetails.css">
+    <link rel="stylesheet" href="./components/common.css">
+    <link rel="stylesheet" href="./components/iconfont/iconfont.css">
+    <link rel="stylesheet" href="./components/zdialog.css">
+</head>
+<body>
+<div class="buydetails">
+    <div class="top">
+        <span><a href="javascript:;" onclick="javascript:history.back(-1);" class="iconfont">&#xe675;<span>返回</span></a></span>
+        <span>维修记录详情</span>
+        <span><a href="#" class="iconfont">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+    </div>
+    <div class="weixiujilu">
+        <!--        <div class="order">-->
+        <!--            <span>订单编号：843828339</span>-->
+        <!--            <p>购买时间：2019-02-03</p>-->
+        <!--        </div>-->
+        <!--        <div class="pro-mes-item">-->
+        <!--            <div class="pro-list">-->
+        <!--                <div class="pic">-->
+        <!--                    <img src="" alt="">-->
+        <!--                </div>-->
+        <!--                <div class="pro-mes">-->
+        <!--                    <span class="title">浪琴手表   康卡斯系列石英男表</span>-->
+        <!--                    <span>数量：1</span>-->
+        <!--                    <span>折扣：五折</span>-->
+        <!--                    <p>售价：<span class="pirce">¥15000</span></p>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+
+        <!--        <div class="list">-->
+        <!--            <ul>-->
+        <!--                <li>-->
+        <!--                    <span>支付方式：</span>-->
+        <!--                    <span>在线支付</span>-->
+        <!--                </li>-->
+        <!--                <li>-->
+        <!--                    <span>购买人姓名：</span>-->
+        <!--                    <span>王梓轩</span>-->
+        <!--                </li>-->
+        <!--                <li>-->
+        <!--                    <span>购买人手机号：</span>-->
+        <!--                    <span>18720094586</span>-->
+        <!--                </li>-->
+        <!--                <li>-->
+        <!--                    <span>实付金额：</span>-->
+        <!--                    <span class="newpirce">¥15000</span>-->
+        <!--                </li>-->
+        <!--            </ul>-->
+        <!--        </div>-->
+        <!--        <div class="twolist">-->
+        <!--            <span>维修记录：</span>-->
+        <!--            <div class="shifou">-->
+        <!--                sdasda-->
+        <!--            </div>-->
+        <!--        </div>-->
+    </div>
+    <div class="btn">
+        <div class="btnlist">
+        </div>
+    </div>
+</div>
+</body>
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./components/zdialog.js"></script>
+<script>
+    function getUrlParam(name) { //封装方法
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg); //匹配目标参数
+        if (r != null) return unescape(r[2]);
+        return null; //返回参数值
+    }
+
+    let id = getUrlParam('id')
+    $(function () {
+
+        if (!window.localStorage) {
+            // console.log("浏览器支持localstorage");
+        } else {
+            var storage = window.localStorage;
+            var Token = storage.getItem("Authorization");
+        }
+
+        $.ajax({
+            url: "http://zdf.dev.hyplmm.com/platform/v1/repair/detail/" + id,
+            type: "GET",
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': Token,
+            },
+            data: {},
+            dataType: "json",
+            success: function (data) {
+                let newlist = data.result.order.item
+                let onelist = data.result
+                console.log(data)
+                // 加入HTML
+                let html1 = ''
+                let html = ''
+                html1 = '<div class="order">\n' +
+                    '            <span>订单编号：' + onelist.order.order_code + '</span>\n' +
+                    '            <p>购买时间：' + onelist.order.created_at + '</p>\n' +
+                    '        </div>\n' +
+                    '        <div class="pro-mes-item">\n' +
+                    '            \n' +
+                    '        </div>\n' +
+                    '\n' +
+                    '        <div class="list">\n' +
+                    '            <ul>\n' +
+                    '                <li>\n' +
+                    '                    <span>支付方式：</span>\n' +
+                    '                    <span>在线支付</span>\n' +
+                    '                </li>\n' +
+                    '                <li>\n' +
+                    '                    <span>购买人姓名：</span>\n' +
+                    '                    <span>' + onelist.order.customer_name + '</span>\n' +
+                    '                </li>\n' +
+                    '                <li>\n' +
+                    '                    <span>购买人手机号：</span>\n' +
+                    '                    <span>' + onelist.order.mobile + '</span>\n' +
+                    '                </li>\n' +
+                    '                <li>\n' +
+                    '                    <span>实付金额：</span>\n' +
+                    '                    <span class="newpirce">¥' + onelist.order.payment + '</span>\n' +
+                    '                </li>\n' +
+                    '                <li>\n' +
+                    '                    <span>维修记录：</span>\n' +
+                    '                    <span>' + onelist.after_sale_type + '</span>\n' +
+                    '                </li>\n' +
+                    '                <li class="beizhu">\n' +
+                    '                    <span>维修备注：</span>\n' +
+                    '                    <span class="beizhumes">' + onelist.describe + '</span>\n' +
+                    '                </li>\n' +
+                    '                <li class="Repair">\n' +
+                    '                    <span>维修时间：</span>\n' +
+                    '                    <span class="Record">' + onelist.repair_time + '</span>\n' +
+                    '                </li>\n' +
+                    '            </ul>\n' +
+                    '        </div>'
+                $('.weixiujilu').append(html1)
+
+                let Records = $('.Record').text()
+
+                if (Records == 'null') {
+                    $('.Repair').hide()
+                } else {
+                    $('.Repair').show()
+                }
+                let beizhumes = $('.beizhumes').text()
+                if (beizhumes == 'null') {
+                    $('.beizhu').hide()
+                } else {
+                    $('.beizhu').show()
+                }
+                $.each(newlist, function (index, items) {
+                    html = '<div class="pro-list">\n' +
+                        '                <div >\n' +
+                        '                    <img class="pic" src="' + items.img + '" alt="">\n' +
+                        '                </div>\n' +
+                        '                <div class="pro-mes">\n' +
+                        '                    <span class="title">' + items.goods_name + '</span>\n' +
+                        '                    <span>数量：' + items.goods_num + '</span>\n' +
+                        '                    <p>售价：<span class="pirce">¥' + items.goods_price + '</span></p>\n' +
+                        '                </div>\n' +
+                        '            </div>'
+                    $('.pro-mes-item').append(html)
+                });
+
+                let statusbtn = onelist.status
+                console.log(statusbtn)
+
+                if (statusbtn == '未维修') {
+                    $(".btnlist").append("<div class='btnanniu'>确认维修</div>");
+                    $('.btnanniu').on('click', function () {
+                        $.DialogByZ.Confirm({Title: "", Content: "确认维修吗？</br>", FunL: confirmL, FunR: Immediate})
+                    })
+                } else {
+                    $(".btnlist").append("<div class='btnanniutwo'>已维修</div>");
+                }
+
+                function confirmL() {
+                    $.ajax({
+                        url: "http://zdf.dev.hyplmm.com/platform/v1/repair/upStatus",
+                        type: "POST",
+                        headers: {
+                            'Accept': 'application/json',
+                            'Authorization': Token,
+                        },
+                        data: {
+                            'id': onelist.id,
+                            'status':1,
+                        },
+                        dataType: "json",
+                        success: function (state) {
+                            console.log()
+                            if(state.result =='维修成功'){
+                                $.DialogByZ.Autofade({Content: "维修成功！"})
+                                $(".zbox-popup-backdrop").css("display", "none")
+                                $(".zbox-active").css("display", "none")
+                                $(".zbox-popup").css("display", "none")
+                                $(".zbox-popup-in").css("display", "none")
+                                setTimeout("window.location.reload()", 1200)
+                            }else (
+                                $.DialogByZ.Autofade({Content:state.message})
+                            )
+                        },
+                        error: function (state) {
+                            $.DialogByZ.Autofade({Content:state.message})
+                        },
+                    });
+                }
+
+                function Immediate() {
+                    $(".zbox-popup-in").css("display", "none")
+                    $(".zbox-active").css("display", "none")
+                }
+            },
+            error: function () {
+                alert("请求错误");
+            },
+
+        });
+
+
+    })
+</script>
+
+</html>
